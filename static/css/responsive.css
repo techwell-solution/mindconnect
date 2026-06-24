@@ -1,0 +1,50 @@
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .process-steps {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .testimonials-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .book-btn,
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+    .team-card {
+        flex-direction: column;
+    }
+
+    .card-image {
+        min-width: 100%;
+    }
+
+    .card-image img {
+        min-height: 300px;
+    }
+}

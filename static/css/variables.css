@@ -1,0 +1,37 @@
+:root {
+    /* Colors */
+    --primary-color: #4D7838;
+    --secondary-color: #294e16;
+    --accent-color: #81C784;
+    --background-color: #fff;
+
+    --text-color: #333333;
+    --light-text: #777777;
+
+    --white: #ffffff;
+    --light-bg: #f8f9fa;
+
+
+    --font-primary: 'Poppins', sans-serif;
+
+    --border-radius: 10px;
+    --transition: 0.3s ease;
+
+
+    /* Layout */
+    --container-width: 1200px;
+
+    /* Radius */
+    --radius-sm: 5px;
+    --radius-md: 10px;
+    --radius-lg: 20px;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 10px rgba(0,0,0,.08);
+    --shadow-md: 0 4px 20px rgba(0,0,0,.12);
+
+    /* Transition */
+    --transition: all .3s ease;
+
+    --section-padding: 80px;
+}

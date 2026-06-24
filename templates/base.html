@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}MindConnect{% endblock %}</title>
+    <meta name="description"
+      content="{% block meta_description %}Professional counselling and therapy services in Kenya.{% endblock %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+     <!-- Top Navigation Bar -->
+        <div class="top-navbar" id="topNavbar">
+            <div class="top-nav-left">
+                <span>(+254) 711 897 242</span>
+                <span>info@techsolution.com</span>
+            </div>
+            <div class="top-nav-right">
+                <span>Mon-Fri: 9am-7pm</span>
+                <span>Emergency: (+254) 792-501 015</span>
+            </div>
+        </div>
+        <div class="bottom-navbar">
+    <!-- Mobile Menu Toggle + Left Links -->
+            <div class="nav-left">
+                <input type="checkbox" id="menu-toggle-input" style="display: none;">
+                <label for="menu-toggle-input" class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <!-- Mobile/Hidden Links -->
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    
+                </ul>
+            </div>
+            <!-- Logo centered on mobile -->
+            <div class="nav-logo">
+                <a href=""><img src="{% static 'images/logo.png' %}" alt="MindConnect Counseling Logo"></a>
+            </div>
+
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <a href="" class="book-button">Book Now</a>
+                <a href="" class="book-button">Log in</a>
+            </div>
+        </div>
+            
+
+            <!-- Right Links + Book Button -->
+            
+
+            {% block content %}
+            {% endblock %}
+
+        <footer>
+            <div class="footer-content">
+                <!-- First Section: Logo and Description -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="{% static 'images/logo.png' %}" alt="MindConnect Counseling Logo">
+                    </div>
+                    <p class="footer-description">
+                    At Techwell Therapy, we believe every mind deserves care and every story matters.
+                    </p>
+                </div>
+                
+                <!-- Second Section: Services -->
+                <div class="footer-section">
+                    <h3 class="footer-heading">Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                </div>
+                
+                <!-- Third Section: Resources -->
+                <div class="footer-section">
+                    <h3 class="footer-heading">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href=""></i> Policy</a></li>
+                        <li><a href=""><i class="fas fa-chevron-right"></i> Terms & Conditions</a></li>
+                        <li><a href=""><i class="fas fa-chevron-right"></i> Our Story</a></li>
+                        <li><a href=""><i class="fas fa-chevron-right"></i> Workshops & Events</a></li>
+                    
+                    </ul>
+                </div>
+                
+                <!-- Fourth Section: Newsletter and Social -->
+                <div class="footer-section">
+                    <h3 class="footer-heading">Stay Connected</h3>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                        <button type="submit" class="newsletter-btn">Subscribe</button>
+                    </form>
+                    
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1A83VcFEHb/" target="blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter" target="blank"></i></a>
+                        <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=oe0b1g" target="blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=erastus-ivelia-982267166" target="blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <!-- Developer Credit Section -->
+                    <p>
+                        Designed & Developed by
+                    <a href="https://www.techwellsolution.com" target="_blank"><strong>TechWell Code</strong></a>
+                    </p>
+                <p>&copy; 2025  <b>Techwell Therapy</b>. Healing Minds, Empowering Futures. | All rights reserved.</p>
+            </div>
+        </footer>
+
+            
+</body>
+</html>

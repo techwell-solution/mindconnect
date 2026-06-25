@@ -146,6 +146,10 @@
 .nav-links a:hover::after {
     width: 100%;
 }
+.nav-links a.active{
+    color: var(--primary-color);
+    font-weight: bold;
+}
 
 .book-button {
     background: #4D7838;

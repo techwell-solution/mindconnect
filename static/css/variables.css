@@ -4,6 +4,7 @@
     --secondary-color: #294e16;
     --accent-color: #81C784;
     --background-color: #fff;
+    --card-background: #ffffff;
 
     --text-color: #333333;
     --light-text: #777777;
@@ -33,5 +34,7 @@
     /* Transition */
     --transition: all .3s ease;
 
-    --section-padding: 80px;
+    --section-padding: 50px;
+    --section-margin-top: 1rem;
+    --card-padding: 2rem;
 }

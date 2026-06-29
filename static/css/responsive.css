@@ -48,3 +48,29 @@
         min-height: 300px;
     }
 }
+
+
+@media (max-width: 768px) {
+
+    .service-detail {
+        padding: 3rem 0;
+    }
+
+    .service-detail img {
+        height: 250px;
+    }
+
+    .service-detail h1 {
+        font-size: 2rem;
+        margin: 1.5rem;
+    }
+
+    .service-subtitle {
+        margin: 0 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    .service-description {
+        padding: 1.5rem;
+    }
+}

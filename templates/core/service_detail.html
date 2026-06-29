@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}MindConnect | Services-detail{% endblock %}
+
+{% block content %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+        <a href="{% url 'home' %}">Home</a>
+        <span>/</span>
+
+        <a href="{% url 'services' %}">Services</a>
+        <span>/</span>
+
+        <span class="current">{{ service.title }}</span>
+    </div>
+</nav>
+
+<section class="service-detail">
+    <div class="container">
+
+        <img src="{{ service.image }}" alt="{{ service.title }}">
+
+        <h1>{{ service.title }}</h1>
+
+        <p class="service-subtitle">
+            {{ service.short_description }}
+        </p>
+
+        <div class="service-description">
+            <p>{{ service.description }}</p>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

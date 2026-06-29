@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}MindConnect| Services{% endblock %}
+{% block title %}MindConnect | Services{% endblock %}
 
 {% block content %}
-    <section class="service-section">
+<section class="service-section">
   <div class="service-bg"></div>
   <div class="hero-content">
     <h1>About MindConnect</h1>
@@ -15,7 +15,7 @@
     <a href="" class="book-btn">Discover Programmes</a>
   </div>
 </section>
-  <!-- Services Section --
+  <!-- Services Section -->
 <section class="services-section">
     <section class="content-section">
       <h2>Our Services</h2>
@@ -23,18 +23,17 @@
          you where you are. Whether you’re seeking individual support, family guidance, or group therapy, our compassionate
         professionals are here to walk with you on your journey toward healing and growth.</p>
     </section>
-    <!--<div class="services-grid">
+    <div class="services-grid">
       {% for service in services %}
       <div class="service-card">
         <div class="card-image">
           <img src="{{ service.image }}" alt="{{ service.title }}">
         </div>
 
-        --<div class="card-content">
+        <div class="card-content">
           <h3>{{ service.title }}</h3>
-          <p>{{ service.description }}</p>
-
-          <a href="{% url 'therapy_hub:case_study' %}" class="card-link">
+          <p>{{ service.short_description }}</p>
+          <a href="{% url 'service_detail' service.slug %}" class="card-link">
             Learn more <i class="fas fa-arrow-right"></i>
           </a>
         </div>
@@ -43,7 +42,7 @@
     </div>
     
 
-<!-- Pagination --
+<!-- Pagination -->
   <div class="pagination">
     <button class="prev">Prev</button>
     <span class="page-info"></span>
@@ -54,78 +53,9 @@
   <section class="content-section">
      <h2>🌱 Benefits of Counselling</h2>
     <p class="lead">What clients gain from a supportive counselling journey.</p>
-  </section>-->
- 
-<!-- Services Section -->
-  <section class="services-section">
-    <section class="content-section">
-      <h2>Our Services</h2>
-      <p>At MindConnect, we provide a wide range of counselling, therapy, and wellness services designed to meet
-         you where you are. Whether you’re seeking individual support, family guidance, or group therapy, our compassionate
-        professionals are here to walk with you on your journey toward healing and growth.</p>
-    </section>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="card-image">
-          <img src="https://images.unsplash.com/photo-1739285452629-2672b13fa42d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="{{ service.title }}">
-        </div>
-        <div class="card-content">
-          <h3>Individual Therapy</h3>
-          <p>
-            Private one-on-one sessions in a safe, supportive space. 
-            Build resilience and discover healthy coping strategies tailored to your 
-            unique needs and circumstances.
-          </p>
-
-          <a href="" class="card-link">
-            Learn more <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="card-image">
-          <img src="https://images.unsplash.com/photo-1739285452629-2672b13fa42d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="{{ service.title }}">
-        </div>
-        <div class="card-content">
-          <h3>Individual Therapy</h3>
-          <p>
-            Private one-on-one sessions in a safe, supportive space. 
-            Build resilience and discover healthy coping strategies tailored to your 
-            unique needs and circumstances.
-          </p>
-
-          <a href="" class="card-link">
-            Learn more <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="card-image">
-          <img src="https://images.unsplash.com/photo-1739285452629-2672b13fa42d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="{{ service.title }}">
-        </div>
-        <div class="card-content">
-          <h3>Individual Therapy</h3>
-          <p>
-            Private one-on-one sessions in a safe, supportive space. 
-            Build resilience and discover healthy coping strategies tailored to your 
-            unique needs and circumstances.
-          </p>
-
-          <a href="" class="card-link">
-            Learn more <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="pagination">
-      <button class="prev">Prev</button>
-      <span class="page-info"></span>
-      <button class="next">Next</button>
-    </div>
   </section>
+ 
+
 
   <div class="benefits-section">
     <div class="benefits-grid">

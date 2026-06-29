@@ -9,32 +9,52 @@
   transition: var(--transition);
   font-weight: 500;
 }
+.pri-btn{
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+    font-weight: 500;
+    margin-top: 1.5rem;
 
+}
+.sec-btn{
+    background: var(--white);
+    color: var(--primary-color);
+    padding: 12px 25px;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+    font-weight: 500;
+    margin: 1.5rem;
+    border: 1px solid var(--primary-color);
+}
 .book-btn:hover,
 .cta-button:hover,
-.price-btn:hover {
+.price-btn:hover,
+.pri-btn:hover,
+.sec-btn:hover {
   background: var(--secondary-color);
 }
 /* ==============================
    NAVBAR
    ============================== */
 .top-navbar {
-    background: white;
-    color: #4D7838;
+    background: var(--white);
+    color: var(--primary-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 8px 5%;
-    font-size: 14px;
-
+    font-size: 18px;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: var(--shadow-sm);
     transition: transform 0.3s ease;
 }
+
 
 .top-navbar.hide {
     transform: translateY(-100%);
@@ -54,19 +74,16 @@
 }
 
 .bottom-navbar {
-    background: white;
+    background: var(--white);
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 20px 5%;
-    margin-top: 40px;
-
+    padding: 30px 5%;
+    margin-top: 38px;
     position: sticky;
-    top: 38px; /* sits under top navbar */
+    top: 0; 
     z-index: 999;
-
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    box-shadow: var(--shadow-sm);
 }
 
 .nav-logo {
@@ -77,9 +94,10 @@
 }
 
 .nav-logo img {
-    height: 90px;
+    height: 140px;
     object-fit: contain;
 }
+
 
 .nav-left,
 .nav-right {
@@ -92,7 +110,6 @@
     justify-content: flex-end;
     gap: 10px;
 }
-
 .nav-right {
     justify-content: flex-start;
     gap: 10px;
@@ -122,12 +139,12 @@
     bottom: -5px;
     width: 0%;
     height: 2px;
-    background: #4D7838;
+    background: var(--primary-color);
     transition: 0.3s;
 }
 
 .nav-links a:hover {
-    color: #4D7838;
+    color: var(--primary-color);
 }
 .nav-links {
     display: flex;
@@ -138,7 +155,7 @@
 }
 .nav-links a {
     text-decoration: none;
-    color: #5C635A;
+    color: var(--text-color);
     font-weight: 400;
     transition: color 0.3s;
     position: relative;
@@ -152,21 +169,18 @@
 }
 
 .book-button {
-    background: #4D7838;
-    color: white;
-
+    background: var(--primary-color);
+    color: var(--white);
     padding: 10px 18px;
     border-radius: 6px;
-
     font-weight: 600;
     text-align: center;
-
     transition: 0.3s;
     margin-left: 15px;
 }
 
 .book-button:hover {
-    background: #3c622e;
+    background: var(--secondary-color);
     transform: translateY(-2px);
 }
 
@@ -180,7 +194,7 @@
 .menu-toggle span {
     width: 25px;
     height: 3px;
-    background: #5C635A;
+    background: var(--text-color);
     transition: 0.3s;
 }
 
@@ -188,10 +202,10 @@
    FOOTER
    ============================== */
 footer {
-    background-color: white;
+    background-color: var(--white);
     padding: 60px 5% 30px;
     margin-top: auto;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+    box-shadow: var(--shadow-sm);
 }
 .footer-content {
     display: flex;
@@ -211,14 +225,14 @@ footer {
     margin-bottom: 20px;
 }
 .footer-description {
-    color: #666;
+    color: var(--text-color);
     line-height: 1.6;
     margin-bottom: 20px;
     max-width: 300px;
 }
 .footer-heading {
-    color: #4D7838;
-    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-size: var(--font-size-lg);
     margin-bottom: 20px;
     position: relative;
     padding-bottom: 10px;
@@ -230,7 +244,7 @@ footer {
     bottom: 0;
     width: 40px;
     height: 2px;
-    background-color: #4D7838;
+    background-color: var(--primary-color);
 }
 .footer-links {
     list-style: none;
@@ -239,13 +253,13 @@ footer {
     margin-bottom: 12px;
 }
 .footer-links a {
-    color: #666;
+    color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s;
     display: inline-block;
 }
 .footer-links a:hover {
-    color: #4D7838;
+    color: var(--primary-color);
     transform: translateX(5px);
 }
 .footer-links i {
@@ -266,11 +280,11 @@ footer {
 }     
 .newsletter-input:focus {
     outline: none;
-    border-color: #4D7838;
+    border-color: var(--primary-color);
 }      
 .newsletter-btn {
-    background-color: #4D7838;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--white);
     border: none;
     padding: 12px 20px;
     border-radius: 4px;
@@ -280,7 +294,7 @@ footer {
     transition: background-color 0.3s;
 }
 .newsletter-btn:hover {
-    background-color: #3a5d29;
+    background-color: var(--secondary-color);
 }        
 .social-links {
     display: flex;
@@ -292,16 +306,16 @@ footer {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: #4D7838;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--white);
     border-radius: 50%;
     margin-right: 12px;
     transition: all 0.3s;
     text-decoration: none;
 }        
 .social-links a:hover {
-    background-color: #666;
-    color: white;
+    background-color: var(--text-color);
+    color: var(--white);
     transform: translateY(-3px);
 }       
 .copyright {
@@ -309,6 +323,6 @@ footer {
     padding-top: 30px;
     margin-top: 30px;
     border-top: 1px solid #eee;
-    color: #666;
+    color: var(--text-color);
     font-size: 0.9rem;
 }

@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Services
+from .models import Services, CaseStudy
 
 # Create your views here.
 def home(request):
@@ -13,10 +13,7 @@ def about(request):
 
 def services(request):
     services = Services.objects.filter(is_active=True)
-
-    context = {
-        "services": services
-    }
+    context = {"services": services}
     return render(request, "core/services.html", context)
 
 def service_detail(request, slug):
@@ -24,4 +21,13 @@ def service_detail(request, slug):
     return render(request, "core/service_detail.html", {"service": service})
 
 def case_study(request):
-    return render(request, 'core/case_study.html')
+    case_studies = CaseStudy.objects.filter(is_active=True, status="published").order_by("-created_at")
+    context = {"case_studies": case_studies}
+    return render(request, "core/case_study.html", context)
+
+def case_study_detail(request, slug):
+    study = get_object_or_404(CaseStudy, slug=slug, is_active=True)
+    context = {
+        "study": study
+    }
+    return render(request, "core/case_study_detail.html", context)

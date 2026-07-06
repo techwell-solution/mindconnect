@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ study.title }} | MindConnect{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+        <a href="{% url 'home' %}">Home</a>
+        <span>/</span>
+
+        <a href="{% url 'case_study' %}">Services</a>
+        <span>/</span>
+
+        <span class="current">{{ study.title }}</span>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<section class="case-study-detail">
+    <div class="hero-content">
+
+        <i class="{{ case_study.icon }}"></i>
+
+        <h1>{{study.title }}</h1>
+
+        <p>{{ study.short_description }}</p>
+    </div>
+
+
+
+        <div class="case-image">
+            <img src="{{ study.image }}" alt="{{ case_study.title }}">
+        </div>
+
+        <div class="case-description">
+
+            <h2>Overview</h2>
+
+            <p>{{ study.description }}</p>
+
+        </div>
+
+        <div class="case-grid">
+
+            <div class="card">
+
+                <h3>
+                    <i class="fas fa-user"></i>
+                    Client Profile
+                </h3>
+
+                <p>{{ study.client_profile }}</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>
+                    <i class="fas fa-exclamation-circle"></i>
+                    Challenge
+                </h3>
+
+                <p>{{ study.challenge }}</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>
+                    <i class="fas fa-lightbulb"></i>
+                    Counselling Approach
+                </h3>
+
+                <ul>
+
+                    {% for item in study.approach_list %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h3>
+                    <i class="fas fa-check-circle"></i>
+                    Outcome
+                </h3>
+
+                <p>{{ study.outcome }}</p>
+
+            </div>
+
+        </div>
+
+        <div class="cta-section">
+
+            <h2>Ready to Begin Your Journey?</h2>
+
+            <p>
+                Every story of healing starts with a single conversation.
+                If you're facing similar challenges, professional support can help.
+            </p>
+
+            <div class="buttons">
+
+                <a href="" class="btn-primary">
+                    Book a Session
+                </a>
+
+                <a href="{% url 'case_study' %}" class="btn-secondary">
+                    ← Back to Case Studies
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

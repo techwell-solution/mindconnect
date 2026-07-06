@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %} MindConnect|  Case Study {% endblock %}
+{% block title %} MindConnect |  Case Study {% endblock %}
 
 {% block content %}
 
@@ -27,44 +27,53 @@
           </p>
       </div>
       <div class="studies-container">
-          {% for study in studies %}
-          <div class="studies-card">
-            <div class="card-content">
+    {% for study in case_studies %}
+    <div class="studies-card">
+        <div class="card-content">
 
-              <div class="card-image"
-                style="background-image: url('{{ study.image_url }}');">
-              </div>
+            <a href="{% url 'case_study_detail' study.slug %}">
+                <div class="card-image"
+                     style="background-image: url('{{ study.image }}');">
+                </div>
+            </a>
 
-              <h3>{{ study.title }}</h3>
+            <h3>
+                <a href="{% url 'case_study_detail' study.slug %}">
+                    {{ study.title }}
+                </a>
+            </h3>
 
-              <p><strong>Client Profile:</strong> {{ study.client_profile }}</p>
+            <p>
+                <strong>Client Profile:</strong>
+                {{ study.client_profile }}
+            </p>
 
-              <div class="more-content">
+            <div class="more-content">
                 <h4>Challenge</h4>
                 <p>{{ study.challenge }}</p>
 
                 <h4>Approach</h4>
                 <ul>
-                  {% for item in study.approach_list %}
-                  <li>{{ item }}</li>
-                  {% endfor %}
+                    {% for item in study.approach_list %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
                 </ul>
 
-            <h4>Outcome</h4>
-            <p>{{ study.outcome }}</p>
-          </div>
+                <h4>Outcome</h4>
+                <p>{{ study.outcome }}</p>
+            </div>
 
-          <button class="see-more-btn">See More</button>
-          <a href="" class="cta-button">
-            Start Your Journey
+            <a href="{% url 'case_study_detail' study.slug %}" class="card-link">
+            Learn more <i class="fas fa-arrow-right"></i>
           </a>
+          
 
         </div>
-      </div>
-      {% empty %}
+    </div>
+    {% empty %}
         <p>No case studies available at the moment.</p>
-      {% endfor %}
-        </div>
+    {% endfor %}
+</div>
     
       <!-- Pagination controls -->
       <div class="pagination">

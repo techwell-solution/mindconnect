@@ -1,3 +1,61 @@
+/* ==========================
+   BUTTON CONTAINER
+========================== */
+
+.button-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Shared Button Styles */
+
+.button-container a{
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+/* ==========================
+   BACK BUTTON
+========================== */
+
+.details-link{
+    background: var(--white);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.details-link:hover{
+    background: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Button Click Effect */
+
+.button-container a:active{
+    transform: scale(.97);
+}
+
+/* Icon */
+
+.button-container i{
+    font-size: .95rem;
+}
+
 .book-btn,
 .cta-button,
 .price-btn {

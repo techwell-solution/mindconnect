@@ -46,7 +46,7 @@
                     <li><a href="/" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a></li>
                     <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a></li>
                     <li><a href="{% url 'services' %}" class="{% if request.resolver_match.url_name == 'services' %}active{% endif %}">Services</a></li>
-                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="{% url 'case_study' %}" class="{% if request.resolver_match.url_name == 'case_study' %}active{% endif %}">Case Studies</a></li>
                     
                 </ul>
             </div>

@@ -1,0 +1,214 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} MindConnect|  Case Study {% endblock %}
+
+{% block content %}
+
+ <section class="case-section">
+    <div class="case-bg"></div>
+    <div class="hero-content">
+      <h1>Real Stories of Healing and Growth</h1>
+      <p>Every journey is unique. These case studies share how counselling has helped 
+        individuals, couples, and families find clarity, balance, and hope.
+    </p>
+      <a href="services" class="book-btn">Discover Programmes</a>
+    </div>
+  </section>
+
+  <section class="studies-section">
+      <div class="content-section">
+          <h2>Case Studies</h2>
+          <p>
+              Every person’s journey is unique, and counselling looks different for everyone. 
+              The case studies shared here are designed to give you a glimpse of how therapy 
+              can bring healing and growth. To protect privacy, names and details have been 
+              changed, but the experiences and outcomes reflect real transformations clients 
+              have achieved through counselling.
+          </p>
+      </div>
+      <div class="studies-container">
+          {% for study in studies %}
+          <div class="studies-card">
+            <div class="card-content">
+
+              <div class="card-image"
+                style="background-image: url('{{ study.image_url }}');">
+              </div>
+
+              <h3>{{ study.title }}</h3>
+
+              <p><strong>Client Profile:</strong> {{ study.client_profile }}</p>
+
+              <div class="more-content">
+                <h4>Challenge</h4>
+                <p>{{ study.challenge }}</p>
+
+                <h4>Approach</h4>
+                <ul>
+                  {% for item in study.approach_list %}
+                  <li>{{ item }}</li>
+                  {% endfor %}
+                </ul>
+
+            <h4>Outcome</h4>
+            <p>{{ study.outcome }}</p>
+          </div>
+
+          <button class="see-more-btn">See More</button>
+          <a href="" class="cta-button">
+            Start Your Journey
+          </a>
+
+        </div>
+      </div>
+      {% empty %}
+        <p>No case studies available at the moment.</p>
+      {% endfor %}
+        </div>
+    
+      <!-- Pagination controls -->
+      <div class="pagination">
+        <button class="prev">Prev</button>
+        <span class="page-info"></span>
+        <button class="next">Next</button>
+      </div>
+  
+    </div>
+    <section class="case-studies">
+    <div class="content-section">
+      <h2 >Challenge vs Solution</h2>
+    </div>
+    
+    <div class="case-card">
+      <h3><strong>Anxiety Management</strong></h3>
+      <div class="case-content">
+        <div class="challenge">
+          <h4>Challenge</h4>
+          <p>A young professional struggled with severe anxiety that affected work performance, sleep patterns, and social interactions.</p>
+        </div>
+        <div class="solution">
+          <h4>Solution</h4>
+          <p>Through weekly Cognitive Behavioral Therapy (CBT) sessions and mindfulness training, the client learned practical coping strategies. Within 3 months, anxiety levels reduced significantly, and confidence in managing stress returned.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card">
+      <h3><strong>Couple Therapy</strong></h3>
+      <div class="case-content">
+        <div class="challenge">
+          <h4>Challenge</h4>
+          <p>A couple faced frequent misunderstandings and communication breakdowns, leading to emotional distance and conflict in their relationship.</p>
+        </div>
+        <div class="solution">
+          <h4>Solution</h4>
+          <p>With structured couple therapy sessions, they practiced active listening, empathy-building exercises, and conflict-resolution techniques. As a result, they rebuilt trust and restored harmony in their relationship.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="impact-section">
+    <h2>Our Impact in Numbers</h2>
+    <div class="impact-stats">
+      <div class="stat-card">
+        <h3>85%</h3>
+        <p>of clients reported reduced anxiety and stress after 8 weeks</p>
+      </div>
+      <div class="stat-card">
+        <h3>70%</h3>
+        <p>experienced improved relationships through couples counselling</p>
+      </div>
+      <div class="stat-card">
+        <h3>90%</h3>
+        <p>of teens showed higher self-esteem after therapy sessions</p>
+      </div>
+      <div class="stat-card">
+        <h3>95%</h3>
+        <p>would recommend our counselling services to a friend</p>
+      </div>
+    </div>
+  </section>                                                                          
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+  <div class="faq-container">
+    <details>
+      <summary>What is counselling?</summary>
+      <p>
+        Counselling is a confidential, supportive process where a trained therapist
+        helps you explore your thoughts, feelings, and behaviors to better
+        understand yourself and work through challenges.
+      </p>
+    </details>
+
+    <details>
+      <summary>Who is counselling for?</summary>
+      <p>
+        Counselling is for anyone seeking support — whether you’re facing stress,
+        anxiety, relationship issues, trauma, or simply want personal growth and
+        clarity.
+      </p>
+    </details>
+
+    <details>
+      <summary>How do I know if I need counselling?</summary>
+      <p>
+        If you’re feeling overwhelmed, stuck, or emotionally drained — or just want
+        a safe space to talk — counselling can help. It’s okay to seek support even
+        if you’re unsure what’s “wrong.”
+      </p>
+    </details>
+
+    <details>
+      <summary>What issues can you help with?</summary>
+      <p>
+        We support clients dealing with anxiety, depression, self-esteem issues,
+        trauma, grief, relationship and family problems, life transitions, and
+        more.
+      </p>
+    </details>
+
+    <details>
+      <summary>Is counselling confidential?</summary>
+      <p>
+        Yes. Everything you share is kept confidential unless there’s a risk of
+        harm to you or others.
+      </p>
+    </details>
+
+    <details>
+      <summary>Do you offer online sessions?</summary>
+      <p>
+        Yes, we offer both in-person and secure online counselling sessions for
+        your convenience.
+      </p>
+    </details>
+
+    <details>
+      <summary>How do I book a session?</summary>
+      <p>
+        You can book via our website, phone, or contact form. We'll guide you
+        through the next steps.
+      </p>
+    </details>
+
+    <details>
+      <summary>What are your fees and payment options?</summary>
+      <p>
+        Session fees and payment options vary. We accept M-Pesa, PayPal, and bank
+        transfer. Sliding scale fees available on request.
+      </p>
+    </details>
+    </div>
+
+  </section>
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Ready to Begin Your Journey?</h2>
+      <p>Our counsellors are here to support you with compassion and proven approaches. Whether you're facing anxiety, grief, or relationship challenges — you don’t have to go through it alone.</p>
+      <a href="" class="cta-btn">Book a Session</a>
+      <a href="{% url 'services' %}" class="sec-btn">Explore Services</a>
+    </div>
+  </section>
+</section
+
+{% endblock %}

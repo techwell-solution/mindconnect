@@ -1,10 +1,11 @@
 .service-section{
-  height: 60vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white;
+  color: var(--white);
+  position: relative;
 }
 
 .service-bg {
@@ -35,10 +36,10 @@
 .benefits h2{
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  color: #4D7838;
+  color: var(--primary-color);
 }
 .benefits p.lead{
-  color:  #666;
+  color:  var(--text-color);
   font-size: 1rem;
   margin-bottom: 2rem;
 }
@@ -50,10 +51,10 @@
   justify-items: center;
 }
 .benefits-card{
-  background:white;
+  background: var(--white);
   border-radius: 10px;
   padding:1.5rem 1rem;
-  box-shadow:0 8px 20px rgba(0, 0, 0, 0.07);;
+  box-shadow: var(--box-shadow);
   transition:transform .2s ease, box-shadow .2s ease;
   border: 1px solid rgba(77, 120, 56, 0.1);
   text-align: center;
@@ -75,7 +76,7 @@
   height:60px;
   margin:0 auto 1rem;
   border-radius:50%;
-  background: #4D7838;
+  background: var(--primary-color);
   display:grid;
   place-items:center;
 }
@@ -85,17 +86,15 @@
   stroke:var(--accent)
 }
 .icon-wrap i{
-  color: #fff;
+  color: var(--white);
 }
 .benefits-card h3{
   margin:0.3rem 0;
   font-size:1.1rem;
-  color:#666
 }
 .benefits-card p{
   margin:0;
-  color: #666;
-  font-size:0.9rem
+  color: var(--text-color);
 }
 
 /* small tweaks for focus accessibility */
@@ -146,13 +145,13 @@
 
 .service-detail {
     padding: 5rem 0;
-    background: #f8f9fa;
+    background: var(--light-color);
 }
 
 .service-detail .container {
     max-width: 900px;
     margin: 0 auto;
-    background: #fff;
+    background: var(--white);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -195,7 +194,7 @@
 }
 
 .service-description p {
-    color: #444;
+    color: var(--text-color);
     line-height: 1.9;
     font-size: 1.05rem;
 }

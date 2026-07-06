@@ -29,8 +29,14 @@
         <div class="service-description">
             <p>{{ service.description }}</p>
         </div>
+        <div class="button-container">
+            <a href="{% url 'services' %}" class="details-link"><i class="fas fa-arrow-left"></i> Back</a>
+            <a href="" class="pri-btn">Book Now</a>
+        </div>
+        <br>
 
     </div>
+    
 </section>
 
 {% endblock %}

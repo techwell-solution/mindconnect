@@ -9,6 +9,7 @@ section {
   padding: var(--section-padding) 0;
   margin-top: var(--section-margin-top);
   background: var(--background-color);
+  align-items: center;
 }
 
 .content-section {

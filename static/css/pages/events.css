@@ -92,22 +92,6 @@
 }
 
 /* Buttons */
-.event-btn {
-  display: inline-block;
-  padding: 10px 18px;
-  background: #4D7838;
-  color: white;
-  border-radius: 6px;
-  margin-top: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-  animation-delay: 1s;
-}
-
-.event-btn:hover {
-  background: #3A5C2A;
-}
 
 /* Past Events */
 .past-events-section {
@@ -122,3 +106,106 @@
   margin: 8px 0;
   font-size: 1rem;
 }
+
+/* ==========================
+   Event Detail Page
+========================== */
+
+.event-detail {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto 80px;
+}
+
+/* Banner Image */
+
+.event-banner {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+    margin-bottom: 40px;
+    box-shadow: 0 12px 30px rgba(0,0,0,.12);
+}
+
+/* Content Card */
+
+.event-info {
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}
+
+.event-info h1 {
+    font-size: 2rem;
+    color: #0f172a;
+    margin-bottom: 20px;
+}
+
+/* Meta Information */
+
+.event-meta {
+    color: #666;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+.event-info hr {
+    margin: 30px 0;
+    border: none;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* Description */
+
+.event-info p {
+    color: #444;
+    line-height: 1.9;
+    font-size: 1rem;
+}
+
+/* Buttons */
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.details-link,
+.event-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s ease;
+}
+
+/* Back Button */
+
+.details-link {
+    background: #f3f4f6;
+    color: #333;
+}
+
+.details-link:hover {
+    background: #e5e7eb;
+}
+
+/* Register Button */
+
+.event-btn {
+    background: #1d4ed8;
+    color: #fff;
+}
+
+.event-btn:hover {
+    background: #1e40af;
+}
+

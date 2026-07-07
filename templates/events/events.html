@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %} MindConnect|  Events{% endblock %}
+{% block title %} MindConnect |  Events{% endblock %}
 {% block content %}
 <section class="events-hero">
     <div class="hero1-bg"></div>
@@ -16,46 +16,29 @@
 </section>
 <section class="events-section">
     <h2 class="section-title">Upcoming Events</h2>
+
     <div class="events-container">
-
+        {% for event in events %}
         <div class="event-card">
-            <img src="https://plus.unsplash.com/premium_photo-1714229505550-3518d761d549?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8TWluZGZ1bG5lc3MlMjAlMjYlMjBTdHJlc3MlMjBSZWxpZWYlMjBXb3Jrc2hvcCUyMGFmcmljYW58ZW58MHx8MHx8fDA%3D" alt="Mindfulness Workshop">
-            <div class="event-content">
-                <h3>Mindfulness & Stress Relief Workshop</h3>
-                <p class="event-date">📅 December 12, 2025 • ⏰ 10:00 AM – 1:00 PM</p>
-                <p>
-                    Join our guided mindfulness session designed to help you reduce stress, improve focus, and enhance emotional balance.
-                </p>
-                <a href="" class="event-btn">Register Now</a>
-            </div>
-        </div>
 
-        <div class="event-card">
-            <img src="https://images.unsplash.com/photo-1675274838343-47d84bd8bb18?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8SGVhbHRoeSUyMFJlbGF0aW9uc2hpcHMlMjBUYWxrJTIwYWZyaWNhbiUyMHBob3RvfGVufDB8fDB8fHww" alt="Couples Therapy Talk">
+            <img src="{{ event.image }}" alt="{{ event.title }}">
+
             <div class="event-content">
-                <h3>Healthy Relationships Talk</h3>
-                <p class="event-date">📅 January 20, 2026 • ⏰ 2:00 PM – 4:00 PM</p>
+                <h3>{{ event.title }}</h3>
+
                 <p>
-                    A powerful discussion on communication, trust, and building strong relationships for couples and families.
+                    {{ event.short_description }}
                 </p>
                 <br>
-                <a href="" class="event-btn">Reserve a Seat</a>
+                <a href="{% url 'event_detail' event.slug %}" class="card-link">
+                    Learn more <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
-        </div>
 
-        <div class="event-card">
-            <img src="https://plus.unsplash.com/premium_photo-1682097955817-d347eef0f0f3?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8VGVlbiUyME1lbnRhbCUyMFdlbGxuZXNzJTIwUHJvZ3JhbSUyMGFmcmljYW4lMjBwaG90b3xlbnwwfHwwfHx8MA%3D%3D" alt="Teen Wellness Program">
-            <div class="event-content">
-                <h3>Teen Mental Wellness Program</h3>
-                <p class="event-date">📅 February 10, 2026 • ⏰ 9:00 AM – 12:00 PM</p>
-                <p>
-                    A supportive program helping teens manage stress, build confidence, and understand emotional health.
-                </p>
-                <br>
-                <a href="" class="event-btn">Join Program</a>
-            </div>
         </div>
-
+        {% empty %}
+        <p>No upcoming events available.</p>
+        {% endfor %}
     </div>
 </section>
 

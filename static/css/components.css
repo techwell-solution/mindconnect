@@ -90,9 +90,12 @@
 .book-btn:hover,
 .cta-button:hover,
 .price-btn:hover,
-.pri-btn:hover,
-.sec-btn:hover {
+.pri-btn:hover {
   background: var(--secondary-color);
+}
+.sec-btn:hover{
+    background: var(--secondary-color);
+    color: var(--white);
 }
 /* ==============================
    NAVBAR

@@ -57,7 +57,7 @@
 
             <div class="nav-right">
                 <ul class="nav-links">
-                    <li><a href="#">Events</a></li>
+                    <li><a href="{% url 'events' %}" class="{% if request.resolver_match.url_name == 'events' %}active{% endif %}">Events</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
                 <a href="" class="book-button">Book Now</a>

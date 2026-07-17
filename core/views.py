@@ -1,12 +1,16 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Services, CaseStudy
+from .models import Services, CaseStudy, ProcessStep
 
 # Create your views here.
 def home(request):
-
+    steps = ProcessStep.objects.filter(is_active=True)
     services = Services.objects.filter(is_active=True)
+    context = {
+        "steps": steps,
+        "services": services,
+        }
 
-    return render(request, "core/home.html",{"services": services})
+    return render(request, "core/home.html", context)
 
 def about(request):
     return render(request, 'core/about.html')

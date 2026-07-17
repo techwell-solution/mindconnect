@@ -1,9 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %} MindConnect |  Home{% endblock %}
-{% block meta_description %}
-  Professional counselling and therapy services in Kenya. Individual, couples, family, and corporate wellness support.
-{% endblock %}
+
 {% block content %}
   <section class="hero">
     <div class="hero-bg"></div>
@@ -69,7 +67,7 @@
           <p><strong>5 +</strong></p>
           <p>Years of Experience</p>
         </div>
-        </div>
+      </div>
   </section>
     <!-- How It Works Section -->
   <section class="how-it-works">
@@ -77,59 +75,27 @@
             <h2>How it Works</h2>
             <p>Booking a session with MindConnect is quick and straightforward. We’ve designed the process to make sure you feel supported at every step — from your first click to your first conversation with a therapist.</p>
       </section>
-     
-        
       <div class="process-steps">
-            <!-- Step 1 -->
-          <div class="step-card">
-                <div class="step-number">1</div>
-                <h3>Choose a Service</h3>
-                <p>Select the type of therapy or counselling that suits your needs.</p>
-          </div>
+           {% for step in steps %}
+
+        <div class="step-card">
+            <div class="step-number">
+                {{ forloop.counter }}
+            </div>
+
+            <h3>{{ step.title }}</h3>
+
+            <p>{{ step.description }}</p>
+        </div>
+
+        {% if not forloop.last %}
+        <div class="step-connector">
+            <i class="fas fa-arrow-right"></i>
+        </div>
+        {% endif %}
+
+      {% endfor %}
             
-          <div class="step-connector">
-                <i class="fas fa-arrow-right"></i>
-          </div>
-            
-            <!-- Step 2 -->
-          <div class="step-card">
-                <div class="step-number">2</div>
-                <h3>Book a Session</h3>
-                <p>Pick a convenient time through our easy online booking system.</p>
-          </div>
-            
-          <div class="step-connector">
-                <i class="fas fa-arrow-right"></i>
-          </div>
-            
-            <!-- Step 3 -->
-          <div class="step-card">
-                <div class="step-number">3</div>
-                <h3>Confirm & Prepare</h3>
-                <p>Receive confirmation and session details via email or SMS.</p>
-          </div>
-            
-          <div class="step-connector">
-                <i class="fas fa-arrow-right"></i>
-          </div>
-            
-            <!-- Step 4 -->
-          <div class="step-card">
-                <div class="step-number">4</div>
-                <h3>Meet Your Therapist</h3>
-                <p>Connect in person or virtually in a safe, confidential space.</p>
-          </div>
-            
-          <div class="step-connector">
-                <i class="fas fa-arrow-right"></i>
-          </div>
-            
-            <!-- Step 5 -->
-          <div class="step-card">
-                <div class="step-number">5</div>
-                <h3>Begin Your Journey</h3>
-                <p>Start working toward healing, growth, and lasting wellness.</p>
-          </div>
         </div>
         
         <div class="cta-container">
@@ -144,14 +110,15 @@
 
     <div class="team-container">
 
-        <div class="team-card">
+        
 
-            <div class="card-image">
+            <div class="team-card">
                 <img src="{% static 'images/erastus.jpg' %}"
                      alt="Erastus Ivelia">
             </div>
 
-            <div class="card-content">
+            <div class="team-card">
+              <div class="card-content">
 
                 <h3>Erastus Ivelia</h3>
                 <h4>Professional Counsellor & Mental Wellness Practitioner</h4>

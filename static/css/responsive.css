@@ -1,70 +1,386 @@
-@media (max-width: 992px) {
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
+@media (max-width:992px){
 
-  .process-steps {
-    flex-direction: column;
-  }
+    .top-navbar{
+        display:none;
+    }
+
+    .menu-toggle{
+        display:flex;
+    }
+
+    .nav-menu{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        display:none;
+        flex-direction:column;
+        padding:30px;
+        box-shadow:0 10px 20px rgba(0,0,0,.08);
+    }
+
+    .nav-menu.active{
+        display:flex;
+    }
+
+    .nav-links{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .nav-buttons{
+        flex-direction:column;
+        margin-top:25px;
+    }
+
+    .book-button{
+        width:100%;
+        text-align:center;
+    }
+
+    .hero{
+        min-height:70vh;
+        padding:100px 30px;
+    }
+
+    .hero-content h1{
+        font-size:2.2rem;
+    }
+
+    .services-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .tag-container{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .testimonials-wrapper{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .process-steps{
+        flex-direction:column;
+    }
+     .process-steps .step-card{
+        width:100%;
+        max-width: 100%;
+    }
+    .how-it-works .cta-container .cta-button{
+        width:100%;
+    }
 }
 
-@media (max-width: 768px) {
-  .hero {
-    min-height: 70vh;
-  }
+@media (max-width:768px){
 
-  .hero-content h1 {
-    font-size: 1.8rem;
-  }
+    /* Navbar */
 
-  section {
-    padding: 50px 0;
-  }
+    .bottom-navbar{
+        position:relative;
+        justify-content:center;
+        padding:20px;
+        width:100%;
+    }
 
-   .team-card {
+    .nav-logo{
+        flex:1;
+        display:flex;
+        justify-content:center;
+    }
+
+    .nav-logo img{
+        height:90px;
+    }
+
+    .nav-left,
+    .nav-right{
+        display:none;
+    }
+
+    .menu-toggle{
+        display:flex;
+        flex-direction:column;
+        gap:5px;
+        position:absolute;
+        left:20px;
+        top:50%;
+        transform:translateY(-50%);
+        background:none;
+        border:none;
+        cursor:pointer;
+    }
+
+    .menu-toggle span{
+        width:28px;
+        height:3px;
+        background:var(--text-color);
+    }
+
+    .mobile-menu{
+        display:none;
+        padding:20px;
+        background:var(--white);
+        box-shadow:var(--shadow-md);
+    }
+
+    .mobile-menu.show{
+        display:block;
+    }
+
+    .mobile-menu ul{
+        list-style:none;
+        margin:0;
+        padding:0;
+    }
+
+    .mobile-menu li{
+        margin:18px 0;
+    }
+
+    .mobile-menu a{
+        text-decoration:none;
+        color:var(--text-color);
+    }
+
+    .mobile-menu .book-button{
+        width:100%;
+        margin-top:15px;
+    }
+
+    /* Hero */
+
+    .hero{
+        min-height:60vh;
+        padding:80px 20px;
+    }
+
+    .hero-content h1{
+        font-size:1.8rem;
+    }
+
+    .hero-content p{
+        font-size:.95rem;
+    }
+
+    .book-btn{
+        width:100%;
+        max-width:320px;
+        text-align:center;
+    }
+
+    /* Sections */
+
+    section{
+        padding:50px 0;
+    }
+
+    .content-section{
+        margin:60px auto;
+    }
+
+    .content-section h2{
+        font-size:1.7rem;
+    }
+
+    /* Services */
+
+    .services-section{
+        padding:60px 15px;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .service-card{
+        width:100%;
+    }
+
+    .card-image{
+        min-width:100%;
+    }
+
+    .card-image img{
+        width:100%;
+        height:220px;
+        object-fit:cover;
+        display:block;
+    }
+
+    .card-content{
+        padding:20px;
+    }
+
+    .card-content h3{
+        font-size:1.3rem;
+    }
+    .team-container {
+        grid-template-columns: 1fr; /* single column on mobile */
+    }
+    .team-card {
+       text-align: start;
+    }
+
+    .team-image img {
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .card-content {
+        text-align: start;
+    }
+
+    .counsellor-stats {
+        display: flex;
         flex-direction: column;
+        gap: 0.5rem;
+    }
+    .step-connector i{
+        display:none;
+    }
+    /* Statistics */
+
+    .tag-section{
+        padding:60px 20px;
     }
 
-    .card-image {
-        min-width: 100%;
+    .tag-container{
+        grid-template-columns:1fr;
+        gap:20px;
     }
 
-    .card-image img {
-        min-height: 300px;
+    .tag-card{
+        width:100%;
+        padding:30px 20px;
     }
 
-    .service-detail {
-        padding: 3rem 0;
+    .tag-card strong{
+        font-size:2rem;
     }
 
-    .service-detail img {
-        height: 250px;
+    /* Testimonials */
+
+    .testimonials-wrapper{
+        grid-template-columns:1fr;
     }
 
-    .service-detail h1 {
-        font-size: 2rem;
-        margin: 1.5rem;
+    .testimonials-card,
+    .team-card{
+        flex-direction:column;
+        text-align:center;
+        align-items:center;
     }
 
-    .service-subtitle {
-        margin: 0 1.5rem;
-        font-size: 1.1rem;
+    .testimonials-card img{
+        width:90px;
+        height:90px;
     }
 
-    .service-description {
-        padding: 1.5rem;
+    /* FAQ */
+    .faq-section{
+        width: 100%;
+        max-width: 100%;
+        margin: 0; 
     }
+
+    .faq-section h2{
+        font-size:1.5rem;
+        
+    }
+
+    .faq-container summary{
+        padding:18px;
+        font-size:.95rem;
+    }
+
+    .faq-container details p{
+        font-size:.95rem;
+    }
+
 }
 
-@media (max-width: 576px) {
-  .testimonials-card {
-    flex-direction: column;
-    text-align: center;
-  }
+@media (max-width:480px){
 
-  .book-btn,
-  .cta-button {
-    width: 100%;
-    text-align: center;
-  }
+    .hero-content h1{
+        font-size:1.3rem;
+    }
+
+    .hero-content p{
+        font-size:.8rem;
+        line-height:1.5;
+    }
+
+    .book-btn{
+        font-size:.85rem;
+    }
+
+    .content-section h2{
+        font-size:1.3rem;
+    }
+
+    .services-section{
+        padding:50px 15px;
+    }
+
+    .card-image img{
+        height:200px;
+    }
+
+    .card-content{
+        padding:18px;
+    }
+
+    .card-content h3{
+        font-size:1.1rem;
+    }
+
+    .pagination{
+        flex-direction:column;
+    }
+
+    .pagination button{
+        width:100%;
+        max-width:220px;
+    }
+    .team-section {
+        padding: 1rem;
+    }
+
+    .card-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .card-content h4 {
+        font-size: 1rem;
+    }
+
+    .card-content p {
+        font-size: 0.9rem;
+    }
+
+    .book-btn {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .tag-container{
+        max-width:300px;
+    }
+
+    .tag-card{
+        padding:18px 12px;
+    }
+
+    .tag-card strong{
+        font-size:1.5rem;
+    }
+
+    .faq-section,
+    .testimonials-section{
+        padding:60px 15px;
+    }
+
 }

@@ -1,0 +1,109 @@
+{% extends "base.html" %}   
+{% load static %}
+
+{% block title %}MindConnect | Counsellor Registration{% endblock %}
+
+{% block content %}
+    <section class="register-section py-5">
+        <div class="container">
+
+            <div class="register-card">
+
+                <div class="text-center mb-5">
+                    <h2>Become a MindConnect Counsellor</h2>
+                    <p>
+                        Join our network of trusted mental health professionals and
+                        help transform lives.
+                    </p>
+                </div>
+
+                <form method="POST" enctype="multipart/form-data">
+
+                    {% csrf_token %}
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-4">
+                            <label>First Name</label>
+                            {{ form.first_name }}
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <label>Last Name</label>
+                            {{ form.last_name }}
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <label>Email Address</label>
+                            {{ form.email }}
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <label>Phone Number</label>
+                            {{ form.phone_number }}
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <label>Professional Title</label>
+                            {{ form.professional_title }}
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <label>Specialization</label>
+                            {{ form.specialization }}
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <label>Years of Experience</label>
+                            {{ form.years_of_experience }}
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <label>License Number</label>
+                            {{ form.license_number }}
+                        </div>
+
+                        <div class="col-12 mb-4">
+                            <label>Qualifications</label>
+                            {{ form.qualifications }}
+                        </div>
+
+                        <div class="col-12 mb-4">
+                            <label>Professional Bio</label>
+                            {{ form.bio }}
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <label>Profile Photo</label>
+                            {{ form.profile_photo }}
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <label>License Document</label>
+                            {{ form.license_document }}
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <label>Password</label>
+                            {{ form.password1 }}
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <label>Confirm Password</label>
+                            {{ form.password2 }}
+                        </div>
+
+                    </div>
+
+                    <button class="btn-register">
+                        Register as Counsellor
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+{% endblock %}

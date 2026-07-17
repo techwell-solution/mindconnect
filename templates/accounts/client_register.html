@@ -1,0 +1,35 @@
+{% extends "base.html" %}   
+{% load static %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<section class="register-section">
+    <div class="container">
+
+        <div class="register-card">
+
+            <div class="register-header">
+                <h2>Create Your Client Account</h2>
+                <p>
+                    Start your journey toward better mental wellbeing with
+                    MindConnect.
+                </p>
+            </div>
+
+            <form method="POST">
+                    {% csrf_token %}
+
+                    {{ form.as_p }}
+
+                    <button type="submit" class="btn-register">
+                        Create Client Account
+                    </button>
+            </form>
+
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

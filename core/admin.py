@@ -1,6 +1,7 @@
 from django.contrib import admin
-from . models import Services, CaseStudy
+from . models import Services, CaseStudy, ProcessStep
 # Register your models here.
+
 @admin.register(Services)
 class ServicesAdmin(admin.ModelAdmin):
     list_display = (
@@ -90,3 +91,9 @@ class CaseStudyAdmin(admin.ModelAdmin):
         )
     }),
     )
+
+@admin.register(ProcessStep)
+class ProcessStepAdmin(admin.ModelAdmin):
+    list_display = ("order", "title", "is_active")
+    list_editable = ("is_active",)
+    ordering = ("order",)

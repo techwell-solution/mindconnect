@@ -57,8 +57,7 @@
 }
 
 .book-btn,
-.cta-button,
-.price-btn {
+.cta-button {
   display: inline-block;
   background: var(--primary-color);
   color: var(--white);
@@ -66,6 +65,7 @@
   border-radius: var(--radius-sm);
   transition: var(--transition);
   font-weight: 500;
+  box-shadow: var(--shadow-sm);
 }
 .pri-btn{
     background: var(--primary-color);
@@ -89,13 +89,14 @@
 }
 .book-btn:hover,
 .cta-button:hover,
-.price-btn:hover,
 .pri-btn:hover {
   background: var(--secondary-color);
+  transform: translateY(-3px);
 }
 .sec-btn:hover{
     background: var(--secondary-color);
     color: var(--white);
+    transform: translateY(-3px);
 }
 /* ==============================
    NAVBAR
@@ -245,20 +246,20 @@
     transform: translateY(-2px);
 }
 
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 4px;
+.mobile-menu{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background: var(--white);
+    z-index:999;
+    box-shadow: var(--shadow-md);
 }
 
-.menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background: var(--text-color);
-    transition: 0.3s;
+.mobile-menu.show{
+    display:block;
 }
-
 /* ==============================
    FOOTER
    ============================== */

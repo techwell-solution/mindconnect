@@ -34,12 +34,6 @@
         <div class="bottom-navbar">
     <!-- Mobile Menu Toggle + Left Links -->
             <div class="nav-left">
-                <input type="checkbox" id="menu-toggle-input" style="display: none;">
-                <label for="menu-toggle-input" class="menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
 
                 <!-- Mobile/Hidden Links -->
                 <ul class="nav-links">
@@ -58,13 +52,50 @@
             <div class="nav-right">
                 <ul class="nav-links">
                     <li><a href="{% url 'events' %}" class="{% if request.resolver_match.url_name == 'events' %}active{% endif %}">Events</a></li>
-                    <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.ull_name == 'contact' %}active {% endif %}">Contact</a></li>
+                    <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active {% endif %}">Contact</a></li>
                 </ul>
                 <a href="" class="book-button">Book Now</a>
-                <a href="" class="book-button">Log in</a> 
+                {% if user.is_authenticated %}
+
+                    <form action="{% url 'logout' %}" method="post" style="display:inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="book-button">log Out</button>
+                    </form>
+
+                {% else %}
+
+                    <a href="{% url 'login' %}" class="book-button">Log In</a>
+
+                {% endif %}
             </div>
-        </div>
+
+            <button class="menu-toggle" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+
+<!-- Mobile Menu -->
+            <div class="mobile-menu">
+
+                <ul nav-links>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'services' %}">Services</a></li>
+                    <li><a href="{% url 'case_study' %}">Case Studies</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+
+                <a href="#" class="book-button">Book Now</a>
+                <a href="{% url 'register' %}" class="book-button">Log In</a>
+
+            </div>
             
+        </div>
+
+        
 
             <!-- Right Links + Book Button -->
             
@@ -132,6 +163,11 @@
                 <p>&copy; 2025  <b>Techwell Therapy</b>. Healing Minds, Empowering Futures. | All rights reserved.</p>
             </div>
         </footer>
+
+        <script src="{% static 'js/main.js' %}"></script>
+
+        {% block scripts %}
+        {% endblock %}
 
             
 </body>

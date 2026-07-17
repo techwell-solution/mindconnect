@@ -65,3 +65,14 @@ class CaseStudy(models.Model):
     def __str__(self):
         return self.title
 
+class ProcessStep(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+    order = models.PositiveIntegerField(default=1)
+    is_active = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ["order"]
+
+    def __str__(self):
+        return f"{self.order}. {self.title}"

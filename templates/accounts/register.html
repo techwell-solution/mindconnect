@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Register{% endblock %}
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="text-center mb-5">
+        <h2>Create Your MindConnect Account</h2>
+        <p>Select how you'd like to use MindConnect.</p>
+    </div>
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-5 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h3>Client</h3>
+
+                    <p>
+                        Book counselling sessions, communicate with counsellors,
+                        and manage your appointments.
+                    </p>
+
+                    <a href="{% url 'client_register' %}" class="btn btn-primary">
+                        Register as Client
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-5 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h3>Counsellor</h3>
+
+                    <p>
+                        Join MindConnect as a verified counsellor and provide
+                        professional counselling services.
+                    </p>
+
+                    <a href="{% url 'counsellor_register' %}" class="btn btn-success">
+                        Register as Counsellor
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
+

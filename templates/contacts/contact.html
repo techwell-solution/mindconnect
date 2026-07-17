@@ -10,13 +10,20 @@
     <div>
        
       <div class="form-container">
+         {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
         <form method="POST" class="contact-form">
             {% csrf_token %}
 
             <div class="form-group">
                 {{ form.full_name.label_tag }}
                 {{ form.full_name }}
-                {% if form.name.errors %}
+                {% if form.full_name.errors %}
                     <small class="error-text">{{ form.full_name.errors.0 }}</small>
                 {% endif %}
             </div>
@@ -31,7 +38,7 @@
             <div class="form-group">
                 {{ form.phone.label_tag }}
                 {{ form.phone }}
-                {% if form.subject.errors %}
+                {% if form.phone.errors %}
                     <small class="error-text">{{ form.phone.errors.0 }}</small>
                 {% endif %}
             </div>            
@@ -39,7 +46,7 @@
             <div class="form-group">
                 {{ form.subject.label_tag }}
                 {{ form.subject }}
-                {% if form.phone.errors %}
+                {% if form.subject.errors %}
                     <small class="error-text">{{ form.subject.errors.0 }}</small>
                 {% endif %}
             </div>

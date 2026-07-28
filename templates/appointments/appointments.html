@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block title %}My Appointments{% endblock %}
+
+{% block content %}
+
+<div class="appointments-container">
+
+    <div class="page-header">
+
+        <h1>My Appointments</h1>
+
+        <a href="" class="btn-primary">
+            Book Appointment
+        </a>
+
+    </div>
+
+    {% if upcoming_appointments %}
+
+        {% for item in upcoming_appointments %}
+
+        <div class="appointment-card">
+
+            <h3>{{ item.get_session_type_display }}</h3>
+
+            <p>
+                <strong>Date:</strong>
+                {{ item.appointment_date }}
+            </p>
+
+            <p>
+                <strong>Time:</strong>
+                {{ item.appointment_time }}
+            </p>
+
+            <p>
+                <strong>Mode:</strong>
+                {{ item.get_session_mode_display }}
+            </p>
+
+            <p>
+                <strong>Duration:</strong>
+                {{ item.duration_minutes }} minutes
+            </p>
+
+            <p>
+                <strong>Status:</strong>
+                {{ item.get_status_display }}
+            </p>
+
+            <p>
+                <strong>Counsellor:</strong>
+
+                {% if item.counselor %}
+
+                    {{ item.counselor.get_full_name }}
+
+                {% else %}
+
+                    To be assigned
+
+                {% endif %}
+
+            </p>
+
+            {% if item.session_mode == "online" and item.meeting_link %}
+
+                <a
+                    href="{{ item.meeting_link }}"
+                    class="btn-secondary"
+                    target="_blank">
+
+                    Join Session
+
+                </a>
+
+            {% endif %}
+
+        </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="empty-state">
+
+            <h2>No appointments yet</h2>
+
+            <p>
+                You haven't booked any therapy sessions.
+            </p>
+
+            <a href="" class="btn-primary">
+                Book Your First Appointment
+            </a>
+
+        </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

@@ -163,3 +163,30 @@ class LoginForm(AuthenticationForm):
         })
     )
 
+class UserUpdateForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = [
+            "first_name",
+            "last_name",
+            "email",
+            "phone_number",
+        ]
+
+
+class ClientProfileForm(forms.ModelForm):
+    class Meta:
+        model = ClientProfile
+        fields = [
+            "avatar",
+            "date_of_birth",
+            "gender",
+            "emergency_contact",
+            "emergency_phone",
+        ]
+
+        widgets = {
+            "date_of_birth": forms.DateInput(
+                attrs={"type": "date"}
+            )
+        }

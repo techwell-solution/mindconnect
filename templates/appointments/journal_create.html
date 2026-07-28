@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}New Journal Entry{% endblock %}
+
+{% block content %}
+
+<section class="journal-page">
+
+    <div class="journal-container">
+
+        <div class="journal-form-card">
+
+            <div class="journal-header">
+
+                <h2>
+                    <i class="fas fa-feather-alt"></i>
+                    New Journal Entry
+                </h2>
+
+                <p>
+                    Your journal is a safe place to record your thoughts,
+                    feelings, and personal reflections.
+                </p>
+
+            </div>
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+                <div class="journal-group">
+
+                    <label for="{{ form.title.id_for_label }}">
+                        Entry Title
+                    </label>
+
+                    {{ form.title }}
+
+                </div>
+
+                <div class="journal-group">
+
+                    <label for="{{ form.mood.id_for_label }}">
+                        How are you feeling today?
+                    </label>
+
+                    {{ form.mood }}
+
+                </div>
+
+                <div class="journal-group">
+
+                    <label for="{{ form.content.id_for_label }}">
+                        Journal Entry
+                    </label>
+
+                    {{ form.content }}
+
+                </div>
+
+                <div class="journal-actions">
+
+                    <button type="submit" class="journal-btn">
+                        <i class="fas fa-save"></i>
+                        Save Entry
+                    </button>
+
+                    <a href="{% url 'journal_list' %}" class="journal-btn-outline">
+                        Cancel
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <div class="journal-tip">
+
+            <i class="fas fa-lightbulb"></i>
+
+            <h3>Reflection Prompt</h3>
+
+            <p>
+                What is one thing that happened today that you're grateful for?
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

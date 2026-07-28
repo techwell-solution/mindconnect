@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}My Journal{% endblock %}
+
+{% block content %}
+
+<section class="dashboard-page">
+
+    <div class="page-header">
+
+        <div>
+            <h2>My Journal</h2>
+            <p>
+                Record your thoughts, emotions and personal reflections.
+            </p>
+        </div>
+
+        <a href="{% url 'journal_create' %}" class="pri-btn">
+            <i class="fas fa-plus"></i>
+            New Entry
+        </a>
+
+    </div>
+
+
+    {% if journals %}
+
+    <div class="journal-grid">
+
+        {% for journal in journals %}
+
+        <div class="journal-card">
+
+            <div class="journal-top">
+
+                <h3>{{ journal.title }}</h3>
+
+                <span class="mood">
+                    {{ journal.get_mood_display }}
+                </span>
+
+            </div>
+
+            <p class="journal-preview">
+
+                {{ journal.content|truncatewords:25 }}
+
+            </p>
+
+            <div class="journal-footer">
+
+                <small>
+
+                    <i class="far fa-calendar-alt"></i>
+
+                    {{ journal.created_at|date:"M d, Y" }}
+
+                </small>
+
+                <a href="{% url 'journal_detail' journal.pk %}">
+                    Read More
+                </a>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    {% else %}
+
+    <div class="empty-state">
+
+        <i class="fas fa-feather-alt fa-4x"></i>
+
+        <h3>No Journal Entries Yet</h3>
+
+        <p>
+            Start documenting your thoughts, emotions and milestones.
+        </p>
+
+        <a href="{% url 'journal_create' %}" class="pri-btn">
+            Create Your First Entry
+        </a>
+
+    </div>
+
+    {% endif %}
+
+</section>
+
+{% endblock %}

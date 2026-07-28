@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Stress Assessment{% endblock %}
+
+{% block content %}
+
+<section class="phq-container">
+
+        <div class="phq-header">
+
+            <h2>Stress Assessment</h2>
+
+            <p class="assessment-intro">
+                Over the <strong>last two weeks</strong>, how often have you been
+                bothered by the following problems?
+            </p>
+        </div>
+        <div class="instructions">
+            <strong>Scoring</strong>
+
+            <ul>
+                <li>Not at all (0)</li>
+                <li>Several days (1)</li>
+                <li>More than half the days (2)</li>
+                <li>Nearly every day (3)</li>
+            </ul>
+        </div>
+
+            <form method="POST">
+                {% csrf_token %}
+
+                {% for field in form %}
+
+                    <div class="question-card">
+
+                        <h5>{{ field.label }}</h5>
+
+                        <div class="options">
+                            {{ field }}
+                        </div>
+
+                        {% if field.errors %}
+                            <div class="text-danger">
+                                {{ field.errors }}
+                            </div>
+                        {% endif %}
+
+                    </div>
+
+                {% endfor %}
+
+                
+                    <button type="submit" class="submit-btn"">
+                        Submit Assessment
+                    </button>
+               
+
+            </form>
+</section>
+
+{% endblock %}

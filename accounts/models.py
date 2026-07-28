@@ -38,7 +38,16 @@ class ClientProfile(models.Model):
         related_name="client_profile"
     )
 
-    date_of_birth = models.DateField(blank=True, null=True)
+    avatar = models.ImageField(
+        upload_to="profile_photos/",
+        blank=True,
+        null=True
+    )
+
+    date_of_birth = models.DateField(
+        blank=True,
+        null=True
+    )
 
     GENDER_CHOICES = [
         ("Male", "Male"),

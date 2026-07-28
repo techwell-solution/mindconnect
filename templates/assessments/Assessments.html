@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+
+{% block title %}Self Assessments{% endblock %}
+
+{% block content %}
+<div class="assessments-container">
+
+    <div class="page-header">
+
+        <div>
+
+            <h1>Self Assessments</h1>
+
+            <p>
+                Take evidence-based mental health assessments to better understand
+                your emotional wellbeing. Your responses remain private and can help
+                guide discussions with your counsellor.
+            </p>
+
+        </div>
+    </div>
+
+</div>
+<!-- Wellness Reminder -->
+
+<div class="wellness-tip">
+
+    <i class="fas fa-heart"></i>
+
+    <div>
+
+        <h4>Before You Begin</h4>
+
+        <p>
+            These self-assessments are confidential screening tools designed to
+            help you better understand your mental wellbeing. They are not a
+            substitute for a professional diagnosis, but they can help you and
+            your counsellor identify areas that may need attention.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- Available Assessments -->
+
+<div class="section">
+
+    <h2>Available Assessments</h2>
+
+    <div class="assessment-grid">
+
+        <div class="assessment-card">
+
+            <div class="assessment-icon">
+                <i class="fas fa-brain"></i>
+            </div>
+
+            <h3>PHQ-9 Depression Screening</h3>
+
+            <p>
+                A short questionnaire used to identify symptoms of depression
+                and monitor emotional wellbeing.
+            </p>
+
+            <div class="assessment-meta">
+
+                <span>
+                    <i class="fas fa-clock"></i>
+                    5 Minutes
+                </span>
+
+                <span>
+                    <i class="fas fa-list-ol"></i>
+                    9 Questions
+                </span>
+
+            </div>
+
+            <a href="{% url 'phq9' %}" class="btn">
+                Start Assessment
+            </a>
+
+        </div>
+
+        <div class="assessment-card">
+
+            <div class="assessment-icon">
+                <i class="fas fa-face-smile"></i>
+            </div>
+
+            <h3>GAD-7 Anxiety Screening</h3>
+
+            <p>
+                Measures symptoms of anxiety and helps identify the severity of
+                anxious feelings.
+            </p>
+
+            <div class="assessment-meta">
+
+                <span>
+                    <i class="fas fa-clock"></i>
+                    3 Minutes
+                </span>
+
+                <span>
+                    <i class="fas fa-list-ol"></i>
+                    7 Questions
+                </span>
+
+            </div>
+
+            <a href="{% url 'gad7_assessment' %}" class="btn">
+                Start Assessment
+            </a>
+
+        </div>
+
+        <div class="assessment-card">
+
+            <div class="assessment-icon">
+                <i class="fas fa-leaf"></i>
+            </div>
+
+            <h3>Stress Assessment</h3>
+
+            <p>
+                Understand your current stress levels and discover whether your
+                daily routines may be affecting your wellbeing.
+            </p>
+
+            <div class="assessment-meta">
+
+                <span>
+                    <i class="fas fa-clock"></i>
+                    5 Minutes
+                </span>
+
+                <span>
+                    <i class="fas fa-list-ol"></i>
+                    10 Questions
+                </span>
+
+            </div>
+
+            <a href="{% url 'stress_assessment' %}" class="btn">
+                Start Assessment
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+{% endblock %}

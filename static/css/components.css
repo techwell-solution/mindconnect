@@ -74,9 +74,11 @@
     border-radius: var(--radius-sm);
     transition: var(--transition);
     font-weight: 500;
-    margin-top: 1.5rem;
-
+    text-decoration: none;
+    display: inline-block;
+    margin: 0;
 }
+
 .sec-btn{
     background: var(--white);
     color: var(--primary-color);
@@ -84,8 +86,10 @@
     border-radius: var(--radius-sm);
     transition: var(--transition);
     font-weight: 500;
-    margin: 1.5rem;
     border: 1px solid var(--primary-color);
+    text-decoration: none;
+    display: inline-block;
+    margin: 0;
 }
 .book-btn:hover,
 .cta-button:hover,

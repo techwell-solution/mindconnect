@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}GAD-7 Results{% endblock %}
+
+{% block content %}
+
+<section class="assessment-page">
+    <div class="container">
+
+        <div class="assessment-header">
+            <h2>Your GAD-7 Results</h2>
+            <p>Thank you for completing the anxiety screening.</p>
+        </div>
+
+        <div class="result-card">
+
+            <div class="score-circle">
+                <h1>{{ assessment.total_score }}</h1>
+                <span>/21</span>
+            </div>
+
+            <h3>{{ assessment.interpretation }}</h3>
+
+            <p>
+                Date Completed:
+                {{ assessment.created_at|date:"F d, Y" }}
+            </p>
+
+            <hr>
+
+            {% if assessment.total_score <= 4 %}
+
+                <div class="result-message success">
+                    <h4>Minimal Anxiety</h4>
+                    <p>
+                        Your responses suggest minimal symptoms of anxiety.
+                        Continue maintaining healthy habits such as regular
+                        exercise, sufficient sleep, social connection, and
+                        stress management.
+                    </p>
+                </div>
+
+            {% elif assessment.total_score <= 9 %}
+
+                <div class="result-message mild">
+                    <h4>Mild Anxiety</h4>
+                    <p>
+                        Your responses suggest mild anxiety symptoms.
+                        Consider monitoring how you're feeling and practicing
+                        relaxation techniques. If symptoms persist or worsen,
+                        speaking with a mental health professional may be
+                        helpful.
+                    </p>
+                </div>
+
+            {% elif assessment.total_score <= 14 %}
+
+                <div class="result-message moderate">
+                    <h4>Moderate Anxiety</h4>
+                    <p>
+                        Your responses suggest moderate anxiety symptoms.
+                        It may be beneficial to schedule an appointment with
+                        a licensed counselor or healthcare provider for a more
+                        comprehensive assessment.
+                    </p>
+                </div>
+
+            {% else %}
+
+                <div class="result-message severe">
+                    <h4>Severe Anxiety</h4>
+                    <p>
+                        Your responses indicate significant anxiety symptoms.
+                        We encourage you to seek support from a qualified
+                        mental health professional as soon as possible.
+                    </p>
+                </div>
+
+            {% endif %}
+
+            <div class="button-group">
+
+                <a href=""
+                   class="btn btn-outline-primary">
+                    Retake Assessment
+                </a>
+
+                <a href=""
+                   class="btn btn-primary">
+                    Back to Dashboard
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

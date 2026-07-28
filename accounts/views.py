@@ -1,15 +1,16 @@
 from django.shortcuts import redirect, render, redirect
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
-from .models import User
+from .models import User, ClientProfile
 from django.contrib.auth import logout
+from django.contrib.auth.decorators import login_required
 from .forms import (
     ClientRegistrationForm,
     CounsellorRegistrationForm,
-    LoginForm
+    LoginForm, 
+    UserUpdateForm, 
+    ClientProfileForm
 )
-
-
 # Create your views here.
 def register(request):
     return render(request, "accounts/register.html")
@@ -48,7 +49,7 @@ def login_view(request):
         if form.is_valid():
             login(request, form.get_user())
             messages.success(request, "Welcome back!")
-            return redirect("home")      # change if needed
+            return redirect("client_dashboard")      # change if needed
 
     return render(request, "accounts/login.html", {
         "form": form
@@ -61,3 +62,52 @@ def logout_view(request):
         "You have been logged out successfully."
     )
     return redirect("login")
+
+@login_required
+def update_profile(request):
+
+    profile, created = ClientProfile.objects.get_or_create(
+        user=request.user
+    )
+
+    if request.method == "POST":
+
+        user_form = UserUpdateForm(
+            request.POST,
+            instance=request.user
+        )
+
+        profile_form = ClientProfileForm(
+            request.POST,
+            request.FILES,
+            instance=profile
+        )
+
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+
+            messages.success(
+                request,
+                "Profile updated successfully."
+            )
+
+            return redirect("update_profile")
+
+    else:
+
+        user_form = UserUpdateForm(instance=request.user)
+
+        profile_form = ClientProfileForm(instance=profile)
+
+    context = {
+        "user_form": user_form,
+        "profile_form": profile_form,
+        "profile": profile,
+    }
+
+    return render(
+        request,
+        "accounts/update_profile.html",
+        context,
+    )

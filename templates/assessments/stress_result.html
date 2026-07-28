@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Stress Assessment Results{% endblock %}
+
+{% block content %}
+
+<section class="result-page">
+    <div class="container">
+
+        <div class="result-card">
+
+            <h2>Stress Assessment Results</h2>
+
+            <div class="score-section">
+                <h1>{{ assessment.total_score }}/30</h1>
+                <h3>{{ assessment.interpretation }}</h3>
+                <p>
+                    Completed on {{ assessment.created_at|date:"F d, Y" }}
+                </p>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress">
+                    <div class="progress-bar"
+                         role="progressbar"
+                         style="width: {% widthratio assessment.total_score 30 100 %}%;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Result Interpretation -->
+            <div class="result-content">
+
+                {% if assessment.total_score <= 7 %}
+
+                    <div class="alert alert-success">
+                        <h4>Minimal Stress</h4>
+
+                        <p>
+                            Your responses indicate a low level of stress.
+                            You appear to be managing daily pressures well.
+                            Continue practicing healthy habits to maintain
+                            your emotional well-being.
+                        </p>
+
+                        <h5>Recommendations</h5>
+
+                        <ul>
+                            <li>Maintain a healthy work-life balance.</li>
+                            <li>Exercise regularly.</li>
+                            <li>Get enough sleep each night.</li>
+                            <li>Continue practicing relaxation techniques.</li>
+                            <li>Stay socially connected.</li>
+                        </ul>
+
+                    </div>
+
+                {% elif assessment.total_score <= 14 %}
+
+                    <div class="alert alert-info">
+                        <h4>Mild Stress</h4>
+
+                        <p>
+                            Your responses suggest a mild level of stress.
+                            While this is common, paying attention to your
+                            stress now can help prevent it from becoming more
+                            significant.
+                        </p>
+
+                        <h5>Recommendations</h5>
+
+                        <ul>
+                            <li>Practice deep breathing exercises.</li>
+                            <li>Take regular breaks during work or study.</li>
+                            <li>Stay physically active.</li>
+                            <li>Talk with trusted friends or family.</li>
+                            <li>Develop healthy daily routines.</li>
+                        </ul>
+
+                    </div>
+
+                {% elif assessment.total_score <= 21 %}
+
+                    <div class="alert alert-warning">
+                        <h4>Moderate Stress</h4>
+
+                        <p>
+                            Your responses indicate a moderate level of stress
+                            that may be affecting your daily life. Taking
+                            proactive steps now can improve your well-being.
+                        </p>
+
+                        <h5>Recommendations</h5>
+
+                        <ul>
+                            <li>Schedule regular relaxation time.</li>
+                            <li>Reduce unnecessary commitments.</li>
+                            <li>Practice mindfulness or meditation.</li>
+                            <li>Seek support from trusted people.</li>
+                            <li>Consider speaking with a mental health professional if stress continues.</li>
+                        </ul>
+
+                    </div>
+
+                {% else %}
+
+                    <div class="alert alert-danger">
+                        <h4>High Stress</h4>
+
+                        <p>
+                            Your responses suggest a high level of stress.
+                            Ongoing stress can affect both your physical and
+                            emotional health. Seeking support can help you
+                            develop effective coping strategies.
+                        </p>
+
+                        <h5>Recommendations</h5>
+
+                        <ul>
+                            <li>Talk to a licensed mental health professional.</li>
+                            <li>Reach out to trusted family or friends.</li>
+                            <li>Prioritize rest and self-care.</li>
+                            <li>Practice daily relaxation techniques.</li>
+                            <li>If your stress feels overwhelming or interferes with daily functioning, seek professional support promptly.</li>
+                        </ul>
+
+                    </div>
+
+                {% endif %}
+
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="button-group">
+
+                <a href="{% url 'stress_assessment' %}"
+                   class="btn btn-outline-primary">
+                    Retake Assessment
+                </a>
+
+                <a href=""
+                   class="btn btn-primary">
+                    Back to Dashboard
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

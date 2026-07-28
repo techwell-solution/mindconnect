@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title %}Session History{% endblock %}
+
+{% block content %}
+
+<section class="session-history">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Session History</h2>
+            <p>
+                View your completed therapy sessions and track your progress over time.
+            </p>
+        </div>
+
+        {% if sessions %}
+
+        <div class="history-list">
+
+            {% for session in sessions %}
+
+            <div class="history-card">
+
+                <div class="history-header">
+
+                    <h3>
+                        {{ session.appointment_date }}
+                    </h3>
+
+                    <span class="badge">
+                        Completed
+                    </span>
+
+                </div>
+
+                <p>
+                    <strong>Counsellor:</strong>
+                    {{ session.counselor.get_full_name }}
+                </p>
+
+                <p>
+                    <strong>Time:</strong>
+                    {{ session.appointment_time }}
+                </p>
+
+                <p>
+                    <strong>Session Type:</strong>
+                    {{ session.get_session_type_display }}
+                </p>
+
+                <p>
+                    <strong>Mode:</strong>
+                    {{ session.get_session_mode_display }}
+                </p>
+
+                {% if session.notes %}
+                <div class="notes">
+                    <strong>Session Notes</strong>
+                    <p>{{ session.notes }}</p>
+                </div>
+                {% endif %}
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+        {% else %}
+
+        <div class="empty-state">
+
+            <i class="fas fa-calendar-times fa-4x"></i>
+
+            <h3>No completed sessions yet</h3>
+
+            <p>
+                Once you complete therapy sessions, they will appear here for future reference.
+            </p>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</section>
+
+{% endblock %}

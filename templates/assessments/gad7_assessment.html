@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}GAD-7 Anxiety Screening{% endblock %}
+
+{% block content %}
+
+<section class="phq-container">
+    <div class="container">
+
+        <div class="phq-header">
+            <h2>GAD-7 Anxiety Screening</h2>
+
+            <p>
+                Over the <strong>last 2 weeks</strong>, how often have you been
+                bothered by the following problems?
+            </p>
+        </div>
+        <div class="instructions">
+            <strong>Scoring</strong>
+
+            <ul>
+                <li>Not at all (0)</li>
+                <li>Several days (1)</li>
+                <li>More than half the days (2)</li>
+                <li>Nearly every day (3)</li>
+            </ul>
+        </div>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            {% for field in form %}
+
+                <div class="question-card">
+
+                    <h5>
+                        {{ forloop.counter }}.
+                        {{ field.label }}
+                    </h5>
+
+                    <div class="options">
+
+                        {% for radio in field %}
+                            <label class="option">
+                                {{ radio.tag }}
+                                {{ radio.choice_label }}
+                            </label>
+                        {% endfor %}
+
+                    </div>
+
+                    {% if field.errors %}
+                        <small class="text-danger">
+                            {{ field.errors }}
+                        </small>
+                    {% endif %}
+
+                </div>
+
+            {% endfor %}
+     
+                <button type="submit" class="submit-btn">
+                    Submit Assessment
+                </button>
+        </form>
+
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}MindConnect | Client Dashboard{% endblock %}
+
+{% block content %}
+<div class="dashboard-top">
+
+    <!-- Wellness Reminder -->
+    <div class="wellness-tip">
+        <i class="fas fa-leaf"></i>
+
+        <div>
+            <h4>Today's Wellness Reminder</h4>
+            <p>
+                Small, consistent steps can make a big difference.
+                Take a few minutes today to pause, breathe, and check in with yourself.
+            </p>
+        </div>
+    </div>
+
+    <!-- Next Appointment -->
+    <div class="next-session">
+
+        <h3><i class="fas fa-calendar-alt"></i> Your Next Session</h3>
+
+        {% if next_appointment %}
+            <p>
+                <strong>{{ next_appointment.date }}</strong><br>
+                {{ next_appointment.time }} with {{ next_appointment.counsellor }}
+            </p>
+
+            <a href="#" class="btn">
+                View Details
+            </a>
+
+        {% else %}
+            <p>You don't have any upcoming appointments.</p>
+
+            <a href="" class="btn">
+                Book a Session
+            </a>
+
+        {% endif %}
+
+    </div>
+
+</div>
+<div class="client-dashboard">
+
+    <!-- Welcome Section -->
+    <div class="dashboard-header">
+        <h2>Welcome back, {{ request.user.get_full_name|default:request.user.username }} 👋</h2>
+        <p>
+            We're glad you're here. Manage your appointments, track your progress,
+            and access the support you need—all in one secure place.
+        </p>
+    </div>
+
+    <!-- Dashboard Cards -->
+    <div class="dashboard-grid">
+
+        <!-- Appointments -->
+        <div class="client-card">
+            <div class="icon-container">
+                <i class="fas fa-calendar-check fa-4x"></i>
+            </div>
+            <h3>Appointments</h3>
+            <p>
+                Schedule new sessions, view upcoming appointments,
+                or manage existing bookings.
+            </p>
+            <a href="{% url 'appointments' %}" class="btn">
+                Manage Appointments
+            </a>
+        </div>
+
+        <!-- Payments -->
+        <div class="client-card">
+            <div class="icon-container">
+                <i class="fas fa-credit-card fa-4x"></i>
+            </div>
+            <h3>Payments</h3>
+            <p>
+                View invoices, payment history, and securely manage your subscriptions.
+            </p>
+            <a href="{% url 'payments' %}" class="btn">
+                View Payments
+            </a>
+        </div>
+
+        <!-- Profile -->
+        <div class="client-card">
+            <div class="icon-container">
+
+                {% if profile and profile.avatar %}
+                    <img src="{{ profile.avatar.url }}"
+                         class="dashboard-avatar"
+                         alt="Profile Photo">
+                {% else %}
+                    <i class="fas fa-user-circle fa-4x"></i>
+                {% endif %}
+
+            </div>
+
+            <h3>My Profile</h3>
+            <p>
+                Keep your personal information, emergency contacts,
+                and preferences up to date.
+            </p>
+
+            <a href="{% url 'update_profile' %}" class="btn">
+                Update Profile
+            </a>
+        </div>
+
+        <!-- Session History -->
+        <div class="client1-card">
+            <div class="icon-container">
+                <i class="fas fa-clipboard-check fa-3x"></i>
+            </div>
+            <h3>Self Assessments</h3>
+            <p>Take wellness assessments and monitor your mental health.</p>
+            <a href="{% url 'assessments' %}" class="btn">Start Assessment</a>
+        </div>
+
+        <!-- Events -->
+        <div class="client1-card">
+            <div class="icon-container">
+                <i class="fas fa-feather-alt fa-3x"></i>
+            </div>
+            <h3>My Journal</h3>
+            <p>Record your thoughts, emotions, and reflections securely.</p>
+            <a href="{% url 'journal_list' %}" class="btn">Open Journal</a>
+        </div>
+         <div class="client1-card">
+            <div class="icon-container">
+                <i class="fas fa-history fa-3x"></i>
+            </div>
+            <h3>Session History</h3>
+            <p>Review past therapy sessions.</p>
+            <a href="{% url 'session_history' %}"" class="btn">View History</a>
+        </div>
+        <div class="client1-card">
+        <div class="icon-container">
+            <i class="fas fa-chart-line fa-3x"></i>
+            </div>
+            <h3>Progress Tracker</h3>
+            <p>Monitor your therapy goals and celebrate your achievements.</p>
+            <a href="{% url 'progress_tracker' %}" class="btn">View Progress</a>
+        </div>
+
+        <!-- Support -->
+        <div class="client-card">
+            <div class="icon-container">
+                <i class="fas fa-headset fa-4x"></i>
+            </div>
+
+            <h3>Help & Support</h3>
+
+            <p>
+                Have a question? Our support team is here to assist
+                you whenever you need help.
+            </p>
+
+            <a href="{% url 'contact' %}" class="btn">
+                Contact Support
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

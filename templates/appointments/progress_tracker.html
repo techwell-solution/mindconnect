@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Progress Tracker{% endblock %}
+
+{% block content %}
+
+<section class="progress-page">
+
+    <div class="progress-container">
+
+        <div class="page-header">
+            <h2>Progress Tracker</h2>
+            <p>
+                Track your personal growth, therapy goals, and celebrate every milestone.
+            </p>
+        </div>
+
+        <!-- Add Goal Form -->
+
+        <div class="progress-form-card">
+
+            <h3>Add New Goal</h3>
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                <button type="submit" class="pri-btn">
+                    Save Goal
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- Goals -->
+
+        <div class="goal-list">
+
+            {% for goal in goals %}
+
+            <div class="goal-card">
+
+                <div class="goal-header">
+
+                    <h3>{{ goal.title }}</h3>
+
+                    <span class="status {{ goal.status }}">
+                        {{ goal.get_status_display }}
+                    </span>
+
+                </div>
+
+                {% if goal.description %}
+                <p class="goal-description">
+                    {{ goal.description }}
+                </p>
+                {% endif %}
+
+                {% if goal.target_date %}
+                <p class="goal-date">
+                    <strong>Target Date:</strong>
+                    {{ goal.target_date }}
+                </p>
+                {% endif %}
+
+                <div class="progress-wrapper">
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress-fill"
+                            style="width: {{ goal.progress }}%;"
+                        ></div>
+
+                    </div>
+
+                    <span class="progress-percent">
+                        {{ goal.progress }}%
+                    </span>
+
+                </div>
+
+            </div>
+
+            {% empty %}
+
+            <div class="empty-card">
+
+                <i class="fas fa-chart-line fa-3x"></i>
+
+                <h3>No Goals Yet</h3>
+
+                <p>
+                    Start by adding your first wellness or therapy goal.
+                </p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

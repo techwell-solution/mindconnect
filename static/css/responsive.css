@@ -69,6 +69,15 @@
     .how-it-works .cta-container .cta-button{
         width:100%;
     }
+    .dashboard-top{
+        grid-template-columns:1fr;
+    }
+
+    .wellness-tip{
+        flex-direction:column;
+        text-align:center;
+        align-items:center;
+    }
 }
 
 @media (max-width:768px){
@@ -298,7 +307,199 @@
         font-size:.95rem;
     }
 
+      .dashboard-header{
+        padding:35px 20px;
+    }
+
+    .dashboard-header h2{
+        font-size:1.7rem;
+    }
+
+    .client-card,
+    .client1-card{
+        padding:30px 20px;
+    }
+
+    .icon-container{
+        width:80px;
+        height:80px;
+    }
+
+    .icon-container i{
+        font-size:2.4rem !important;
+    }
+
+    .dashboard-avatar{
+        width:80px;
+        height:80px;
+    }
+
+        .appointments-container {
+        margin: 40px auto;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .appointment-card {
+        padding: 20px;
+    }
+      .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .payment-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .payment-info {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .payments-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+        .wellness-tip {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 25px;
+    }
+
+    .wellness-tip i {
+        margin-bottom: 10px;
+    }
+        .phq-header{
+        padding:25px;
+    }
+
+    .phq-header h2{
+        font-size:1.6rem;
+    }
+
+    .question-card{
+        padding:20px;
+    }
+
+    .question-card label{
+        align-items:flex-start;
+    }
+    .result-card{
+        margin:30px 15px;
+        padding:25px;
+    }
+
+    .result-card h2{
+        font-size:1.6rem;
+    }
+
+    .score{
+        width:180px;
+        height:180px;
+    }
+
+    .score h1{
+        font-size:2.5rem;
+    }
+
+    .score h3{
+        font-size:1rem;
+    }
+
+    .result-actions{
+        flex-direction:column;
+    }
+
+    .result-actions .btn{
+        width:100%;
+        text-align:center;
+    }
+
+     .journal-form-card{
+        padding:25px;
+    }
+
+    .journal-header h2{
+        font-size:26px;
+    }
+
+    .journal-actions{
+        flex-direction:column;
+    }
+
+    .journal-btn,
+    .journal-btn-outline{
+        width:100%;
+        text-align:center;
+    }
+
+     .progress-page{
+        padding: 60px 15px;
+    }
+
+    .page-header h2{
+        font-size: 2rem;
+    }
+
+    .goal-header{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .progress-form-card,
+    .goal-card{
+        padding: 20px;
+    }
+      .profile-header{
+        padding: 2rem;
+    }
+
+    .profile-header h2{
+        font-size: 1.8rem;
+    }
+
+    .profile-form{
+        padding: 1.5rem;
+    }
+
+    .form-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .profile-avatar{
+        width: 140px;
+        height: 140px;
+    }
+
+    .button-group{
+        flex-direction: column;
+    }
+
+    .pri-btn,
+    .sec-btn{
+        width: 100%;
+        text-align: center;
+    }
 }
+    
 
 @media (max-width:480px){
 

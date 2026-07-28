@@ -39,7 +39,22 @@ def client_register(request):
 
 
 def counsellor_register(request):
-    return render(request, "accounts/counsellor_register.html")
+    if request.method == "POST":
+        form = CounsellorRegistrationForm(request.POST, request.FILES)
+
+        if form.is_valid():
+            form.save()
+            return redirect("login")   # Use your actual login URL name
+        else:
+            print(form.errors)   # Check your terminal
+
+    else:
+        form = CounsellorRegistrationForm()
+
+    return render(
+        request,
+        "accounts/counsellor_register.html",
+        {"form": form},)
 
 
 def login_view(request):
@@ -47,9 +62,21 @@ def login_view(request):
 
     if request.method == "POST":
         if form.is_valid():
-            login(request, form.get_user())
+            user = form.get_user()
+            login(request, user)
+
             messages.success(request, "Welcome back!")
-            return redirect("client_dashboard")      # change if needed
+
+            if user.role == User.CLIENT:
+                return redirect("client_dashboard")
+
+            elif user.role == User.COUNSELLOR:
+                return redirect("counselor_dashboard")
+
+            elif user.role == User.ADMIN:
+                return redirect("admin_dashboard")
+
+            return redirect("home")
 
     return render(request, "accounts/login.html", {
         "form": form

@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Session Note{% endblock %}
+
+{% block content %}
+
+<div class="note-detail-container">
+
+    <div class="note-header">
+
+        <div>
+            <h2>Session Note</h2>
+            <p>Confidential Counselling Record</p>
+        </div>
+
+        <div class="header-buttons">
+
+            <a href="{% url 'edit_session_note' note.id %}" class="edit-btn">
+                <i class="fas fa-edit"></i>
+                Edit
+            </a>
+
+            <button onclick="window.print()" class="print-btn">
+                <i class="fas fa-print"></i>
+                Print
+            </button>
+
+            <a href="{% url 'session_notes' %}" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+                Back
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="session-info">
+
+        <h3>Session Information</h3>
+
+        <div class="info-grid">
+
+            <div>
+                <strong>Client</strong>
+                <p>{{ note.session.client.get_full_name }}</p>
+            </div>
+
+            <div>
+                <strong>Counsellor</strong>
+                <p>{{ note.counsellor.get_full_name }}</p>
+            </div>
+
+            <div>
+                <strong>Date</strong>
+                <p>{{ note.session.appointment_date }}</p>
+            </div>
+
+            <div>
+                <strong>Time</strong>
+                <p>{{ note.session.appointment_time }}</p>
+            </div>
+
+            <div>
+                <strong>Session Type</strong>
+                <p>{{ note.session.get_session_type_display }}</p>
+            </div>
+
+            <div>
+                <strong>Mode</strong>
+                <p>{{ note.session.get_session_mode_display }}</p>
+            </div>
+
+            <div>
+                <strong>Status</strong>
+                <p>{{ note.session.get_status_display }}</p>
+            </div>
+
+            <div>
+                <strong>Private</strong>
+                <p>
+                    {% if note.is_private %}
+                        Yes
+                    {% else %}
+                        No
+                    {% endif %}
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="note-section">
+
+        <h3>Diagnosis</h3>
+
+        <p>{{ note.diagnosis|default:"Not recorded." }}</p>
+
+    </div>
+
+    <div class="note-section">
+
+        <h3>Session Observations</h3>
+
+        <p>{{ note.observations|linebreaks }}</p>
+
+    </div>
+
+    <div class="note-section">
+
+        <h3>Interventions</h3>
+
+        <p>{{ note.interventions|default:"Not recorded."|linebreaks }}</p>
+
+    </div>
+
+    <div class="note-section">
+
+        <h3>Recommendations</h3>
+
+        <p>{{ note.recommendations|default:"Not recorded."|linebreaks }}</p>
+
+    </div>
+
+    <div class="note-section">
+
+        <h3>Next Session Plan</h3>
+
+        <p>{{ note.next_session_plan|default:"Not recorded."|linebreaks }}</p>
+
+    </div>
+
+    <div class="note-footer">
+
+        <p>
+            <strong>Created:</strong>
+            {{ note.created_at|date:"d M Y H:i" }}
+        </p>
+
+        <p>
+            <strong>Last Updated:</strong>
+            {{ note.updated_at|date:"d M Y H:i" }}
+        </p>
+
+    </div>
+
+</div>
+
+{% endblock %}

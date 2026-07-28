@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Reports{% endblock %}
+
+{% block content %}
+<div class="reports-container">
+
+    <div class="page-header">
+        <h2>Reports</h2>
+
+        <a href="{% url 'counselor_dashboard' %}" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back to Dashboard
+        </a>
+    </div>
+
+    <div class="report-grid">
+
+        <div class="report-card">
+            <i class="fas fa-users fa-3x"></i>
+            <h3>Total Clients</h3>
+            <p>{{ total_clients }}</p>
+        </div>
+
+        <div class="report-card">
+            <i class="fas fa-calendar-check fa-3x"></i>
+            <h3>Completed Sessions</h3>
+            <p>{{ completed_sessions }}</p>
+        </div>
+
+        <div class="report-card">
+            <i class="fas fa-clock fa-3x"></i>
+            <h3>Upcoming Sessions</h3>
+            <p>{{ upcoming_sessions }}</p>
+        </div>
+
+        <div class="report-card">
+            <i class="fas fa-file-medical-alt fa-3x"></i>
+            <h3>Session Notes</h3>
+            <p>{{ session_notes }}</p>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

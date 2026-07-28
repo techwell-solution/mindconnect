@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+{% if note %}
+Edit Session Note
+{% else %}
+New Session Note
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+<div class="note-form-container">
+
+    <div class="form-header">
+
+        <h2>
+            {% if note %}
+                Edit Session Note
+            {% else %}
+                New Session Note
+            {% endif %}
+        </h2>
+
+        <p>Record confidential counselling notes for this therapy session.</p>
+
+    </div>
+
+    <div class="session-card">
+
+        <h3>Session Information</h3>
+
+        <div class="session-grid">
+
+            <div>
+                <strong>Client</strong>
+                <p>{{ session.client.get_full_name }}</p>
+            </div>
+
+            <div>
+                <strong>Session Date</strong>
+                <p>{{ session.appointment_date }}</p>
+            </div>
+
+            <div>
+                <strong>Time</strong>
+                <p>{{ session.appointment_time }}</p>
+            </div>
+
+            <div>
+                <strong>Session Type</strong>
+                <p>{{ session.get_session_type_display }}</p>
+            </div>
+
+            <div>
+                <strong>Mode</strong>
+                <p>{{ session.get_session_mode_display }}</p>
+            </div>
+
+            <div>
+                <strong>Status</strong>
+                <p>{{ session.get_status_display }}</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <form method="POST" class="note-form">
+
+        {% csrf_token %}
+
+        <div class="form-group">
+            {{ form.diagnosis.label_tag }}
+            {{ form.diagnosis }}
+            {{ form.diagnosis.errors }}
+        </div>
+
+        <div class="form-group">
+            {{ form.observations.label_tag }}
+            {{ form.observations }}
+            {{ form.observations.errors }}
+        </div>
+
+        <div class="form-group">
+            {{ form.interventions.label_tag }}
+            {{ form.interventions }}
+            {{ form.interventions.errors }}
+        </div>
+
+        <div class="form-group">
+            {{ form.recommendations.label_tag }}
+            {{ form.recommendations }}
+            {{ form.recommendations.errors }}
+        </div>
+
+        <div class="form-group">
+            {{ form.next_session_plan.label_tag }}
+            {{ form.next_session_plan }}
+            {{ form.next_session_plan.errors }}
+        </div>
+
+        <div class="checkbox-group">
+            {{ form.is_private }}
+            {{ form.is_private.label_tag }}
+        </div>
+
+        <div class="button-group">
+
+            <button type="submit" class="save-btn">
+                <i class="fas fa-save"></i>
+
+                {% if note %}
+                    Update Note
+                {% else %}
+                    Save Note
+                {% endif %}
+            </button>
+
+            <a href="{% url 'session_notes' %}" class="cancel-btn">
+                <i class="fas fa-times"></i>
+                Cancel
+            </a>
+
+        </div>
+
+    </form>
+
+</div>
+
+{% endblock %}

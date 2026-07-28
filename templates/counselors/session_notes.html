@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Session Notes{% endblock %}
+
+{% block content %}
+
+<div class="notes-container">
+
+    <div class="page-header">
+        <h2>Session Notes</h2>
+        <p>Manage and review counselling session notes.</p>
+    </div>
+
+    <div class="summary-cards">
+
+        <div class="summary-card">
+            <i class="fas fa-file-medical"></i>
+            <h3>{{ notes.count }}</h3>
+            <p>Total Notes</p>
+        </div>
+
+        <div class="summary-card">
+            <i class="fas fa-lock"></i>
+            <h3>{{ notes|length }}</h3>
+            <p>Private Notes</p>
+        </div>
+
+    </div>
+
+    <div class="notes-header">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search client..."
+        >
+
+        <a href="{% url 'counselor_dashboard' %}" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Dashboard
+        </a>
+
+    </div>
+
+    <div class="table-responsive">
+
+        <table id="notesTable">
+
+            <thead>
+
+                <tr>
+                    <th>Client</th>
+                    <th>Date</th>
+                    <th>Session Type</th>
+                    <th>Diagnosis</th>
+                    <th>Actions</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+            {% for note in notes %}
+
+                <tr>
+
+                    <td>{{ note.session.client.get_full_name }}</td>
+
+                    <td>{{ note.session.appointment_date }}</td>
+
+                    <td>{{ note.session.get_session_type_display }}</td>
+
+                    <td>
+                        {{ note.diagnosis|default:"-" }}
+                    </td>
+
+                    <td class="actions">
+
+                        <a href="{% url 'session_note_detail' note.id %}" class="view-btn">
+                            <i class="fas fa-eye"></i>
+                        </a>
+
+                        <a href="{% url 'edit_session_note' note.id %}" class="edit-btn">
+                            <i class="fas fa-edit"></i>
+                        </a>
+
+                    </td>
+
+                </tr>
+
+            {% empty %}
+
+                <tr>
+
+                    <td colspan="5" class="empty">
+
+                        <i class="fas fa-folder-open fa-3x"></i>
+
+                        <p>No session notes found.</p>
+
+                    </td>
+
+                </tr>
+
+            {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script>
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("keyup", function(){
+
+    let value = this.value.toLowerCase();
+
+    let rows = document.querySelectorAll("#notesTable tbody tr");
+
+    rows.forEach(row =>{
+
+        row.style.display =
+        row.textContent.toLowerCase().includes(value)
+        ? ""
+        : "none";
+
+    });
+
+});
+</script>
+
+{% endblock %}

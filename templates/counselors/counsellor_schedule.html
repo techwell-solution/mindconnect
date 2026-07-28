@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}My Schedule{% endblock %}
+
+{% block content %}
+
+<div class="schedule-container">
+
+    <div class="page-header">
+        <h2>My Schedule</h2>
+        <a href="{% url 'counselor_dashboard' %}" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back to Dashboard
+        </a>
+    </div>
+
+    {% if sessions %}
+    <div class="schedule-summary">
+
+    <div class="summary-card">
+        <i class="fas fa-calendar-day"></i>
+
+        <div>
+            <h3>{{ sessions.count }}</h3>
+            <p>Total Sessions</p>
+        </div>
+    </div>
+
+    <div class="summary-card">
+            <i class="fas fa-clock"></i>
+
+            <div>
+                <h3>{{ today_sessions }}</h3>
+                <p>Today's Sessions</p>
+            </div>
+        </div>
+
+        <div class="summary-card">
+            <i class="fas fa-check-circle"></i>
+
+            <div>
+                <h3>{{ completed_sessions }}</h3>
+                <p>Completed</p>
+            </div>
+        </div>
+
+        <div class="summary-card">
+            <i class="fas fa-hourglass-half"></i>
+
+            <div>
+                <h3>{{ pending_sessions }}</h3>
+                <p>Pending</p>
+            </div>
+        </div>
+
+    </div>
+
+    <table class="schedule-table">
+
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Client</th>
+                    <th>Type</th>
+                    <th>Mode</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+            {% for session in sessions %}
+                <tr>
+
+                    <td>{{ session.appointment_date }}</td>
+
+                    <td>{{ session.appointment_time }}</td>
+
+                    <td>{{ session.client.get_full_name }}</td>
+
+                    <td>{{ session.get_session_type_display }}</td>
+
+                    <td>{{ session.get_session_mode_display }}</td>
+
+                    <td>
+                        <span class="status {{ session.status }}">
+                            {{ session.get_status_display }}
+                        </span>
+                    </td>
+
+                    <td class="action-buttons">
+
+                        {% if session.status == "completed" %}
+
+                            {% if session.session_note %}
+
+                                <a href="{% url 'session_note_detail' session.session_note.id %}"
+                                class="view-note-btn">
+                                    <i class="fas fa-eye"></i>
+                                    View
+                                </a>
+
+                                <a href="{% url 'edit_session_note' session.session_note.id %}"
+                                class="edit-note-btn">
+                                    <i class="fas fa-edit"></i>
+                                    Edit
+                                </a>
+
+                            {% else %}
+
+                                <a href="{% url 'create_session_note' session.id %}"
+                                class="create-note-btn">
+                                    <i class="fas fa-file-medical"></i>
+                                    Create Note
+                                </a>
+
+                            {% endif %}
+
+                        {% else %}
+
+                            <span class="text-muted">Not Available</span>
+
+                        {% endif %}
+
+                    </td>
+
+                </tr>
+            {% empty %}
+
+                <tr>
+                    <td colspan="7" class="empty-state">
+                        <i class="fas fa-calendar-times fa-2x"></i><br><br>
+                        No scheduled sessions found.
+                    </td>
+                </tr>
+
+            {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    {% else %}
+
+    <div class="empty-state">
+        <i class="fas fa-calendar-times fa-4x"></i>
+        <h3>No sessions scheduled</h3>
+        <p>Your upcoming appointments will appear here.</p>
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

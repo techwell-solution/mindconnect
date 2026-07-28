@@ -78,6 +78,11 @@
         text-align:center;
         align-items:center;
     }
+    .schedule-table{
+    display:block;
+    overflow-x:auto;
+    }
+
 }
 
 @media (max-width:768px){
@@ -498,6 +503,105 @@
         width: 100%;
         text-align: center;
     }
+    .dashboard-grid{
+    grid-template-columns:1fr;
+    }
+        .clients-container{
+        width:95%;
+    }
+
+    .clients-grid{
+        grid-template-columns:1fr;
+    }
+
+    .client-card{
+        padding:1.5rem;
+    }
+
+    .page-header h2{
+        font-size:1.7rem;
+    }
+
+    .page-header{
+    flex-direction:column;
+    align-items:flex-start;
+    }
+
+    .page-header h2{
+        font-size:1.7rem;
+    }
+
+    .summary-card{
+        padding:18px;
+    }
+
+    .summary-card h3{
+        font-size:1.5rem;
+    }
+
+    .schedule-table th,
+    .schedule-table td{
+        padding:14px;
+}
+    .notes-header{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .back-btn{
+        text-align:center;
+    }
+     .note-form-container{
+        padding:15px;
+    }
+
+    .button-group{
+        flex-direction:column;
+    }
+
+    .save-btn,
+    .cancel-btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .note-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .header-buttons{
+        width:100%;
+    }
+
+    .edit-btn,
+    .print-btn,
+    .back-btn{
+        flex:1;
+        text-align:center;
+    }
+     .page-header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .page-header h2{
+        font-size: 1.7rem;
+    }
+
+    .back-btn{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .report-card{
+        padding: 1.5rem;
+    }
+
+    .report-card p{
+        font-size: 1.7rem;
+    }
+
 }
     
 

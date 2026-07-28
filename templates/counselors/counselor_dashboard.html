@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Counsellor Dashboard{% endblock %}
+
+{% block content %}
+
+<section class="dashboard">
+
+    <div class="dashboard-header">
+
+        <h2>
+            Welcome,
+            {{ request.user.get_full_name|default:request.user.username }}
+        </h2>
+
+        <p>
+            Manage your clients, appointments and therapy sessions.
+        </p>
+
+    </div>
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <i class="fas fa-users"></i>
+            <h3>{{ total_clients }}</h3>
+            <p>Total Clients</p>
+        </div>
+
+        <div class="stat-card">
+            <i class="fas fa-calendar-check"></i>
+            <h3>{{ today_sessions }}</h3>
+            <p>Confirmed Sessions</p>
+        </div>
+
+        <div class="stat-card">
+            <i class="fas fa-clock"></i>
+            <h3>{{ pending_sessions }}</h3>
+            <p>Pending Requests</p>
+        </div>
+
+    </div>
+
+    <div class="dashboard-grid">
+
+        <div class="dashboard-card">
+
+            <h3>Upcoming Appointments</h3>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Client</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                {% for appointment in appointments %}
+
+                    <tr>
+
+                        <td>{{ appointment.client }}</td>
+
+                        <td>{{ appointment.appointment_date }}</td>
+
+                        <td>{{ appointment.appointment_time }}</td>
+
+                        <td>{{ appointment.status }}</td>
+
+                    </tr>
+
+                {% empty %}
+
+                    <tr>
+                        <td colspan="4">
+                            No appointments available.
+                        </td>
+                    </tr>
+
+                {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <h3>Quick Actions</h3>
+
+            <div class="action-links">
+
+                <a href="{% url 'client_list' %}">
+                    <i class="fas fa-user-friends"></i>
+                    Clients
+                </a>
+
+                <a href="{% url 'counsellor_schedule' %}">
+                    <i class="fas fa-calendar-alt"></i>
+                    Schedule
+                </a>
+
+                <a href="{% url 'session_notes' %}">
+                    <i class="fas fa-file-medical"></i>
+                    Session Notes
+                </a>
+
+                <a href="{% url 'counsellor_reports' %}">
+                    <i class="fas fa-chart-line"></i>
+                    Reports
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

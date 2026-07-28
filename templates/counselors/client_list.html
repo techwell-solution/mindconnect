@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}My Clients{% endblock %}
+
+{% block content %}
+
+<div class="clients-container">
+    <div class="header-content">
+        <div>
+            <h2>My Clients</h2>
+            <p>Manage your assigned clients.</p>
+        </div>
+
+        <a href="{% url 'counselor_dashboard' %}" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back to Dashboard
+        </a>
+    </div>
+
+    {% if clients %}
+
+    <div class="clients-grid">
+
+        {% for client in clients %}
+
+        <div class="client-card">
+
+            <div class="avatar">
+                <i class="fas fa-user-circle"></i>
+            </div>
+
+            <h3>
+                {{ client.client__first_name }}
+                {{ client.client__last_name }}
+            </h3>
+
+            <p>{{ client.client__email }}</p>
+
+            <p>
+                <strong>Total Sessions:</strong>
+                {{ client.total_sessions }}
+            </p>
+
+            <a href="#" class="btn">View Client</a>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    {% else %}
+
+    <div class="empty-state">
+        <i class="fas fa-user-friends fa-3x"></i>
+        <h3>No Clients Found</h3>
+        <p>You don't have any assigned clients yet.</p>
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

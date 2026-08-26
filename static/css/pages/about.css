@@ -88,3 +88,401 @@
 .why-card ul li {
   padding: 0.5rem 0;
 }
+.counsellor-home {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0;
+    background: var(--background);
+}
+
+
+/* ---------------------------------------------------------
+   Section Heading
+   --------------------------------------------------------- */
+
+.counsellor-home .section-heading {
+    max-width: 720px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.counsellor-home .section-tag {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+.counsellor-home .section-heading h2 {
+    margin: 0 0 16px;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.counsellor-home .section-heading p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-muted, #64748b);
+}
+
+
+/* ---------------------------------------------------------
+   Main Wrapper
+   --------------------------------------------------------- */
+
+.counsellor-home-wrapper {
+    display: grid;
+    grid-template-columns: minmax(320px, 0.9fr) minmax(320px, 1.1fr);
+    align-items: center;
+    gap: 70px;
+
+    max-width: 1100px;
+    margin: 0 auto;
+
+    padding: 40px;
+
+    background: var(--surface, #ffffff);
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: 28px;
+
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+}
+
+
+/* ---------------------------------------------------------
+   Counsellor Image
+   --------------------------------------------------------- */
+
+.counsellor-home-image {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+}
+
+.counsellor-home-image::before {
+    content: "";
+    position: absolute;
+    top: -18px;
+    left: -18px;
+
+    width: 90px;
+    height: 90px;
+
+    border-radius: 20px;
+
+    background: var(--primary);
+    opacity: 0.1;
+
+    z-index: 0;
+}
+
+.counsellor-home-image::after {
+    content: "";
+    position: absolute;
+    right: -18px;
+    bottom: -18px;
+
+    width: 110px;
+    height: 110px;
+
+    border-radius: 50%;
+
+    background: var(--accent, #06b6d4);
+    opacity: 0.1;
+
+    z-index: 0;
+}
+
+.counsellor-home-image img {
+    position: relative;
+    z-index: 1;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 24px;
+
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.15);
+}
+
+
+/* ---------------------------------------------------------
+   Content
+   --------------------------------------------------------- */
+
+.counsellor-home-content {
+    max-width: 600px;
+}
+
+.counsellor-home-content .profile-label {
+    display: inline-flex;
+    align-items: center;
+
+    margin-bottom: 14px;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: var(--primary-color);
+}
+
+.counsellor-home-content h3 {
+    margin: 0 0 8px;
+
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    line-height: 1.2;
+
+    color: var(--text-color);
+}
+
+.counsellor-home-content h4 {
+    margin: 0 0 22px;
+
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+
+    color: var(--primary-color);
+}
+
+.counsellor-home-content > p {
+    margin: 0;
+
+    font-size: 1rem;
+    line-height: 1.85;
+
+    color: var(--text-muted, #64748b);
+}
+
+
+/* ---------------------------------------------------------
+   Highlights
+   --------------------------------------------------------- */
+
+.counsellor-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+
+    margin-top: 28px;
+}
+
+.counsellor-highlights span {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 10px 14px;
+
+    border-radius: 10px;
+
+    background: var(--background);
+    border: 1px solid var(--border, #e2e8f0);
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    color: var(--text);
+}
+
+.counsellor-highlights i {
+    font-size: 0.95rem;
+    color: var(--primary);
+}
+
+
+/* ---------------------------------------------------------
+   Action Button
+   --------------------------------------------------------- */
+
+.counsellor-actions {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.counsellor-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 13px 22px;
+
+    border-radius: 10px;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.counsellor-actions .btn-outline {
+    color: var(--primary-color);
+    background: transparent;
+    border: 1.5px solid var(--primary-color);
+}
+
+.counsellor-actions .btn-outline:hover {
+    transform: translateY(-3px);
+
+    color: #ffffff;
+    background: var(--primary-color);
+
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
+}
+
+.counsellor-actions .btn i {
+    transition: transform 0.25s ease;
+}
+
+.counsellor-actions .btn:hover i {
+    transform: translateX(4px);
+}
+
+
+/* ---------------------------------------------------------
+   Tablet
+   --------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .counsellor-home {
+        padding: 80px 0;
+    }
+
+    .counsellor-home-wrapper {
+        grid-template-columns: 1fr;
+        gap: 45px;
+
+        padding: 35px;
+    }
+
+    .counsellor-home-image {
+        max-width: 500px;
+    }
+
+    .counsellor-home-image img {
+        height: 480px;
+    }
+
+    .counsellor-home-content {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .counsellor-highlights {
+        justify-content: center;
+    }
+
+    .counsellor-actions {
+        justify-content: center;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   Mobile
+   --------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .counsellor-home {
+        padding: 65px 0;
+    }
+
+    .counsellor-home .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .counsellor-home .section-heading h2 {
+        font-size: 1.9rem;
+    }
+
+    .counsellor-home .section-heading p {
+        font-size: 0.92rem;
+    }
+
+    .counsellor-home-wrapper {
+        gap: 35px;
+
+        padding: 22px;
+
+        border-radius: 20px;
+    }
+
+    .counsellor-home-image img {
+        height: 360px;
+        border-radius: 18px;
+    }
+
+    .counsellor-home-image::before {
+        top: -10px;
+        left: -10px;
+
+        width: 60px;
+        height: 60px;
+
+        border-radius: 14px;
+    }
+
+    .counsellor-home-image::after {
+        right: -10px;
+        bottom: -10px;
+
+        width: 75px;
+        height: 75px;
+    }
+
+    .counsellor-home-content h3 {
+        font-size: 1.7rem;
+    }
+
+    .counsellor-home-content h4 {
+        font-size: 0.9rem;
+    }
+
+    .counsellor-home-content > p {
+        font-size: 0.92rem;
+        line-height: 1.75;
+    }
+
+    .counsellor-highlights {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .counsellor-highlights span {
+        justify-content: center;
+        font-size: 0.8rem;
+    }
+
+    .counsellor-actions {
+        width: 100%;
+    }
+
+    .counsellor-actions .btn {
+        width: 100%;
+        padding: 13px 16px;
+        text-align: center;
+    }
+}

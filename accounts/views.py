@@ -89,7 +89,10 @@ def logout_view(request):
         "You have been logged out successfully."
     )
     return redirect("login")
-
+@login_required
+def gen_dashboard(request):
+    return render(request, 'accounts/gen_dashboard.html')
+    
 @login_required
 def update_profile(request):
 
@@ -138,3 +141,7 @@ def update_profile(request):
         "accounts/update_profile.html",
         context,
     )
+
+@login_required
+def settings_view(request):
+    return render(request, "accounts/settings.html")

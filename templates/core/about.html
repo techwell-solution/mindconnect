@@ -104,98 +104,104 @@
         </div>
     </div>
   </section>
-     
-  <section class="team-section">
-    <div class="content-section">
-        <h2>About Counsellor</h2>
-    </div>
+  {% if counsellor %}
 
-    <div class="team-container">
+<section class="counsellor-home section">
 
-        <div class="team-card">
+    <div class="container">
 
-            <div class="card-image">
-                <img src="{% static 'images/erastus.jpg' %}"
-                     alt="Erastus Ivelia">
+        <div class="section-heading">
+
+            <span class="section-tag">
+                MEET OUR COUNSELLOR
+            </span>
+
+            <h2>
+                Compassionate Support for Your Well-being
+            </h2>
+
+            <p>
+                Professional guidance in a safe, confidential,
+                and supportive environment.
+            </p>
+
+        </div>
+
+
+        <div class="counsellor-home-wrapper">
+
+            <!-- Counsellor Image -->
+            <div class="counsellor-home-image">
+
+                {% if counsellor.photo %}
+
+                    <img
+                        src="{{ counsellor.photo.url }}"
+                        alt="{{ counsellor.name }}"
+                    >
+
+                {% endif %}
+
             </div>
 
-            <div class="card-content">
 
-                <h3>Erastus Ivelia</h3>
-                <h4>Professional Counsellor & Mental Wellness Practitioner</h4>
+            <!-- Counsellor Information -->
+            <div class="counsellor-home-content">
 
-                <p> Erastus Ivelia is a dedicated counselling professional committed to helping 
-                    individuals, couples, families, and organizations achieve emotional well-being 
-                    and personal growth. Through a compassionate and client-centered approach, 
-                    he provides guidance, support, and practical strategies for navigating life's 
-                    challenges. 
+                <span class="profile-label">
+                    PROFESSIONAL COUNSELLOR
+                </span>
+
+                <h3>
+                    {{ counsellor.name }}
+                </h3>
+
+                <h4>
+                    {{ counsellor.title }}
+                </h4>
+
+                <p>
+                    {{ counsellor.short_bio }}
                 </p>
 
-                <h4><strong>Areas of Specialization</strong></h4> 
-                <ul> 
-                    <li>Individual Counselling</li> 
-                    <li>Couples & Relationship Counselling</li> 
-                    <li>Family Therapy</li> 
-                    <li>Stress & Anxiety Management</li> 
-                    <li>Grief & Loss Support</li> 
-                    <li>Corporate Wellness Programmes</li> 
-                </ul>
-                    <br>
-                <h4><strong>Professional Experience</strong></h4> 
-                <p> 
-                    With over 5 years of counselling experience, Erastus has worked with diverse 
-                    individuals and groups, helping them develop healthier coping strategies, 
-                    strengthen relationships, and improve overall mental wellness. 
-                </p> 
-                
-                <h4><strong>Qualifications & Training</strong></h4> 
-                <ul> <li>Bachelor's Degree in Counselling Psychology</li> 
-                    <li>Professional Counselling Certification</li> 
-                    <li>Continuous Professional Development Training</li> 
-                    <li>Mental Health & Wellness Practitioner</li> 
-                </ul> 
-                
-                <h4><strong>Counselling Approach</strong></h4> 
-                <p> 
-                    Every client is unique. Erastus believes in creating a safe, confidential, 
-                    and supportive environment where clients can openly explore their concerns 
-                    and work toward meaningful, lasting change. 
-                </p>
 
-                <div class="counsellor-stats">
-                    <span>✔ 5+ Years Experience</span>
-                    <span>✔ Confidential Sessions</span>
-                    <span>✔ Online & In-Person Support</span>
+                <div class="counsellor-highlights">
+
+                    <span>
+                        <i class="fa-solid fa-award"></i>
+                        {{ counsellor.years_experience }}+ Years Experience
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-shield-heart"></i>
+                        Confidential Sessions
+                    </span>
+
                 </div>
 
-                <a href="" class="book-btn">
-                    Book a Consultation
-                </a>
+
+                <div class="counsellor-actions">
+
+                    <a
+                        href="{% url 'profile' %}"
+                        class="btn btn-outline"
+                    >
+                        Read More About Our Counsellor
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
 
             </div>
 
         </div>
 
     </div>
+
 </section>
-<!--<div class="team-container">
-  {% for member in team %}
-    <div class="team-card">
-      <div class="card-image">
-        <img src="{{ member.image.url }}" alt="{{ member.name }}">
-      </div>
-      <div class="card-content">
-        <h5>{{ member.name }}</h5>
-        <h4>{{ member.title }}</h4>
-        <p>{{ member.bio }}</p>
-    </div>
-    </div>
-  {% empty %}
-    <p>No team members found.</p>
-  {% endfor %}
-</div>-->
-</section>
-    <section class="why-section">
+
+{% endif %}
+ <section class="why-section">
       <div class="why-card" style="background-color: #4D7838;">
         <h4 style="color: white;">Why Book With Us?</h4>
         <ul style="color: #fff">

@@ -1,0 +1,338 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+    {{ counsellor.name }} | MindConnect
+{% endblock %}
+
+
+{% block content %}
+
+{% if counsellor %}
+
+<section class="counsellor-profile-page">
+
+    <div class="container">
+
+        <!-- Header -->
+
+        <div class="profile-page-header">
+
+            <span class="section-tag">
+                MEET OUR COUNSELLOR
+            </span>
+
+            <h1>
+                {{ counsellor.name }}
+            </h1>
+
+            <p>
+                {{ counsellor.title }}
+            </p>
+
+        </div>
+
+
+        <!-- Main Profile -->
+
+        <div class="profile-main">
+
+            <!-- Photo -->
+
+            <div class="profile-photo">
+
+                {% if counsellor.photo %}
+
+                    <img
+                        src="{{ counsellor.photo.url }}"
+                        alt="{{ counsellor.name }}"
+                    >
+
+                {% endif %}
+
+            </div>
+
+
+            <!-- Introduction -->
+
+            <div class="profile-introduction">
+
+                <span class="profile-label">
+                    PROFESSIONAL COUNSELLOR
+                </span>
+
+                <h2>
+                    {{ counsellor.name }}
+                </h2>
+
+                <h3>
+                    {{ counsellor.title }}
+                </h3>
+
+                <p>
+                    {{ counsellor.bio }}
+                </p>
+
+
+                <div class="profile-stats">
+
+                    <div>
+                        <strong>
+                            {{ counsellor.years_experience }}+
+                        </strong>
+
+                        <span>
+                            Years Experience
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <strong>
+                            <i class="fa-solid fa-lock"></i>
+                        </strong>
+
+                        <span>
+                            Confidential
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <strong>
+                            <i class="fa-solid fa-heart"></i>
+                        </strong>
+
+                        <span>
+                            Client-Centered
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Specializations -->
+
+        <div class="profile-section">
+
+            <span class="section-tag">
+                EXPERTISE
+            </span>
+
+            <h2>
+                Areas of Specialization
+            </h2>
+
+            <div class="specialization-grid">
+
+                {% for specialization in counsellor.specialization_list %}
+
+                <div class="specialization-card">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <span>
+                        {{ specialization }}
+                    </span>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+
+        <!-- Experience -->
+
+        <div class="profile-section">
+
+            <span class="section-tag">
+                EXPERIENCE
+            </span>
+
+            <h2>
+                Professional Experience
+            </h2>
+
+            <p>
+                {{ counsellor.experience }}
+            </p>
+
+        </div>
+
+
+        <!-- Qualifications -->
+
+        <div class="profile-section">
+
+            <span class="section-tag">
+                QUALIFICATIONS
+            </span>
+
+            <h2>
+                Qualifications & Training
+            </h2>
+
+            <div class="qualifications-list">
+
+                {% for qualification in counsellor.qualification_list %}
+
+                <div class="qualification-item">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    <span>
+                        {{ qualification }}
+                    </span>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+
+        <!-- Approach -->
+
+        <div class="profile-section">
+
+            <span class="section-tag">
+                OUR APPROACH
+            </span>
+
+            <h2>
+                Counselling Approach
+            </h2>
+
+            <div class="approach-content">
+
+                <i class="fa-solid fa-quote-left"></i>
+
+                <p>
+                    {{ counsellor.approach }}
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Support Options -->
+
+        <div class="profile-support">
+
+            <h2>
+                Support That Works For You
+            </h2>
+
+            <p>
+                Whether you prefer online or in-person sessions,
+                MindConnect provides a safe and confidential
+                environment where you can receive the support you need.
+            </p>
+
+
+            <div class="support-options">
+
+                {% if counsellor.online_support %}
+
+                <div>
+                    <i class="fa-solid fa-video"></i>
+
+                    <h3>
+                        Online Sessions
+                    </h3>
+
+                    <p>
+                        Connect with your counsellor remotely
+                        from wherever you are.
+                    </p>
+                </div>
+
+                {% endif %}
+
+
+                {% if counsellor.in_person_support %}
+
+                <div>
+                    <i class="fa-solid fa-user"></i>
+
+                    <h3>
+                        In-Person Sessions
+                    </h3>
+
+                    <p>
+                        Meet your counsellor in a comfortable
+                        and supportive environment.
+                    </p>
+                </div>
+
+                {% endif %}
+
+            </div>
+
+        </div>
+
+
+        <!-- CTA -->
+
+        <div class="profile-cta">
+
+            <span class="section-tag">
+                TAKE THE NEXT STEP
+            </span>
+
+            <h2>
+                Ready to Start Your Journey?
+            </h2>
+
+            <p>
+                You don't have to navigate life's challenges alone.
+                Take the first step toward greater emotional
+                well-being today.
+            </p>
+
+            <a
+                href="{% url 'booking' %}"
+                class="btn btn-primary"
+            >
+                Book a Consultation
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% else %}
+
+<section class="empty-section">
+
+    <div class="container">
+
+        <h2>
+            Counsellor profile unavailable
+        </h2>
+
+        <p>
+            Our counsellor information is currently being updated.
+        </p>
+
+    </div>
+
+</section>
+
+{% endif %}
+
+{% endblock %}

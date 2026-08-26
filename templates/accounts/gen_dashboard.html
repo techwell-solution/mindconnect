@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}MindConnect | Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="dashboard-container">
+
+    {% if user.role == "client" %}
+
+    <div class="dash-card">
+        <i class="fas fa-user fa-3x"></i>
+
+        <h3>Client Dashboard</h3>
+
+        <p>
+            View your appointments, journal, assessments,
+            progress tracker, payments, and wellness resources.
+        </p>
+
+        <a href="{% url 'client_dashboard' %}" class="btn">
+            Enter Dashboard
+        </a>
+    </div>
+
+    {% elif user.role == "counsellor" %}
+
+    <div class="dash-card">
+        <i class="fas fa-user-md fa-3x"></i>
+
+        <h3>Counsellor Dashboard</h3>
+
+        <p>
+            Manage your schedule, clients, session notes,
+            reports, and appointments.
+        </p>
+
+        <a href="{% url 'counselor_dashboard' %}" class="btn">
+            Enter Dashboard
+        </a>
+    </div>
+
+    {% elif user.is_superuser %}
+
+    <div class="dash-card">
+        <i class="fas fa-user-shield fa-3x"></i>
+
+        <h3>Administrator</h3>
+
+        <p>
+            Manage users, counsellors, appointments,
+            content, and the entire MindConnect platform.
+        </p>
+
+        <a href="{% url 'admin:index' %}" class="btn">
+            Open Admin
+        </a>
+    </div>
+
+    {% endif %}
+
+    <div class="user-info">
+
+        <h4>Account Information</h4>
+
+        <p><strong>Name:</strong> {{ user.get_full_name|default:user.username }}</p>
+
+        <p><strong>Username:</strong> {{ user.username }}</p>
+
+        <p><strong>Email:</strong> {{ user.email }}</p>
+
+        <p><strong>Role:</strong> {{ user.role|title }}</p>
+
+    </div>
+
+</div>
+
+{% endblock %}

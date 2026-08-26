@@ -602,7 +602,33 @@
         font-size: 1.7rem;
     }
 
+    .dashboard-container{
+        margin: 2rem auto;
+    }
+
+    .dash-card{
+        padding: 2rem 1.5rem;
+    }
+
+    .dash-card h3{
+        font-size: 1.5rem;
+    }
+
+    .dash-card p{
+        font-size: .95rem;
+    }
+
+    .dash-card .btn{
+        width: 100%;
+        text-align: center;
+    }
+
+    .user-info{
+        padding: 1.5rem;
+    }
 }
+
+
     
 
 @media (max-width:480px){

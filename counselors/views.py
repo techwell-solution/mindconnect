@@ -5,7 +5,7 @@ from appointments.models import Session
 from accounts.models import User
 from django.utils import timezone
 from django.contrib import messages
-from .models import SessionNote
+from .models import SessionNote, CounsellorProfile
 from .forms import SessionNoteForm
 
 # Create your views here.
@@ -198,3 +198,16 @@ def edit_session_note(request, pk):
 @login_required
 def counsellor_reports(request):
     return render(request, "counselors/counsellor_reports.html")
+
+def counsellor_profile(request):
+    counsellor = CounsellorProfile.objects.filter(
+        is_active=True
+    ).first()
+
+    return render(
+        request,
+        "counselors/profile.html",
+        {
+            "counsellor": counsellor,
+        }
+    )

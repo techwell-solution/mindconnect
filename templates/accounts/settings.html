@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Settings{% endblock %}
+
+{% block content %}
+
+<div class="settings-container">
+
+    <div class="page-header">
+        <h2>Account Settings</h2>
+
+        <a href="javascript:history.back()" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back
+        </a>
+    </div>
+
+    <div class="settings-grid">
+
+        <a href="{% url 'update_profile' %}" class="settings-card">
+            <i class="fas fa-user-edit fa-3x"></i>
+            <h3>Edit Profile</h3>
+            <p>Update your personal information and profile picture.</p>
+        </a>
+
+        <a href="{% url 'password_reset' %}" class="settings-card">
+            <i class="fas fa-lock fa-3x"></i>
+            <h3>Change Password</h3>
+            <p>Reset your account password securely.</p>
+        </a>
+
+        <a href="#" class="settings-card">
+            <i class="fas fa-bell fa-3x"></i>
+            <h3>Notifications</h3>
+            <p>Manage email and appointment notifications.</p>
+        </a>
+
+        <a href="#" class="settings-card">
+            <i class="fas fa-shield-alt fa-3x"></i>
+            <h3>Privacy</h3>
+            <p>Control your account privacy and visibility.</p>
+        </a>
+
+        <a href="{% url 'logout' %}" class="settings-card logout-card">
+            <i class="fas fa-sign-out-alt fa-3x"></i>
+            <h3>Logout</h3>
+            <p>Sign out of your MindConnect account.</p>
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

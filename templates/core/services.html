@@ -23,31 +23,54 @@
          you where you are. Whether you’re seeking individual support, family guidance, or group therapy, our compassionate
         professionals are here to walk with you on your journey toward healing and growth.</p>
     </section>
-    <div class="services-grid">
-      {% for service in services %}
-      <div class="service-card">
-        <div class="card-image">
-          <img src="{{ service.image }}" alt="{{ service.title }}">
-        </div>
+    <div class="services-grid" id="servicesGrid">
 
-        <div class="card-content">
-          <h3>{{ service.title }}</h3>
-          <p>{{ service.short_description }}</p>
-          <a href="{% url 'service_detail' service.slug %}" class="card-link">
-            Learn more <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-    {% endfor %}
+        {% for service in services %}
+
+            <div class="service-card">
+
+                <div class="card-image">
+                    <img src="{{ service.image }}" alt="{{ service.title }}">
+                </div>
+
+                <div class="card-content">
+                    <h3>{{ service.title }}</h3>
+
+                    <p>{{ service.short_description }}</p>
+
+                    <a href="{% url 'service_detail' service.slug %}" class="card-link">
+                        Learn more
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+
+        {% empty %}
+
+            <p>No services available.</p>
+
+        {% endfor %}
+
     </div>
-    
 
-<!-- Pagination -->
-  <div class="pagination">
-    <button class="prev">Prev</button>
-    <span class="page-info"></span>
-    <button class="next">Next</button>
-  </div>
+
+    <div class="pagination">
+
+        <button type="button" id="prevBtn" class="pagination-btn">
+            <i class="fas fa-arrow-left"></i>
+            Previous
+        </button>
+
+        <span id="pageInfo" class="page-info"></span>
+
+        <button type="button" id="nextBtn" class="pagination-btn">
+            Next
+            <i class="fas fa-arrow-right"></i>
+        </button>
+
+    </div>   
+    
 </section>
 <section class="benefits">
   <section class="content-section">

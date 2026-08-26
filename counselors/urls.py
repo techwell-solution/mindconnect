@@ -11,4 +11,5 @@ urlpatterns = [
     path("session/<int:session_id>/notes/add/", views.create_session_note, name="create_session_note",),
     path("session-notes/<int:pk>/edit/", views.edit_session_note, name="edit_session_note", ),
     path("dashboard/reports/", views.counsellor_reports, name="counsellor_reports"),
+    path("", views.counsellor_profile, name="profile"),
 ]

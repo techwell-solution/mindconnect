@@ -234,7 +234,7 @@ class ClientProfileForm(forms.ModelForm):
     class Meta:
         model = ClientProfile
         fields = [
-            "avatar",
+            "profile_photo",
             "date_of_birth",
             "gender",
             "emergency_contact",

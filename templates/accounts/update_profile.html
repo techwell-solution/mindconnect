@@ -35,17 +35,17 @@
 
             <div class="avatar-section">
 
-                {% if profile.avatar %}
-                    <img src="{{ profile.avatar.url }}"
-                         class="profile-avatar"
-                         alt="Profile Photo">
+               {% if user.profile.profile_photo %}
+                    <img src="{{ user.profile.profile_photo.url }}"
+                        alt="Profile"
+                        class="profile-avatar">
                 {% else %}
-                    <i class="fas fa-user-circle fa-6x profile-icon"></i>
+                    <i class="fas fa-user-circle profile-icon"></i>
                 {% endif %}
 
                 <div class="form-group">
                     <label>Profile Photo</label>
-                    {{ profile_form.avatar }}
+                    {{ profile_form.profile_photo }}
                 </div>
 
             </div>

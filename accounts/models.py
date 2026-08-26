@@ -27,6 +27,13 @@ class User(AbstractUser):
 
     is_verified = models.BooleanField(default=False)
 
+
+    @property
+    def profile(self):
+        if self.role == self.CLIENT:
+            return self.client_profile
+        return self.counsellor_profile
+
     def __str__(self):
         return self.get_full_name() or self.username
 
@@ -38,7 +45,7 @@ class ClientProfile(models.Model):
         related_name="client_profile"
     )
 
-    avatar = models.ImageField(
+    profile_photo = models.ImageField(
         upload_to="profile_photos/",
         blank=True,
         null=True

@@ -6,7 +6,9 @@ from .views import (
             counsellor_register,
             login_view,
             logout_view,
-            update_profile
+            update_profile,
+            settings_view,
+            gen_dashboard
     )
 
 
@@ -21,4 +23,6 @@ urlpatterns = [
     path("reset/<uidb64>/<token>/", auth_views.PasswordResetConfirmView.as_view(template_name="accounts/password_reset_confirm.html" ), name="password_reset_confirm", ),
     path("reset/done/", auth_views.PasswordResetCompleteView.as_view(template_name="accounts/password_reset_complete.html" ), name="password_reset_complete", ),
     path("profile/", update_profile, name="update_profile",),
+    path("settings/", settings_view, name="settings"),
+    path("gen-dashboard/", gen_dashboard, name="gen_dashboard"),
 ]

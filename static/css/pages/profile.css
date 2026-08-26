@@ -1,0 +1,831 @@
+/* =========================================================
+   COUNSELLOR PROFILE PAGE
+   ========================================================= */
+
+.counsellor-profile-page {
+    padding: 110px 0 100px;
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.profile-page-header {
+    max-width: 800px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.profile-page-header .section-tag {
+    display: inline-block;
+    margin-bottom: 16px;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: var(--primary-color);
+}
+
+.profile-page-header h1 {
+    margin: 0 0 14px;
+
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    line-height: 1.1;
+    font-weight: 700;
+
+    color: var(--text-color);
+}
+
+.profile-page-header p {
+    margin: 0;
+
+    font-size: 1.1rem;
+    line-height: 1.7;
+
+    color: var(--text-muted, #64748b);
+}
+
+
+/* =========================================================
+   MAIN PROFILE
+   ========================================================= */
+
+.profile-main {
+    display: grid;
+    grid-template-columns: minmax(300px, 0.85fr) minmax(350px, 1.15fr);
+    align-items: center;
+    gap: 75px;
+
+    max-width: 1100px;
+    margin: 0 auto 100px;
+
+    padding: 45px;
+
+    background: var(--surface, #ffffff);
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: 30px;
+
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.07);
+}
+
+
+/* =========================================================
+   PROFILE PHOTO
+   ========================================================= */
+
+.profile-photo {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+}
+
+.profile-photo::before {
+    content: "";
+
+    position: absolute;
+    top: -18px;
+    left: -18px;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 24px;
+
+    background: var(--primary-color);
+    opacity: 0.1;
+}
+
+.profile-photo::after {
+    content: "";
+
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+
+    background: var(--accent, #06b6d4);
+    opacity: 0.1;
+}
+
+.profile-photo img {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    width: 100%;
+    height: 500px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 45px rgba(15, 23, 42, 0.15);
+}
+
+
+/* =========================================================
+   INTRODUCTION
+   ========================================================= */
+
+.profile-introduction {
+    max-width: 600px;
+}
+
+.profile-label {
+    display: inline-flex;
+    align-items: center;
+
+    margin-bottom: 14px;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: var(--primary-color);
+}
+
+.profile-introduction h2 {
+    margin: 0 0 8px;
+
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.15;
+
+    color: var(--text-color);
+}
+
+.profile-introduction h3 {
+    margin: 0 0 24px;
+
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 600;
+
+    color: var(--primary-color);
+}
+
+.profile-introduction > p {
+    margin: 0;
+
+    font-size: 1rem;
+    line-height: 1.9;
+
+    color: var(--text-muted, #64748b);
+}
+
+
+/* =========================================================
+   PROFILE STATS
+   ========================================================= */
+
+.profile-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+
+    margin-top: 35px;
+}
+
+.profile-stats > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 105px;
+    padding: 15px;
+
+    text-align: center;
+
+    background: var(--background-color);
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: 14px;
+}
+
+.profile-stats strong {
+    display: block;
+    margin-bottom: 7px;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    color: var(--primary-color);
+}
+
+.profile-stats strong i {
+    font-size: 1.25rem;
+}
+
+.profile-stats span {
+    font-size: 0.78rem;
+    font-weight: 600;
+
+    color: var(--text-muted, #64748b);
+}
+
+
+/* =========================================================
+   PROFILE SECTIONS
+   ========================================================= */
+
+.profile-section {
+    max-width: 1000px;
+    margin: 0 auto 80px;
+}
+
+.profile-section .section-tag {
+    display: inline-block;
+    margin-bottom: 12px;
+
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+
+    color: var(--primary-color);
+}
+
+.profile-section h2 {
+    margin: 0 0 22px;
+
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    line-height: 1.2;
+
+    color: var(--text-color);
+}
+
+.profile-section > p {
+    max-width: 850px;
+    margin: 0;
+
+    font-size: 1rem;
+    line-height: 1.9;
+
+    color: var(--text-muted, #64748b);
+}
+
+
+/* =========================================================
+   SPECIALIZATIONS
+   ========================================================= */
+
+.specialization-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.specialization-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 20px;
+
+    background: var(--surface, #ffffff);
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: 14px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.specialization-card:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--primary-color);
+
+    box-shadow:
+        0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.specialization-card i {
+    flex-shrink: 0;
+
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.specialization-card span {
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    color: var(--text-color);
+}
+
+
+/* =========================================================
+   QUALIFICATIONS
+   ========================================================= */
+
+.qualifications-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.qualification-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+
+    padding: 20px;
+
+    background: var(--surface, #ffffff);
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: 14px;
+}
+
+.qualification-item i {
+    flex-shrink: 0;
+
+    margin-top: 3px;
+
+    font-size: 1.05rem;
+    color: var(--primary-color);
+}
+
+.qualification-item span {
+    font-size: 0.94rem;
+    line-height: 1.6;
+    font-weight: 600;
+
+    color: var(--text-color);
+}
+
+
+/* =========================================================
+   APPROACH
+   ========================================================= */
+
+.approach-content {
+    position: relative;
+
+    padding: 35px 40px;
+
+    background: var(--surface, #ffffff);
+
+    border-left: 4px solid var(--primary-color);
+
+    border-radius: 0 18px 18px 0;
+
+    box-shadow:
+        0 12px 35px rgba(15, 23, 42, 0.06);
+}
+
+.approach-content > i {
+    display: block;
+    margin-bottom: 15px;
+
+    font-size: 1.7rem;
+    color: var(--primary-color);
+    opacity: 0.7;
+}
+
+.approach-content p {
+    margin: 0;
+
+    font-size: 1rem;
+    line-height: 1.9;
+
+    color: var(--text-muted, #64748b);
+}
+
+
+/* =========================================================
+   SUPPORT SECTION
+   ========================================================= */
+
+.profile-support {
+    max-width: 1100px;
+    margin: 100px auto;
+
+    padding: 60px;
+
+    text-align: center;
+
+    background: var(--surface, #ffffff);
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: 28px;
+
+    box-shadow:
+        0 20px 55px rgba(15, 23, 42, 0.06);
+}
+
+.profile-support h2 {
+    margin: 0 0 14px;
+
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+
+    color: var(--text-color);
+}
+
+.profile-support > p {
+    max-width: 700px;
+    margin: 0 auto 40px;
+
+    font-size: 1rem;
+    line-height: 1.8;
+
+    color: var(--text-muted, #64748b);
+}
+
+.support-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.support-options > div {
+    padding: 30px;
+
+    background: var(--background-color);
+
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: 18px;
+}
+
+.support-options i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 55px;
+    height: 55px;
+
+    margin-bottom: 18px;
+
+    border-radius: 50%;
+
+    background: var(--primary-color);
+    color: #ffffff;
+
+    font-size: 1.2rem;
+}
+
+.support-options h3 {
+    margin: 0 0 10px;
+
+    font-size: 1.1rem;
+
+    color: var(--text-color);
+}
+
+.support-options p {
+    margin: 0;
+
+    font-size: 0.9rem;
+    line-height: 1.7;
+
+    color: var(--text-muted, #64748b);
+}
+
+
+/* =========================================================
+   CALL TO ACTION
+   ========================================================= */
+
+.profile-cta {
+    max-width: 900px;
+    margin: 100px auto 0;
+
+    padding: 70px 40px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--primary-dark, #1d4ed8)
+        );
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 25px 60px rgba(37, 99, 235, 0.2);
+}
+
+.profile-cta .section-tag {
+    display: inline-block;
+    margin-bottom: 14px;
+
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.profile-cta h2 {
+    margin: 0 0 15px;
+
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.2;
+
+    color: #ffffff;
+}
+
+.profile-cta p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+
+    font-size: 1rem;
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.profile-cta .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 14px 26px;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+    color: var(--primary-color);
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.profile-cta .btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.profile-cta .btn i {
+    transition: transform 0.25s ease;
+}
+
+.profile-cta .btn:hover i {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   EMPTY PROFILE
+   ========================================================= */
+
+.empty-section {
+    padding: 140px 20px;
+
+    text-align: center;
+
+    background: var(--background-color);
+}
+
+.empty-section h2 {
+    margin-bottom: 12px;
+
+    font-size: 2rem;
+
+    color: var(--text-color);
+}
+
+.empty-section p {
+    margin: 0;
+
+    color: var(--text-muted, #64748b);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .counsellor-profile-page {
+        padding: 85px 0 80px;
+    }
+
+    .profile-main {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding: 35px;
+    }
+
+    .profile-photo {
+        max-width: 500px;
+    }
+
+    .profile-photo img {
+        height: 500px;
+    }
+
+    .profile-introduction {
+        max-width: 700px;
+        margin: 0 auto;
+
+        text-align: center;
+    }
+
+    .profile-stats {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .profile-section {
+        margin-bottom: 65px;
+    }
+
+    .profile-support {
+        margin-top: 70px;
+        margin-bottom: 70px;
+
+        padding: 45px 30px;
+    }
+
+    .profile-cta {
+        margin-top: 70px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .counsellor-profile-page {
+        padding: 65px 0 60px;
+    }
+
+    .profile-page-header {
+        margin-bottom: 45px;
+    }
+
+    .profile-page-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .profile-page-header p {
+        font-size: 0.95rem;
+    }
+
+    .profile-main {
+        gap: 35px;
+
+        margin-bottom: 65px;
+
+        padding: 20px;
+
+        border-radius: 20px;
+    }
+
+    .profile-photo img {
+        height: 380px;
+
+        border-radius: 18px;
+    }
+
+    .profile-photo::before {
+        top: -10px;
+        left: -10px;
+
+        width: 65px;
+        height: 65px;
+
+        border-radius: 16px;
+    }
+
+    .profile-photo::after {
+        right: -10px;
+        bottom: -10px;
+
+        width: 75px;
+        height: 75px;
+    }
+
+    .profile-introduction h2 {
+        font-size: 1.8rem;
+    }
+
+    .profile-introduction h3 {
+        font-size: 0.9rem;
+    }
+
+    .profile-introduction > p {
+        font-size: 0.92rem;
+        line-height: 1.8;
+    }
+
+    .profile-stats {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+    .profile-stats > div {
+        min-height: auto;
+        padding: 14px;
+    }
+
+    .profile-section {
+        margin-bottom: 55px;
+    }
+
+    .profile-section h2 {
+        font-size: 1.7rem;
+    }
+
+    .profile-section > p {
+        font-size: 0.92rem;
+    }
+
+    .specialization-grid,
+    .qualifications-list,
+    .support-options {
+        grid-template-columns: 1fr;
+    }
+
+    .specialization-card,
+    .qualification-item {
+        padding: 16px;
+    }
+
+    .approach-content {
+        padding: 25px 22px;
+    }
+
+    .approach-content p {
+        font-size: 0.92rem;
+    }
+
+    .profile-support {
+        margin: 60px 0;
+
+        padding: 35px 20px;
+
+        border-radius: 20px;
+    }
+
+    .profile-support h2 {
+        font-size: 1.8rem;
+    }
+
+    .profile-support > p {
+        font-size: 0.92rem;
+    }
+
+    .support-options > div {
+        padding: 25px 20px;
+    }
+
+    .profile-cta {
+        margin-top: 60px;
+
+        padding: 50px 22px;
+
+        border-radius: 20px;
+    }
+
+    .profile-cta h2 {
+        font-size: 1.9rem;
+    }
+
+    .profile-cta p {
+        font-size: 0.92rem;
+    }
+
+    .profile-cta .btn {
+        width: 100%;
+        padding: 14px 18px;
+    }
+}

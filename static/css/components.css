@@ -66,6 +66,7 @@
   transition: var(--transition);
   font-weight: 500;
   box-shadow: var(--shadow-sm);
+
 }
 .pri-btn{
     background: var(--primary-color);
@@ -75,8 +76,10 @@
     transition: var(--transition);
     font-weight: 500;
     text-decoration: none;
-    display: inline-block;
-    margin: 0;
+    display: block;
+    width: 200px;
+    margin:  0 auto;
+    align-self: center;
 }
 
 .sec-btn{
@@ -144,7 +147,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 5%;
+    padding: 12px 5%;
     margin-top: 38px;
     position: sticky;
     top: 0; 
@@ -160,7 +163,7 @@
 }
 
 .nav-logo img {
-    height: 140px;
+    height: 90px;
     object-fit: contain;
 }
 
@@ -179,6 +182,7 @@
 .nav-right {
     justify-content: flex-start;
     gap: 10px;
+    justify-content:flex-start;
 }
 
 .nav-left,
@@ -186,16 +190,6 @@
     display: flex;
     align-items: center;
     flex: 1;
-}
-
-.nav-left {
-    justify-content: flex-end;
-    gap: 10px;
-}
-
-.nav-right {
-    justify-content: flex-start;
-    gap: 10px;
 }
 
 .nav-links a::after {
@@ -225,6 +219,7 @@
     font-weight: 400;
     transition: color 0.3s;
     position: relative;
+    white-space: nowrap;
 }
 .nav-links a:hover::after {
     width: 100%;
@@ -243,7 +238,10 @@
     text-align: center;
     transition: 0.3s;
     margin-left: 15px;
+    width: 120px;
+    white-space: nowrap;
 }
+
 
 .book-button:hover {
     background: var(--secondary-color);

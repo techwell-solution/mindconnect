@@ -50,30 +50,96 @@
             </div>
 
             <div class="nav-right">
+
                 <ul class="nav-links">
-                    <li><a href="{% url 'events' %}" class="{% if request.resolver_match.url_name == 'events' %}active{% endif %}">Events</a></li>
-                    <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active {% endif %}">Contact</a></li>
+                    <li><a href="{% url 'events' %}"class="{% if request.resolver_match.url_name == 'events' %}active{% endif %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}"class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}"> Contact</a></li>
+                    <li><a href="{% url 'gen_dashboard' %}"class="{% if request.resolver_match.url_name == 'gen_dashboard' %}active{% endif %}"> Dashboard</a></li>
+
                 </ul>
+
                 <a href="" class="book-button">Book Now</a>
-                {% if user.is_authenticated %}
 
-                    <form action="{% url 'logout' %}" method="post" style="display:inline;">
-                        {% csrf_token %}
-                        <button type="submit" class="book-button">log Out</button>
-                    </form>
+                <div class="profile-dropdown">
 
+    {% if user.is_authenticated %}
+
+        <button class="profile-btn" onclick="toggleDropdown(event)">
+
+            {% if user.profile.profile_photo %}
+                <img src="{{ user.profile.profile_photo.url }}"
+                    alt="Profile"
+                    class="profile-avatar">
+            {% else %}
+                <i class="fas fa-user-circle profile-icon"></i>
+            {% endif %}
+
+            <span class="profile-name">
+                {{ user.first_name|default:user.username }}
+            </span>
+
+            <i class="fas fa-chevron-down dropdown-arrow"></i>
+
+        </button>
+
+        <div class="dropdown-menu" id="profileMenu">
+
+            <div class="dropdown-header">
+
+                {% if user.profile.profile_photo %}
+                    <img src="{{ user.profile.profile_photo.url }}"
+                        class="dropdown-avatar"
+                        alt="Profile">
                 {% else %}
-
-                    <a href="{% url 'login' %}" class="book-button">Log In</a>
-
+                    <i class="fas fa-user-circle dropdown-user-icon"></i>
                 {% endif %}
+
+                <div>
+                    <h4>{{ user.get_full_name|default:user.username }}</h4>
+                    <small>{{ user.email }}</small>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <a href="{% url 'update_profile' %}">
+                <i class="fas fa-user"></i>
+                My Profile
+            </a>
+
+            <a href="{% url 'settings' %}">
+                <i class="fas fa-cog"></i>
+                Settings
+            </a>
+
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="dropdown-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </button>
+            </form>
+
+        </div>
+
+    {% else %}
+
+        <a href="{% url 'login' %}" class="profile-login">
+            <i class="fas fa-user-circle profile-icon"></i>
+        </a>
+
+    {% endif %}
+
+</div>
+
             </div>
 
             <button class="menu-toggle" type="button">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
 
 <!-- Mobile Menu -->
@@ -169,6 +235,18 @@
         {% block scripts %}
         {% endblock %}
 
-            
+  <script>
+    function toggleDropdown(event) {
+        event.stopPropagation();
+        document.getElementById("profileMenu").classList.toggle("show");
+    }
+
+    document.addEventListener("click", function () {
+        const menu = document.getElementById("profileMenu");
+        if (menu) {
+            menu.classList.remove("show");
+        }
+    });
+</script>          
 </body>
 </html>

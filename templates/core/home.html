@@ -27,31 +27,30 @@
         professionals are here to walk with you on your journey toward healing and growth.</p>
     </section>
     <div class="services-grid">
-    {% for service in services %}
-    <div class="service-card">
-        <div class="card-image">
-            <img src="{{ service.image }}" alt="{{ service.title }}">
-        </div>
+        {% for service in services %}
+            <div class="service-card">
 
-        <div class="card-content">
-            <h3>{{ service.title }}</h3>
-            <p>{{ service.short_description }}</p>
+                <div class="card-image">
+                    <img src="{{ service.image }}" alt="{{ service.title }}">
+                </div>
 
-            <a href="" class="card-link">
-                Learn more <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
+                <div class="card-content">
+                    <h3>{{ service.title }}</h3>
+
+                    <p>{{ service.short_description }}</p>
+
+                    <a href="{% url 'service_detail' service.slug %}" class="card-link">
+                        Learn more
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        {% empty %}
+            <p>No featured services available.</p>
+        {% endfor %}
     </div>
-    {% empty %}
-    <p>No services available.</p>
-    {% endfor %}
-</div>
-
-    <div class="pagination">
-      <button class="prev">Prev</button>
-      <span class="page-info"></span>
-      <button class="next">Next</button>
-    </div>
+    <a href="{% url 'services' %}" class="pri-btn">View all services</a>
   </section>
   <section class="tag-section">
       <div class="tag-container">
@@ -99,80 +98,10 @@
         </div>
         
         <div class="cta-container">
-            <a href="" class="cta-button">Discover Programs</a>
+            <a href="{% url 'services' %}" class="pri-btn">Discover Services</a>
         </div>
   </section>
-   <section class="team-section">
-    <div class="content-section">
-        <h2>Meet Your Counsellor</h2>
-    </div>
-    
-
-    <div class="team-container">
-
-        
-
-            <div class="team-card">
-                <img src="{% static 'images/erastus.jpg' %}"
-                     alt="Erastus Ivelia">
-            </div>
-
-            <div class="team-card">
-              <div class="card-content">
-
-                <h3>Erastus Ivelia</h3>
-                <h4>Professional Counsellor & Mental Wellness Practitioner</h4>
-
-                <p>
-                    Erastus Ivelia is a professional counsellor dedicated
-                    to helping individuals, couples, families, and organizations
-                    improve emotional well-being, strengthen relationships,
-                    and navigate life’s challenges with confidence.
-                </p>
-
-                <ul>
-                    <li>✔ Individual Counselling</li>
-                    <li>✔ Couples Therapy</li>
-                    <li>✔ Family Therapy</li>
-                    <li>✔ Corporate Wellness</li>
-                </ul>
-                <br>
-                <br>
-
-                <div class="counsellor-stats">
-                    <span>✔ 5+ Years Experience</span>
-                    <span>✔ Confidential Sessions</span>
-                    <span>✔ Online & In-Person Support</span>
-                </div>
-
-                <a href="" class="book-btn">
-                    Book a Consultation
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
- <!-- {% for member in team %}
-      <div class="team-card">
-        <div class="card-image">
-          <img src="{{ member.image.url }}" alt="{{ member.name }}">
-        </div>
-        <div class="card-content">
-          <h5>{{ member.name }}</h5>
-          <h4>{{ member.title }}</h4>
-          <p>{{ member.bio }}</p>
-      </div>
-      </div>
-    {% empty %}
-      <p>No team members found.</p>
-    {% endfor %}-->
-      </div>
-      </div>
-    </section>
+   
   <section class="testimonials-section">
     <section class="content-section">
       <h2>Testimonials</h2>

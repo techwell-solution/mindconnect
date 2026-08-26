@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Services, CaseStudy, ProcessStep
+from .models import Services, CaseStudy, ProcessStep, FAQ
 from counselors.models import CounsellorProfile
+from testimonials.models import  Testimonial
 from django.core.paginator import Paginator
 
 # Create your views here.
@@ -11,10 +12,17 @@ def home(request):
         is_featured=True
     )
     counsellor = CounsellorProfile.objects.filter(is_active=True).first()
+    testimonials = Testimonial.objects.filter(
+        is_active=True,
+        is_featured=True
+    ).order_by("order")
+    faqs = FAQ.objects.filter(is_active=True)
     context = {
         "steps": steps,
         "services": services,
         "counsellor": counsellor,
+        "testimonials": testimonials,
+         "faqs": faqs,
         }
 
     return render(request, "core/home.html", context)
@@ -32,7 +40,16 @@ def about(request):
 
 def services(request):
     services = Services.objects.filter(is_active=True)
-    context = {"services": services}
+    testimonials = Testimonial.objects.filter(
+            is_active=True,
+            is_featured=True
+        ).order_by("order")
+    faqs = FAQ.objects.filter(is_active=True)
+    context = {
+        "services": services,
+        "testimonials": testimonials,
+        "faqs": faqs,
+    }
     return render(request, "core/services.html", context)
 
 def service_detail(request, slug):
@@ -41,7 +58,11 @@ def service_detail(request, slug):
 
 def case_study(request):
     case_studies = CaseStudy.objects.filter(is_active=True, status="published").order_by("-created_at")
-    context = {"case_studies": case_studies}
+    faqs = FAQ.objects.filter(is_active=True)
+    context = {
+        "case_studies": case_studies,
+        "faqs": faqs,
+    }
     return render(request, "core/case_study.html", context)
 
 def case_study_detail(request, slug):

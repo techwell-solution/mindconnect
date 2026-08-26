@@ -191,126 +191,144 @@
             <a href="" class="cta-button">Discover Programs</a>
         </div>
   </section>
-  <section class="testimonials-section">
+ <section class="testimonials-section">
+
     <section class="content-section">
-      <h2>Testimonials</h2>
-      <h6>Stories of healing, growth, and transformation</h6>
-      </section>
-  <div class="testimonials-wrapper">
-  <div class="testimonials-card">
-    <img src="https://images.unsplash.com/photo-1713845784497-fe3d7ed176d8?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG1pZGRsZSUyMGFnZWQlMjBibGFjayUyMGdpcmx8ZW58MHx8MHx8fDA%3D" alt="person">
-    <div><p>“Techwell Therapy has been a safe space for me. My sessions with Erastus have helped me manage anxiety and rebuild my confidence.”</p>
-    <p><strong>Jane M.</strong> – Individual Therapy</p>
+        <h2>Testimonials</h2>
+        <h6>Stories of healing, growth, and transformation</h6>
+    </section>
+
+
+    <div class="testimonials-slider">
+
+        <div class="testimonials-track">
+
+            {% for testimonial in testimonials %}
+
+                <div class="testimonials-card">
+
+                    <div class="testimonial-content">
+
+                        <p class="testimonial-message">
+                            “{{ testimonial.message }}”
+                        </p>
+
+                        <p class="testimonial-author">
+                            <strong>{{ testimonial.name }}</strong>
+
+                            {% if testimonial.position %}
+                                – {{ testimonial.position }}
+                            {% endif %}
+                        </p>
+
+                        <div class="testimonial-rating">
+
+                            {% for i in "12345" %}
+
+                                {% if forloop.counter <= testimonial.rating %}
+                                    <i class="fa-solid fa-star"></i>
+                                {% else %}
+                                    <i class="fa-regular fa-star"></i>
+                                {% endif %}
+
+                            {% endfor %}
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            {% empty %}
+
+                <p class="no-testimonials">
+                    No testimonials available at the moment.
+                </p>
+
+            {% endfor %}
+
+
+            <!-- Duplicate cards for seamless animation -->
+
+            {% for testimonial in testimonials %}
+
+                <div class="testimonials-card">
+
+                    <div class="testimonial-content">
+
+                        <p class="testimonial-message">
+                            “{{ testimonial.message }}”
+                        </p>
+
+                        <p class="testimonial-author">
+                            <strong>{{ testimonial.name }}</strong>
+
+                            {% if testimonial.position %}
+                                – {{ testimonial.position }}
+                            {% endif %}
+                        </p>
+
+                        <div class="testimonial-rating">
+
+                            {% for i in "12345" %}
+
+                                {% if forloop.counter <= testimonial.rating %}
+                                    <i class="fa-solid fa-star"></i>
+                                {% else %}
+                                    <i class="fa-regular fa-star"></i>
+                                {% endif %}
+
+                            {% endfor %}
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
     </div>
-  </div>
 
-  <div class="testimonials-card">
-    <img src="https://plus.unsplash.com/premium_photo-1694618624818-3fc850af3c5c?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGVhcmx5JTIwNTAncyUyMGJsYWNrJTIwJTIwd29tYW58ZW58MHx8MHx8fDA%3D" alt="person">
-    <div><p>“I appreciate the therapist’s ability to combine compassion with practical strategies. Their approach fosters real progress and long-term personal growth.”</p>
-    <p><strong>Sarah T.</strong> – Couple's Therapy</p>
-    </div>
-  </div>
-
-  <div class="testimonials-card">
-    <img src="https://images.unsplash.com/photo-1740327823179-af68ca3d0290?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGVhcmx5JTIwNTAncyUyMGJsYWNrJTIwJTIwbWFufGVufDB8fDB8fHww" alt="person">
-    <div><p>“Sessions are conducted with professionalism and care, creating a space where clients feel heard and respected. The guidance offered is both constructive and empowering.”</p>
-    <p><strong>Alex K.</strong> – Individual Therapy</p>
-    </div>
-  </div>
-
-  <div class="testimonials-card">
-    <img src="https://plus.unsplash.com/premium_photo-1710459650199-9e355d4e642a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fGVhcmx5JTIwNTAncyUyMGJsYWNrJTIwJTIwbWFufGVufDB8fDB8fHww" alt="person">
-    <div><p>“The therapist demonstrates expertise and empathy in every session. Their support has a meaningful impact on personal well-being and resilience.”</p>
-    <p><strong>Brian L.</strong> – Individual Therapy</p>
-  </div>
-  </div>
-
-  <div class="testimonials-card">
-    <img src="https://plus.unsplash.com/premium_photo-1763335952150-76b08c9f5751?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dGVlbmJveSUyMGFmcmljYW58ZW58MHx8MHx8fDA%3D" alt="person">
-    <p>“The therapist provides a supportive and professional environment that makes it easy to open up. Each session is focused, insightful, and tailored to individual needs.”</p>
-    <p><strong>Johnathan P.</strong> – Stress Therapy</p>
-  </div>
-
-  <div class="testimonials-card">
-    <img src="https://images.unsplash.com/photo-1615453261261-77494754424e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YWZyaWNhbiUyMHlvdW5nJTIwbGFkeXxlbnwwfHwwfHx8MA%3D%3D" alt="person">
-   <div><p>“The therapist combines expertise with genuine care, helping clients navigate challenges with confidence and clarity.”</p>
-    <p><strong>Melissa R.</strong> – Anxiety Therapy</p>
-    </div>
-  </div>
-  </div>
 </section>
-     
+
+
+</section>
 <section class="faq-section">
-  <h2>Frequently Asked Questions</h2>
-<div class="faq-container">
-  <details>
-    <summary>What is counselling?</summary>
-    <p>
-      Counselling is a confidential, supportive process where a trained therapist
-      helps you explore your thoughts, feelings, and behaviors to better
-      understand yourself and work through challenges.
-    </p>
-  </details>
 
-  <details>
-    <summary>Who is counselling for?</summary>
-    <p>
-      Counselling is for anyone seeking support — whether you’re facing stress,
-      anxiety, relationship issues, trauma, or simply want personal growth and
-      clarity.
-    </p>
-  </details>
+    <div class="content-section">
+        <span class="section-tag">FAQ</span>
 
-  <details>
-    <summary>How do I know if I need counselling?</summary>
-    <p>
-      If you’re feeling overwhelmed, stuck, or emotionally drained — or just want
-      a safe space to talk — counselling can help. It’s okay to seek support even
-      if you’re unsure what’s “wrong.”
-    </p>
-  </details>
+        <h2>Frequently Asked Questions</h2>
 
-  <details>
-    <summary>What issues can you help with?</summary>
-    <p>
-      We support clients dealing with anxiety, depression, self-esteem issues,
-      trauma, grief, relationship and family problems, life transitions, and
-      more.
-    </p>
-  </details>
+        <p>
+            Find answers to common questions about our counselling services.
+        </p>
+    </div>
 
-  <details>
-    <summary>Is counselling confidential?</summary>
-    <p>
-      Yes. Everything you share is kept confidential unless there’s a risk of
-      harm to you or others.
-    </p>
-  </details>
+    <div class="faq-container">
 
-  <details>
-    <summary>Do you offer online sessions?</summary>
-    <p>
-      Yes, we offer both in-person and secure online counselling sessions for
-      your convenience.
-    </p>
-  </details>
+        {% for faq in faqs %}
 
-  <details>
-    <summary>How do I book a session?</summary>
-    <p>
-      You can book via our website, phone, or contact form. We'll guide you
-      through the next steps.
-    </p>
-  </details>
+            <details>
+                <summary>{{ faq.question }}</summary>
 
-  <details>
-    <summary>What are your fees and payment options?</summary>
-    <p>
-      Session fees and payment options vary. We accept M-Pesa, PayPal, and bank
-      transfer. Sliding scale fees available on request.
-    </p>
-  </details>
-  </div>
+                <p>
+                    {{ faq.answer }}
+                </p>
+            </details>
+
+        {% empty %}
+
+            <p class="no-faqs">
+                No frequently asked questions available at the moment.
+            </p>
+
+        {% endfor %}
+
+    </div>
 
 </section>
 <section class="content-section">

@@ -11,7 +11,7 @@
       <p>Every journey is unique. These case studies share how counselling has helped 
         individuals, couples, and families find clarity, balance, and hope.
     </p>
-      <a href="services" class="book-btn">Discover Programmes</a>
+      <a href="{% url 'services' %}" class="pri-btn">Discover Programmes</a>
     </div>
   </section>
 
@@ -26,63 +26,92 @@
               have achieved through counselling.
           </p>
       </div>
-      <div class="studies-container">
+      <div class="studies-container" id="caseStudiesContainer">
+
     {% for study in case_studies %}
-    <div class="studies-card">
-        <div class="card-content">
 
-            <a href="{% url 'case_study_detail' study.slug %}">
-                <div class="card-image"
-                     style="background-image: url('{{ study.image }}');">
-                </div>
-            </a>
+        <div class="studies-card">
 
-            <h3>
+            <div class="card-content">
+
                 <a href="{% url 'case_study_detail' study.slug %}">
-                    {{ study.title }}
+                    <div
+                        class="card-image"
+                        style="background-image: url('{{ study.image }}');">
+                    </div>
                 </a>
-            </h3>
 
-            <p>
-                <strong>Client Profile:</strong>
-                {{ study.client_profile }}
-            </p>
+                <h3>
+                    <a href="{% url 'case_study_detail' study.slug %}">
+                        {{ study.title }}
+                    </a>
+                </h3>
 
-            <div class="more-content">
-                <h4>Challenge</h4>
-                <p>{{ study.challenge }}</p>
+                <p>
+                    <strong>Client Profile:</strong>
+                    {{ study.client_profile }}
+                </p>
 
-                <h4>Approach</h4>
-                <ul>
-                    {% for item in study.approach_list %}
-                        <li>{{ item }}</li>
-                    {% endfor %}
-                </ul>
+                <div class="more-content">
 
-                <h4>Outcome</h4>
-                <p>{{ study.outcome }}</p>
+                    <h4>Challenge</h4>
+                    <p>{{ study.challenge }}</p>
+
+                    <h4>Approach</h4>
+
+                    <ul>
+                        {% for item in study.approach_list %}
+                            <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+
+                    <h4>Outcome</h4>
+                    <p>{{ study.outcome }}</p>
+
+                </div>
+
+                <a
+                    href="{% url 'case_study_detail' study.slug %}"
+                    class="card-link">
+                    Learn more
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
             </div>
 
-            <a href="{% url 'case_study_detail' study.slug %}" class="card-link">
-            Learn more <i class="fas fa-arrow-right"></i>
-          </a>
-          
-
         </div>
-    </div>
+
     {% empty %}
+
         <p>No case studies available at the moment.</p>
+
     {% endfor %}
-</div>
-    
-      <!-- Pagination controls -->
-      <div class="pagination">
-        <button class="prev">Prev</button>
-        <span class="page-info"></span>
-        <button class="next">Next</button>
-      </div>
-  
+
+  </div>
+    {% if case_studies %}
+    <div class="case-study-navigation">
+
+        <button
+            type="button"
+            id="prevCaseStudy"
+            class="pagination-btn">
+            <i class="fas fa-chevron-left"></i>
+            Previous
+        </button>
+
+        <div id="caseStudyPages" class="pagination-pages"></div>
+
+        <button
+            type="button"
+            id="nextCaseStudy"
+            class="pagination-btn">
+            Next
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
     </div>
+    {% endif %}
+</section>
     <section class="case-studies">
     <div class="content-section">
       <h2 >Challenge vs Solution</h2>
@@ -137,79 +166,41 @@
       </div>
     </div>
   </section>                                                                          
-  <section class="faq-section">
-    <h2>Frequently Asked Questions</h2>
-  <div class="faq-container">
-    <details>
-      <summary>What is counselling?</summary>
-      <p>
-        Counselling is a confidential, supportive process where a trained therapist
-        helps you explore your thoughts, feelings, and behaviors to better
-        understand yourself and work through challenges.
-      </p>
-    </details>
+ <section class="faq-section">
 
-    <details>
-      <summary>Who is counselling for?</summary>
-      <p>
-        Counselling is for anyone seeking support — whether you’re facing stress,
-        anxiety, relationship issues, trauma, or simply want personal growth and
-        clarity.
-      </p>
-    </details>
+    <div class="content-section">
+        <span class="section-tag">FAQ</span>
 
-    <details>
-      <summary>How do I know if I need counselling?</summary>
-      <p>
-        If you’re feeling overwhelmed, stuck, or emotionally drained — or just want
-        a safe space to talk — counselling can help. It’s okay to seek support even
-        if you’re unsure what’s “wrong.”
-      </p>
-    </details>
+        <h2>Frequently Asked Questions</h2>
 
-    <details>
-      <summary>What issues can you help with?</summary>
-      <p>
-        We support clients dealing with anxiety, depression, self-esteem issues,
-        trauma, grief, relationship and family problems, life transitions, and
-        more.
-      </p>
-    </details>
-
-    <details>
-      <summary>Is counselling confidential?</summary>
-      <p>
-        Yes. Everything you share is kept confidential unless there’s a risk of
-        harm to you or others.
-      </p>
-    </details>
-
-    <details>
-      <summary>Do you offer online sessions?</summary>
-      <p>
-        Yes, we offer both in-person and secure online counselling sessions for
-        your convenience.
-      </p>
-    </details>
-
-    <details>
-      <summary>How do I book a session?</summary>
-      <p>
-        You can book via our website, phone, or contact form. We'll guide you
-        through the next steps.
-      </p>
-    </details>
-
-    <details>
-      <summary>What are your fees and payment options?</summary>
-      <p>
-        Session fees and payment options vary. We accept M-Pesa, PayPal, and bank
-        transfer. Sliding scale fees available on request.
-      </p>
-    </details>
+        <p>
+            Find answers to common questions about our counselling services.
+        </p>
     </div>
 
-  </section>
+    <div class="faq-container">
+
+        {% for faq in faqs %}
+
+            <details>
+                <summary>{{ faq.question }}</summary>
+
+                <p>
+                    {{ faq.answer }}
+                </p>
+            </details>
+
+        {% empty %}
+
+            <p class="no-faqs">
+                No frequently asked questions available at the moment.
+            </p>
+
+        {% endfor %}
+
+    </div>
+
+</section>
   <section class="cta-section">
     <div class="cta-content">
       <h2>Ready to Begin Your Journey?</h2>

@@ -182,5 +182,110 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+
+    const container = document.getElementById("caseStudiesContainer");
+    const prevBtn = document.getElementById("prevCaseStudy");
+    const nextBtn = document.getElementById("nextCaseStudy");
+    const pagesContainer = document.getElementById("caseStudyPages");
+
+    // Stop if the elements don't exist
+    if (!container || !prevBtn || !nextBtn || !pagesContainer) {
+        console.log("Case study pagination elements not found.");
+        return;
+    }
+
+    const cards = Array.from(
+        container.querySelectorAll(".studies-card")
+    );
+
+    console.log("Case studies found:", cards.length);
+
+    const cardsPerPage = 3;
+
+    let currentPage = 1;
+
+    const totalPages = Math.ceil(cards.length / cardsPerPage);
+
+    console.log("Total pages:", totalPages);
+
+
+    function showPage(page) {
+
+        currentPage = page;
+
+        const start = (page - 1) * cardsPerPage;
+        const end = start + cardsPerPage;
+
+        cards.forEach((card, index) => {
+
+            if (index >= start && index < end) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
+            }
+
+        });
+
+
+        // Previous button
+        prevBtn.disabled = currentPage === 1;
+
+
+        // Next button
+        nextBtn.disabled = currentPage === totalPages;
+
+
+        // Page numbers
+        pagesContainer.innerHTML = "";
+
+        for (let i = 1; i <= totalPages; i++) {
+
+            const pageButton = document.createElement("button");
+
+            pageButton.type = "button";
+            pageButton.textContent = i;
+
+            pageButton.classList.add("pagination-page");
+
+            if (i === currentPage) {
+                pageButton.classList.add("active");
+            }
+
+            pageButton.addEventListener("click", function () {
+                showPage(i);
+            });
+
+            pagesContainer.appendChild(pageButton);
+        }
+
+    }
+
+
+    // Previous
+    prevBtn.addEventListener("click", function () {
+
+        if (currentPage > 1) {
+            showPage(currentPage - 1);
+        }
+
+    });
+
+
+    // Next
+    nextBtn.addEventListener("click", function () {
+
+        if (currentPage < totalPages) {
+            showPage(currentPage + 1);
+        }
+
+    });
+
+
+    // Start on page 1
+    showPage(1);
+
+});
+
 
       

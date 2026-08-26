@@ -1,5 +1,5 @@
 from django.contrib import admin
-from . models import Services, CaseStudy, ProcessStep
+from . models import Services, CaseStudy, ProcessStep, FAQ
 # Register your models here.
 
 @admin.register(Services)
@@ -97,3 +97,11 @@ class ProcessStepAdmin(admin.ModelAdmin):
     list_display = ("order", "title", "is_active")
     list_editable = ("is_active",)
     ordering = ("order",)
+
+@admin.register(FAQ)
+class FAQAdmin(admin.ModelAdmin):
+    list_display = ("question", "order", "is_active")
+    list_filter = ("is_active",)
+    search_fields = ("question", "answer")
+    list_editable = ("order", "is_active")
+    ordering = ("order", "id")

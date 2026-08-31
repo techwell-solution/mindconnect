@@ -1,0 +1,452 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Book a Session | MindConnect
+{% endblock %}
+
+
+{% block content %}
+
+<section class="booking-page">
+
+    <div class="booking-container">
+
+        <!-- =========================================
+             PAGE HEADER
+        ========================================== -->
+
+        <div class="booking-page-header">
+
+            <span class="section-tag">
+                BOOK A SESSION
+            </span>
+
+            <h1>
+                Your Wellbeing
+                <span>Starts Here</span>
+            </h1>
+
+            <p>
+                Take the first step toward better mental wellbeing.
+                Choose your preferred counsellor and session details
+                below. Your booking request will be reviewed with care.
+            </p>
+
+        </div>
+
+
+        <!-- =========================================
+             FORM
+        ========================================== -->
+
+        <form
+            method="POST"
+            action="{% url 'book_session' %}"
+            class="booking-form"
+            id="bookingForm"
+        >
+
+            {% csrf_token %}
+
+
+            <!-- =====================================
+                 STEP 01 — COUNSELLOR
+            ====================================== -->
+
+            <div class="booking-card">
+
+                <div class="booking-card-header">
+
+                    <div class="booking-number">
+                        01
+                    </div>
+
+                    <div>
+                        <h2>Choose Your Counsellor</h2>
+
+                        <p>
+                            Select a counsellor you'd feel comfortable
+                            speaking with.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="{{ form.counselor.id_for_label }}">
+                        Counsellor
+                    </label>
+
+                    {{ form.counselor }}
+
+                    {% if form.counselor.errors %}
+                        <div class="form-error">
+                            {{ form.counselor.errors }}
+                        </div>
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 STEP 02 — SESSION DETAILS
+            ====================================== -->
+
+            <div class="booking-card">
+
+                <div class="booking-card-header">
+
+                    <div class="booking-number">
+                        02
+                    </div>
+
+                    <div>
+                        <h2>Session Details</h2>
+
+                        <p>
+                            Choose the type of support and session
+                            format that works best for you.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="booking-fields-grid">
+
+
+                    <!-- SESSION TYPE -->
+
+                    <div class="form-group">
+
+                        <label for="{{ form.session_type.id_for_label }}">
+                            Session Type
+                        </label>
+
+                        {{ form.session_type }}
+
+                        {% if form.session_type.errors %}
+                            <div class="form-error">
+                                {{ form.session_type.errors }}
+                            </div>
+                        {% endif %}
+
+                    </div>
+
+
+                    <!-- SESSION MODE -->
+
+                    <div class="form-group">
+
+                        <label for="{{ form.session_mode.id_for_label }}">
+                            Session Mode
+                        </label>
+
+                        {{ form.session_mode }}
+
+                        {% if form.session_mode.errors %}
+                            <div class="form-error">
+                                {{ form.session_mode.errors }}
+                            </div>
+                        {% endif %}
+
+                    </div>
+
+
+                    <!-- DATE -->
+
+                    <div class="form-group">
+
+                        <label for="{{ form.preferred_date.id_for_label }}">
+                            Preferred Date
+                        </label>
+
+                        {{ form.preferred_date }}
+
+                        {% if form.preferred_date.errors %}
+                            <div class="form-error">
+                                {{ form.preferred_date.errors }}
+                            </div>
+                        {% endif %}
+
+                    </div>
+
+
+                    <!-- TIME -->
+
+                    <div class="form-group">
+
+                        <label for="{{ form.preferred_time.id_for_label }}">
+                            Preferred Time
+                        </label>
+
+                        {{ form.preferred_time }}
+
+                        {% if form.preferred_time.errors %}
+                            <div class="form-help">
+                                Please select your preferred time.
+                            </div>
+                        {% endif %}
+
+                        {% if form.preferred_time.errors %}
+                            <div class="form-error">
+                                {{ form.preferred_time.errors }}
+                            </div>
+                        {% endif %}
+
+                    </div>
+
+
+                    <!-- DURATION -->
+
+                    <div class="form-group full-width">
+
+                        <label for="{{ form.duration_minutes.id_for_label }}">
+                            Session Duration
+                        </label>
+
+                        {{ form.duration_minutes }}
+
+                        {% if form.duration_minutes.errors %}
+                            <div class="form-error">
+                                {{ form.duration_minutes.errors }}
+                            </div>
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 STEP 03 — NOTES
+            ====================================== -->
+
+            <div class="booking-card">
+
+                <div class="booking-card-header">
+
+                    <div class="booking-number">
+                        03
+                    </div>
+
+                    <div>
+                        <h2>Tell Us a Little More</h2>
+
+                        <p>
+                            Share anything you'd like your counsellor
+                            to know before your session.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="{{ form.notes.id_for_label }}">
+                        Additional Notes
+                        <span class="optional">
+                            Optional
+                        </span>
+                    </label>
+
+                    {{ form.notes }}
+
+                    <div class="form-help">
+                        You don't need to share anything you're
+                        uncomfortable sharing.
+                    </div>
+
+                    {% if form.notes.errors %}
+                        <div class="form-error">
+                            {{ form.notes.errors }}
+                        </div>
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 BOOKING SUMMARY
+            ====================================== -->
+
+            <div class="booking-summary">
+
+                <div class="summary-top">
+
+                    <div class="summary-icon">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+
+                    <div>
+
+                        <span class="summary-label">
+                            YOUR BOOKING
+                        </span>
+
+                        <h2>
+                            Session Summary
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-grid">
+
+
+                    <!-- COUNSELLOR -->
+
+                    <div class="summary-item">
+
+                        <span>
+                            <i class="fa-solid fa-user"></i>
+                            Counsellor
+                        </span>
+
+                        <strong id="summaryCounselor">
+                            Not selected
+                        </strong>
+
+                    </div>
+
+
+                    <!-- SESSION TYPE -->
+
+                    <div class="summary-item">
+
+                        <span>
+                            <i class="fa-solid fa-heart"></i>
+                            Session Type
+                        </span>
+
+                        <strong id="summarySessionType">
+                            Not selected
+                        </strong>
+
+                    </div>
+
+
+                    <!-- MODE -->
+
+                    <div class="summary-item">
+
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Session Mode
+                        </span>
+
+                        <strong id="summaryMode">
+                            Not selected
+                        </strong>
+
+                    </div>
+
+
+                    <!-- DATE -->
+
+                    <div class="summary-item">
+
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            Preferred Date
+                        </span>
+
+                        <strong id="summaryDate">
+                            Not selected
+                        </strong>
+
+                    </div>
+
+
+                    <!-- TIME -->
+
+                    <div class="summary-item">
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            Preferred Time
+                        </span>
+
+                        <strong id="summaryTime">
+                            Not selected
+                        </strong>
+
+                    </div>
+
+
+                    <!-- DURATION -->
+
+                    <div class="summary-item">
+
+                        <span>
+                            <i class="fa-solid fa-hourglass-half"></i>
+                            Duration
+                        </span>
+
+                        <strong id="summaryDuration">
+                            Not selected
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 SUBMIT
+            ====================================== -->
+
+            <div class="booking-actions">
+
+                <button
+                    type="submit"
+                    class="book-session-button"
+                >
+
+                    <span>
+                        Submit Booking Request
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+                <div class="booking-security">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <span>
+                        Your information is private and handled
+                        with care.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+{% block extra_js %}
+
+<script src="{% static 'js/booking.js' %}"></script>
+
+{% endblock %}
+{% endblock %}

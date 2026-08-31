@@ -1,5 +1,5 @@
 from django import forms
-from .models import Session, JournalEntry, ProgressGoal
+from .models import Session, JournalEntry, ProgressGoal, Booking
 
 
 class SessionForm(forms.ModelForm):
@@ -86,4 +86,75 @@ class ProgressGoalForm(forms.ModelForm):
             "status": forms.Select(attrs={
                 "class": "progress-input"
             }),
+        }
+class BookingForm(forms.ModelForm):
+
+    class Meta:
+        model = Booking
+
+        fields = [
+            "counselor",
+            "session_type",
+            "session_mode",
+            "preferred_date",
+            "preferred_time",
+            "duration_minutes",
+            "notes",
+        ]
+
+        widgets = {
+            "counselor": forms.Select(
+                attrs={
+                    "class": "form-control",
+                }
+            ),
+
+            "session_type": forms.Select(
+                attrs={
+                    "class": "form-control",
+                }
+            ),
+
+            "session_mode": forms.Select(
+                attrs={
+                    "class": "form-control",
+                }
+            ),
+
+            "preferred_date": forms.DateInput(
+                attrs={
+                    "class": "form-control",
+                    "type": "date",
+                }
+            ),
+
+            "preferred_time": forms.TimeInput(
+                attrs={
+                    "class": "form-control",
+                    "type": "time",
+                }
+            ),
+
+            "duration_minutes": forms.Select(
+                choices=[
+                    (30, "30 Minutes"),
+                    (60, "1 Hour"),
+                    (90, "1 Hour 30 Minutes"),
+                    (120, "2 Hours"),
+                ],
+                attrs={
+                    "class": "form-control",
+                }
+            ),
+
+            "notes": forms.Textarea(
+                attrs={
+                    "class": "form-control",
+                    "rows": 5,
+                    "placeholder": (
+                        "Tell us anything you'd like your "
+                        "counsellor to know before the session..."
+                    ),
+                }
+            ),
         }

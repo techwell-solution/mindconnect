@@ -11,7 +11,7 @@
       <p>Every journey is unique. These case studies share how counselling has helped 
         individuals, couples, and families find clarity, balance, and hope.
     </p>
-      <a href="{% url 'services' %}" class="pri-btn">Discover Programmes</a>
+      <a href="{% url 'events' %}" class="pri-btn">Discover Programmes</a>
     </div>
   </section>
 
@@ -30,7 +30,7 @@
 
     {% for study in case_studies %}
 
-        <div class="studies-card">
+        <div class="service-card">
 
             <div class="card-content">
 
@@ -88,29 +88,21 @@
     {% endfor %}
 
   </div>
-    {% if case_studies %}
-    <div class="case-study-navigation">
+    <div class="pagination">
 
-        <button
-            type="button"
-            id="prevCaseStudy"
-            class="pagination-btn">
-            <i class="fas fa-chevron-left"></i>
+        <button type="button" id="prevBtn" class="pagination-btn">
+            <i class="fas fa-arrow-left"></i>
             Previous
         </button>
 
-        <div id="caseStudyPages" class="pagination-pages"></div>
+        <span id="pageInfo" class="page-info"></span>
 
-        <button
-            type="button"
-            id="nextCaseStudy"
-            class="pagination-btn">
+        <button type="button" id="nextBtn" class="pagination-btn">
             Next
-            <i class="fas fa-chevron-right"></i>
+            <i class="fas fa-arrow-right"></i>
         </button>
 
     </div>
-    {% endif %}
 </section>
     <section class="case-studies">
     <div class="content-section">
@@ -205,7 +197,7 @@
     <div class="cta-content">
       <h2>Ready to Begin Your Journey?</h2>
       <p>Our counsellors are here to support you with compassion and proven approaches. Whether you're facing anxiety, grief, or relationship challenges — you don’t have to go through it alone.</p>
-      <a href="" class="pri-btn">Book a Session</a>
+      <a href="{% url 'book_session' %}" class="pri-btn">Book a Session</a>
       <a href="{% url 'services' %}" class="sec-btn">Explore Services</a>
     </div>
   </section>

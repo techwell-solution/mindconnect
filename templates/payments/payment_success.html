@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="payment-result">
+
+    <div class="container">
+
+        <div class="success-card">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h1>
+                Payment Successful
+            </h1>
+
+            <p>
+                Your counselling session has been confirmed.
+            </p>
+
+            <div class="payment-details">
+
+                <p>
+                    <strong>Payment Reference:</strong>
+                    {{ payment.reference }}
+                </p>
+
+                <p>
+                    <strong>Amount:</strong>
+                    {{ payment.currency }}
+                    {{ payment.amount }}
+                </p>
+
+                <p>
+                    <strong>Payment Method:</strong>
+                    {{ payment.get_gateway_display }}
+                </p>
+
+                <p>
+                    <strong>Date:</strong>
+                    {{ session.appointment_date }}
+                </p>
+
+                <p>
+                    <strong>Time:</strong>
+                    {{ session.appointment_time }}
+                </p>
+
+                <p>
+                    <strong>Status:</strong>
+                    Confirmed
+                </p>
+
+            </div>
+
+            <a
+                href="{% url 'client_dashboard' %}"
+                class="primary-btn"
+            >
+                Go to Dashboard
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+from decimal import Decimal
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,6 +24,28 @@ load_dotenv(BASE_DIR / ".env")
 # SECURITY WARNING: don't run with debug turned on in production!
 
 SECRET_KEY = os.getenv("SECRET_KEY")
+PAYSTACK_SECRET_KEY = os.getenv("PAYSTACK_SECRET_KEY")
+PAYSTACK_PUBLIC_KEY = os.getenv("PAYSTACK_PUBLIC_KEY")
+
+PAYPAL_CLIENT_ID = os.environ.get("PAYPAL_CLIENT_ID")
+PAYPAL_CLIENT_SECRET = os.environ.get("PAYPAL_CLIENT_SECRET")
+
+PAYPAL_BASE_URL = os.environ.get(
+    "PAYPAL_BASE_URL",
+    "https://api-m.sandbox.paypal.com",
+)
+
+PAYPAL_CURRENCY = os.environ.get(
+    "PAYPAL_CURRENCY",
+    "USD",
+)
+
+KES_TO_USD_RATE = Decimal(
+    os.environ.get(
+        "KES_TO_USD_RATE",
+        "0.0077",
+    )
+)
 
 DEBUG = os.getenv("DEBUG") == "True"
 
@@ -46,6 +69,7 @@ INSTALLED_APPS = [
     'contacts',
     'accounts',
     'assessments',
+    "payments",
 ]
 
 MIDDLEWARE = [

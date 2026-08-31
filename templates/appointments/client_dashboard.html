@@ -5,46 +5,58 @@
 {% block content %}
 <div class="dashboard-top">
 
-    <!-- Wellness Reminder -->
-    <div class="wellness-tip">
-        <i class="fas fa-leaf"></i>
+        <!-- Wellness Reminder -->
+        <div class="wellness-tip">
+            <i class="fas fa-leaf"></i>
 
-        <div>
-            <h4>Today's Wellness Reminder</h4>
-            <p>
-                Small, consistent steps can make a big difference.
-                Take a few minutes today to pause, breathe, and check in with yourself.
-            </p>
+            <div>
+                <h4>Today's Wellness Reminder</h4>
+                <p>
+                    Small, consistent steps can make a big difference.
+                    Take a few minutes today to pause, breathe, and check in with yourself.
+                </p>
+            </div>
         </div>
-    </div>
+</div>
 
     <!-- Next Appointment -->
     <div class="next-session">
 
         <h3><i class="fas fa-calendar-alt"></i> Your Next Session</h3>
+            {% if next_appointment %}
 
-        {% if next_appointment %}
-            <p>
-                <strong>{{ next_appointment.date }}</strong><br>
-                {{ next_appointment.time }} with {{ next_appointment.counsellor }}
-            </p>
+                <p>
+                    <strong>
+                        {{ next_appointment.preferred_date }}
+                    </strong>
+                    <br>
 
-            <a href="#" class="btn">
-                View Details
-            </a>
+                    {{ next_appointment.preferred_time }}
 
-        {% else %}
-            <p>You don't have any upcoming appointments.</p>
+                    with
 
-            <a href="" class="btn">
-                Book a Session
-            </a>
+                    {% if next_appointment.counselor %}
+                        {{ next_appointment.counselor.get_full_name }}
+                    {% else %}
+                        To be assigned
+                    {% endif %}
+                </p>
 
-        {% endif %}
+                <a href="{% url 'appointments' %}" class="btn">
+                    View Details
+                </a>
+
+            {% else %}
+
+                <p>You don't have any upcoming appointments.</p>
+
+                <a href="{% url 'book_session' %}" class="btn">
+                    Book a Session
+                </a>
+
+            {% endif %}
 
     </div>
-
-</div>
 <div class="client-dashboard">
 
     <!-- Welcome Section -->

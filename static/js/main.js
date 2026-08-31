@@ -1,130 +1,412 @@
-console.log("main.js is loaded");
+document.addEventListener("DOMContentLoaded", function () {
 
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("DOM loaded");
+console.log("PAYPAL PAGE LOADED");
 
-    // Mobile Navigation
-    const toggle = document.querySelector(".menu-toggle");
-    const mobileMenu = document.querySelector(".mobile-menu");
 
-    if (toggle && mobileMenu) {
-        toggle.addEventListener("click", () => {
-            mobileMenu.classList.toggle("show");
-        });
+// ==========================================
+// ELEMENTS
+// ==========================================
+
+const amountInput =
+    document.getElementById("payment-amount");
+
+const paypalContainer =
+    document.getElementById("paypal-button-container");
+
+const paypalError =
+    document.getElementById("paypal-error");
+
+const paystackForm =
+    document.getElementById("paystack-form");
+
+const paystackAmount =
+    document.getElementById("paystack_amount");
+
+
+// ==========================================
+// PAYMENT CONFIGURATION
+// ==========================================
+
+const paypalCreateUrl =
+    paypalContainer.dataset.createUrl;
+
+const paypalCaptureUrl =
+    paypalContainer.dataset.captureUrl;
+
+const csrfToken =
+    paypalContainer.dataset.csrf;
+
+
+console.log(
+    "PayPal create URL:",
+    paypalCreateUrl
+);
+
+console.log(
+    "PayPal capture URL:",
+    paypalCaptureUrl
+);
+
+
+// ==========================================
+// CHECK PAYPAL SDK
+// ==========================================
+
+console.log(
+    "PayPal SDK:",
+    typeof paypal
+);
+
+
+if (typeof paypal === "undefined") {
+
+    console.error(
+        "PAYPAL SDK NOT LOADED"
+    );
+
+    paypalError.textContent =
+        "PayPal could not be loaded. Please refresh the page.";
+
+    return;
 }
-    // Sticky Header
-    const header = document.querySelector("header");
 
-    if (header) {
-        window.addEventListener("scroll", () => {
-            header.classList.toggle("sticky", window.scrollY > 50);
+
+// ==========================================
+// PAYSTACK / MPESA
+// ==========================================
+
+if (paystackForm) {
+
+    paystackForm.addEventListener(
+        "submit",
+        function (event) {
+
+            const amount =
+                amountInput.value;
+
+
+            if (
+                !amount ||
+                parseFloat(amount) <= 0
+            ) {
+
+                event.preventDefault();
+
+                alert(
+                    "Please enter a valid payment amount."
+                );
+
+                return;
+            }
+
+
+            paystackAmount.value =
+                amount;
+
+        }
+    );
+
+}
+
+
+// ==========================================
+// PAYPAL BUTTON
+// ==========================================
+
+paypal.Buttons({
+
+    style: {
+        layout: "vertical",
+        color: "gold",
+        shape: "rect",
+        label: "paypal"
+    },
+
+
+    // ======================================
+    // CREATE ORDER
+    // ======================================
+
+    createOrder: function () {
+
+        const amount =
+            amountInput.value;
+
+
+        console.log(
+            "AMOUNT ENTERED:",
+            amount
+        );
+
+
+        if (
+            !amount ||
+            parseFloat(amount) <= 0
+        ) {
+
+            paypalError.textContent =
+                "Please enter a valid payment amount.";
+
+            return Promise.reject(
+                new Error(
+                    "Invalid payment amount."
+                )
+            );
+        }
+
+
+        const formData =
+            new URLSearchParams();
+
+        formData.append(
+            "amount",
+            amount
+        );
+
+
+        console.log(
+            "CREATING PAYPAL ORDER..."
+        );
+
+
+        return fetch(
+            paypalCreateUrl,
+            {
+                method: "POST",
+
+                headers: {
+                    "Content-Type":
+                        "application/x-www-form-urlencoded",
+
+                    "X-CSRFToken":
+                        csrfToken
+                },
+
+                body: formData
+            }
+        )
+
+        .then(function (response) {
+
+            console.log(
+                "CREATE ORDER STATUS:",
+                response.status
+            );
+
+
+            return response.text();
+
+        })
+
+        .then(function (text) {
+
+            console.log(
+                "CREATE ORDER RESPONSE:",
+                text
+            );
+
+
+            let data;
+
+            try {
+
+                data =
+                    JSON.parse(text);
+
+            } catch (error) {
+
+                throw new Error(
+                    "Invalid response from server."
+                );
+            }
+
+
+            if (!data.id) {
+
+                throw new Error(
+                    data.error ||
+                    "PayPal order could not be created."
+                );
+            }
+
+
+            console.log(
+                "PAYPAL ORDER ID:",
+                data.id
+            );
+
+
+            return data.id;
+
+        })
+
+        .catch(function (error) {
+
+            console.error(
+                "CREATE ORDER ERROR:",
+                error
+            );
+
+
+            paypalError.textContent =
+                error.message ||
+                "Unable to create PayPal order.";
+
+
+            throw error;
+
         });
+
+    },
+
+
+    // ======================================
+    // PAYMENT APPROVED
+    // ======================================
+
+    onApprove: function (data) {
+
+        console.log(
+            "PAYPAL PAYMENT APPROVED"
+        );
+
+        console.log(
+            "ORDER ID:",
+            data.orderID
+        );
+
+
+        return fetch(
+            paypalCaptureUrl,
+            {
+                method: "POST",
+
+                headers: {
+                    "Content-Type":
+                        "application/json",
+
+                    "X-CSRFToken":
+                        csrfToken
+                },
+
+                body: JSON.stringify({
+                    orderID:
+                        data.orderID
+                })
+            }
+        )
+
+        .then(function (response) {
+
+            console.log(
+                "CAPTURE STATUS:",
+                response.status
+            );
+
+
+            return response.text();
+
+        })
+
+        .then(function (text) {
+
+            console.log(
+                "CAPTURE RESPONSE:",
+                text
+            );
+
+
+            let result;
+
+            try {
+
+                result =
+                    JSON.parse(text);
+
+            } catch (error) {
+
+                throw new Error(
+                    "Invalid capture response from server."
+                );
+            }
+
+
+            if (result.success) {
+
+                window.location.href =
+                    result.redirect_url;
+
+                return;
+            }
+
+
+            throw new Error(
+                result.error ||
+                "Payment capture failed."
+            );
+
+        })
+
+        .catch(function (error) {
+
+            console.error(
+                "CAPTURE ERROR:",
+                error
+            );
+
+
+            paypalError.textContent =
+                error.message ||
+                "Payment capture failed.";
+
+        });
+
+    },
+
+
+    // ======================================
+    // CANCELLED
+    // ======================================
+
+    onCancel: function () {
+
+        console.log(
+            "PAYPAL PAYMENT CANCELLED"
+        );
+
+    },
+
+
+    // ======================================
+    // ERROR
+    // ======================================
+
+    onError: function (error) {
+
+        console.error(
+            "PAYPAL ERROR:",
+            error
+        );
+
+
+        paypalError.textContent =
+            "PayPal error: " +
+            (
+                error.message ||
+                "Unknown PayPal error."
+            );
+
     }
 
-    // ...keep the rest of your existing code here...
+}).render(
+    "#paypal-button-container"
+);
+
 });
-    // ==========================
-    // Mobile Navigation
-    // ==========================
-
-    // ==========================
-    // Sticky Header
-    // ==========================
-    const header = document.querySelector("header");
-
-    if (header) {
-        window.addEventListener("scroll", () => {
-            header.classList.toggle("sticky", window.scrollY > 50);
-        });
-    }
-
-    // ==========================
-    // Smooth Scrolling
-    // ==========================
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-
-            const target = document.querySelector(this.getAttribute("href"));
-
-            if (target) {
-                e.preventDefault();
-
-                target.scrollIntoView({
-                    behavior: "smooth"
-                });
-            }
-        });
-    });
-
-    // ==========================
-    // Scroll Animation
-    // ==========================
-    const hiddenElements = document.querySelectorAll(".hidden");
-
-    const observer = new IntersectionObserver(entries => {
-
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-            }
-
-        });
-
-    });
-
-    hiddenElements.forEach(el => observer.observe(el));
-
-    // ==========================
-    // Auto-hide Messages
-    // ==========================
-    const alerts = document.querySelectorAll(".alert");
-
-    alerts.forEach(alert => {
-
-        setTimeout(() => {
-
-            alert.style.opacity = "0";
-
-            setTimeout(() => {
-                alert.remove();
-            }, 500);
-
-        }, 4000);
-
-    });
-
-    // ==========================
-    // Back to Top Button
-    // ==========================
-    const backToTop = document.querySelector("#backToTop");
-
-    if (backToTop) {
-
-        window.addEventListener("scroll", () => {
-
-            if (window.scrollY > 300) {
-                backToTop.classList.add("show");
-            } else {
-                backToTop.classList.remove("show");
-            }
-
-        });
-
-        backToTop.addEventListener("click", () => {
-
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-
-        });
-
-    }
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const cards = document.querySelectorAll("#servicesGrid .service-card");
+    const cards = document.querySelectorAll(".service-card");
     const prevBtn = document.getElementById("prevBtn");
     const nextBtn = document.getElementById("nextBtn");
     const pageInfo = document.getElementById("pageInfo");
@@ -134,85 +416,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const totalPages = Math.ceil(cards.length / cardsPerPage);
 
-
-    function showPage(page) {
-
-        const start = (page - 1) * cardsPerPage;
-        const end = start + cardsPerPage;
-
-        cards.forEach((card, index) => {
-
-            if (index >= start && index < end) {
-                card.style.display = "flex";
-            } else {
-                card.style.display = "none";
-            }
-
-        });
-
-
-        pageInfo.textContent = `Page ${page} of ${totalPages}`;
-
-        prevBtn.disabled = page === 1;
-        nextBtn.disabled = page === totalPages;
-    }
-
-
-    nextBtn.addEventListener("click", function () {
-
-        if (currentPage < totalPages) {
-            currentPage++;
-            showPage(currentPage);
-        }
-
-    });
-
-
-    prevBtn.addEventListener("click", function () {
-
-        if (currentPage > 1) {
-            currentPage--;
-            showPage(currentPage);
-        }
-
-    });
-
-
-    showPage(currentPage);
-
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const container = document.getElementById("caseStudiesContainer");
-    const prevBtn = document.getElementById("prevCaseStudy");
-    const nextBtn = document.getElementById("nextCaseStudy");
-    const pagesContainer = document.getElementById("caseStudyPages");
-
-    // Stop if the elements don't exist
-    if (!container || !prevBtn || !nextBtn || !pagesContainer) {
-        console.log("Case study pagination elements not found.");
-        return;
-    }
-
-    const cards = Array.from(
-        container.querySelectorAll(".studies-card")
-    );
-
-    console.log("Case studies found:", cards.length);
-
-    const cardsPerPage = 3;
-
-    let currentPage = 1;
-
-    const totalPages = Math.ceil(cards.length / cardsPerPage);
-
-    console.log("Total pages:", totalPages);
-
-
-    function showPage(page) {
-
-        currentPage = page;
+    function displayPage(page) {
 
         const start = (page - 1) * cardsPerPage;
         const end = start + cardsPerPage;
@@ -227,65 +431,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
         });
 
+        pageInfo.textContent = `Page ${page} of ${totalPages}`;
 
-        // Previous button
-        prevBtn.disabled = currentPage === 1;
-
-
-        // Next button
-        nextBtn.disabled = currentPage === totalPages;
-
-
-        // Page numbers
-        pagesContainer.innerHTML = "";
-
-        for (let i = 1; i <= totalPages; i++) {
-
-            const pageButton = document.createElement("button");
-
-            pageButton.type = "button";
-            pageButton.textContent = i;
-
-            pageButton.classList.add("pagination-page");
-
-            if (i === currentPage) {
-                pageButton.classList.add("active");
-            }
-
-            pageButton.addEventListener("click", function () {
-                showPage(i);
-            });
-
-            pagesContainer.appendChild(pageButton);
-        }
-
+        prevBtn.disabled = page === 1;
+        nextBtn.disabled = page === totalPages;
     }
 
-
-    // Previous
     prevBtn.addEventListener("click", function () {
 
         if (currentPage > 1) {
-            showPage(currentPage - 1);
+            currentPage--;
+            displayPage(currentPage);
         }
 
     });
 
-
-    // Next
     nextBtn.addEventListener("click", function () {
 
         if (currentPage < totalPages) {
-            showPage(currentPage + 1);
+            currentPage++;
+            displayPage(currentPage);
         }
 
     });
 
-
-    // Start on page 1
-    showPage(1);
+    if (cards.length > 0) {
+        displayPage(currentPage);
+    } else {
+        prevBtn.style.display = "none";
+        nextBtn.style.display = "none";
+        pageInfo.style.display = "none";
+    }
 
 });
-
-
-      

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="payment-result">
+
+    <div class="container">
+
+        <div class="failed-card">
+
+            <div class="failed-icon">
+                ×
+            </div>
+
+            <h1>
+                Payment Unsuccessful
+            </h1>
+
+            <p>
+                We could not confirm your payment.
+            </p>
+
+            {% if payment %}
+
+                <p>
+                    Your booking is still awaiting payment.
+                </p>
+
+                <a
+                    href="{% url 'payment_options' payment.session.id %}"
+                    class="primary-btn"
+                >
+                    Try Again
+                </a>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

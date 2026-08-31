@@ -1,0 +1,854 @@
+/* =========================================================
+   PAYMENT PAGE
+========================================================= */
+
+.payment-page {
+    min-height: calc(100vh - 80px);
+    padding: 70px 20px;
+    background: var(--light-bg, #f7f9fc);
+}
+
+.payment-page .container {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.payment-page h1 {
+    margin: 0 0 12px;
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: var(--primary-color, #2f6f73);
+}
+
+.payment-page > .container > p {
+    margin: 0 0 35px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   ERROR MESSAGE
+========================================================= */
+
+.payment-error {
+    margin-bottom: 25px;
+    padding: 15px 18px;
+    border-radius: 10px;
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+    color: #b91c1c;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+
+/* =========================================================
+   BOOKING SUMMARY
+========================================================= */
+
+.booking-summary {
+    background: var(--white, #ffffff);
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.booking-summary h2 {
+    margin: 0 0 22px;
+    font-size: 1.35rem;
+    color: var(--primary-color, #2f6f73);
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 15px;
+}
+
+.booking-summary p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding: 13px 0;
+    color: #555;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.booking-summary p:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.booking-summary strong {
+    color: #333;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   PAYMENT SECTION
+========================================================= */
+
+.payment-section {
+    background: var(--white, #ffffff);
+    padding: 35px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.payment-section h2 {
+    margin: 0 0 10px;
+    color: #222;
+    font-size: 1.5rem;
+}
+
+.payment-section > p {
+    margin: 0 0 25px;
+    color: #6b7280;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    height: 52px;
+    padding: 0 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background: #fff;
+    color: #333;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input::placeholder {
+    color: #9ca3af;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color, #2f6f73);
+    box-shadow: 0 0 0 3px rgba(47, 111, 115, 0.12);
+}
+
+
+/* Remove number input arrows */
+
+.form-group input::-webkit-outer-spin-button,
+.form-group input::-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+}
+
+.form-group input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+
+/* =========================================================
+   PAYMENT BUTTON
+========================================================= */
+
+.payment-button {
+    width: 100%;
+    min-height: 52px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary-color, #2f6f73);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.payment-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(47, 111, 115, 0.2);
+}
+
+.payment-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   PAYPAL SECTION
+========================================================= */
+
+.paypal-section {
+    position: relative;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.paypal-section p {
+    margin: 0 0 15px;
+    text-align: center;
+    color: #777;
+    font-size: 0.95rem;
+}
+
+.paypal-button {
+    background: #0070ba;
+}
+
+.paypal-button:hover {
+    background: #005ea6;
+}
+
+.paypal-button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .payment-page {
+        padding: 45px 15px;
+    }
+
+    .payment-page h1 {
+        font-size: 1.9rem;
+    }
+
+    .booking-summary,
+    .payment-section {
+        padding: 25px 20px;
+    }
+
+    .booking-summary p {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .payment-page {
+        padding: 35px 12px;
+    }
+
+    .payment-page h1 {
+        font-size: 1.65rem;
+    }
+
+    .payment-page > .container > p {
+        font-size: 0.9rem;
+    }
+
+    .booking-summary,
+    .payment-section {
+        padding: 20px 16px;
+        border-radius: 12px;
+    }
+
+    .booking-summary h2,
+    .payment-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .form-group input,
+    .payment-button {
+        height: 50px;
+    }
+}
+
+/* =========================================================
+   PAYMENT RESULT PAGE
+========================================================= */
+
+.payment-result {
+    min-height: calc(100vh - 80px);
+    padding: 80px 20px;
+    background: var(--light-bg, #f7f9fc);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-result .container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   FAILED CARD
+========================================================= */
+
+.failed-card {
+    background: var(--white, #ffffff);
+    padding: 50px 40px;
+    border-radius: 18px;
+    border: 1px solid #e5e7eb;
+
+    text-align: center;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.07);
+
+    animation: paymentCardFade 0.5s ease;
+}
+
+
+/* =========================================================
+   FAILED ICON
+========================================================= */
+
+.failed-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fee2e2;
+    color: #dc2626;
+
+    font-size: 3rem;
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.failed-card h1 {
+    margin: 0 0 15px;
+
+    color: #222;
+
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.failed-card p {
+    margin: 8px 0;
+
+    color: #6b7280;
+
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.failed-card p:nth-of-type(2) {
+    margin-top: 5px;
+    color: #555;
+}
+
+
+/* =========================================================
+   TRY AGAIN BUTTON
+========================================================= */
+
+.failed-card .primary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 170px;
+    min-height: 50px;
+
+    margin-top: 25px;
+    padding: 12px 25px;
+
+    background: var(--primary-color, #2f6f73);
+    color: #fff;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.failed-card .primary-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 18px rgba(47, 111, 115, 0.2);
+
+    background: var(--primary-dark, #285f62);
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes paymentCardFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .payment-result {
+        padding: 60px 20px;
+    }
+
+    .failed-card {
+        padding: 40px 30px;
+    }
+
+    .failed-card h1 {
+        font-size: 1.75rem;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .payment-result {
+        min-height: calc(100vh - 70px);
+        padding: 40px 15px;
+    }
+
+    .failed-card {
+        padding: 35px 20px;
+        border-radius: 14px;
+    }
+
+    .failed-icon {
+        width: 65px;
+        height: 65px;
+
+        margin-bottom: 20px;
+
+        font-size: 2.5rem;
+    }
+
+    .failed-card h1 {
+        font-size: 1.5rem;
+    }
+
+    .failed-card p {
+        font-size: 0.92rem;
+    }
+
+    .failed-card .primary-btn {
+        width: 100%;
+        margin-top: 22px;
+    }
+
+}
+
+/* =========================================================
+   PAYMENT SUCCESS PAGE
+========================================================= */
+
+.payment-result {
+    min-height: calc(100vh - 80px);
+    padding: 80px 20px;
+
+    background: var(--light-bg, #f7f9fc);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-result .container {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   SUCCESS CARD
+========================================================= */
+
+.success-card {
+    background: var(--white, #ffffff);
+
+    padding: 50px 45px;
+
+    border-radius: 18px;
+
+    border: 1px solid #e5e7eb;
+
+    text-align: center;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.07);
+
+    animation: successCardFade 0.5s ease;
+}
+
+
+/* =========================================================
+   SUCCESS ICON
+========================================================= */
+
+.success-icon {
+    width: 78px;
+    height: 78px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #dcfce7;
+    color: #16a34a;
+
+    font-size: 2.8rem;
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.success-card h1 {
+    margin: 0 0 12px;
+
+    color: #222;
+
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.success-card > p {
+    margin: 0 0 30px;
+
+    color: #6b7280;
+
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   PAYMENT DETAILS
+========================================================= */
+
+.payment-details {
+    margin: 0 0 30px;
+
+    padding: 5px 20px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    text-align: left;
+}
+
+.payment-details p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    margin: 0;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    color: #555;
+
+    font-size: 0.95rem;
+
+    line-height: 1.5;
+}
+
+.payment-details p:last-child {
+    border-bottom: none;
+}
+
+.payment-details strong {
+    color: #333;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.payment-details p:last-child {
+    color: #16a34a;
+
+    font-weight: 600;
+}
+
+.payment-details p:last-child strong {
+    color: #333;
+}
+
+
+/* =========================================================
+   DASHBOARD BUTTON
+========================================================= */
+
+.success-card .primary-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 200px;
+    min-height: 52px;
+
+    padding: 12px 28px;
+
+    background: var(--primary-color, #2f6f73);
+
+    color: #fff;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.success-card .primary-btn:hover {
+    transform: translateY(-2px);
+
+    background: var(--primary-dark, #285f62);
+
+    box-shadow: 0 8px 18px rgba(47, 111, 115, 0.2);
+}
+
+.success-card .primary-btn:active {
+    transform: translateY(0);
+}
+
+.paypal-section {
+    display: block;
+}
+
+#paypal-button-container {
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    margin-top: 20px;
+}
+
+#paypal-error {
+    margin-top: 15px;
+}
+
+
+/* =========================================================
+   SUCCESS ANIMATION
+========================================================= */
+
+@keyframes successCardFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   CHECKMARK ANIMATION
+========================================================= */
+
+.success-icon {
+    animation: successIconPop 0.5s ease 0.2s both;
+}
+
+@keyframes successIconPop {
+
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    70% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .payment-result {
+        padding: 60px 20px;
+    }
+
+    .success-card {
+        padding: 40px 30px;
+    }
+
+    .success-card h1 {
+        font-size: 1.75rem;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .payment-result {
+        min-height: calc(100vh - 70px);
+
+        padding: 40px 15px;
+    }
+
+    .success-card {
+        padding: 35px 18px;
+
+        border-radius: 14px;
+    }
+
+    .success-icon {
+        width: 65px;
+        height: 65px;
+
+        margin-bottom: 20px;
+
+        font-size: 2.3rem;
+    }
+
+    .success-card h1 {
+        font-size: 1.5rem;
+    }
+
+    .success-card > p {
+        font-size: 0.92rem;
+    }
+
+    .payment-details {
+        padding: 5px 15px;
+    }
+
+    .payment-details p {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 3px;
+
+        padding: 12px 0;
+
+        font-size: 0.9rem;
+    }
+
+    .payment-details strong {
+        white-space: normal;
+    }
+
+    .success-card .primary-btn {
+        width: 100%;
+    }
+
+}

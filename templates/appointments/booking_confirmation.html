@@ -1,0 +1,367 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Booking Submitted | MindConnect
+{% endblock %}
+
+
+{% block content %}
+
+<section class="booking-confirmation-page">
+
+    <div class="confirmation-container">
+
+        <!-- =========================================
+             SUCCESS ICON
+        ========================================== -->
+
+        <div class="confirmation-icon">
+
+            <i class="fa-solid fa-check"></i>
+
+        </div>
+
+
+        <!-- =========================================
+             HEADER
+        ========================================== -->
+
+        <div class="confirmation-header">
+
+            <span class="section-tag">
+                BOOKING REQUEST RECEIVED
+            </span>
+
+            <h1>
+                Your Booking Request
+                <span>Has Been Submitted</span>
+            </h1>
+
+            <p>
+                Thank you for choosing MindConnect.
+                Your counselling session request has been received
+                and is currently awaiting confirmation.
+            </p>
+
+        </div>
+
+
+        <!-- =========================================
+             BOOKING CARD
+        ========================================== -->
+
+        <div class="confirmation-card">
+
+            <div class="confirmation-card-header">
+
+                <div>
+                    <span class="confirmation-label">
+                        BOOKING DETAILS
+                    </span>
+
+                    <h2>
+                        Session Information
+                    </h2>
+                </div>
+
+                <div class="booking-status">
+                    {{ booking.get_status_display }}
+                </div>
+
+            </div>
+
+
+            <div class="confirmation-details">
+
+
+                <!-- COUNSELLOR -->
+
+                <div class="confirmation-detail">
+
+                    <div class="detail-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div>
+                        <span>
+                            Counsellor
+                        </span>
+
+                        <strong>
+                            {{ booking.counselor.get_full_name }}
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <!-- SESSION TYPE -->
+
+                <div class="confirmation-detail">
+
+                    <div class="detail-icon">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <div>
+                        <span>
+                            Session Type
+                        </span>
+
+                        <strong>
+                            {{ booking.get_session_type_display }}
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <!-- SESSION MODE -->
+
+                <div class="confirmation-detail">
+
+                    <div class="detail-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <div>
+                        <span>
+                            Session Mode
+                        </span>
+
+                        <strong>
+                            {{ booking.get_session_mode_display }}
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <!-- DATE -->
+
+                <div class="confirmation-detail">
+
+                    <div class="detail-icon">
+                        <i class="fa-regular fa-calendar"></i>
+                    </div>
+
+                    <div>
+                        <span>
+                            Preferred Date
+                        </span>
+
+                        <strong>
+                            {{ booking.preferred_date|date:"l, F j, Y" }}
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <!-- TIME -->
+
+                <div class="confirmation-detail">
+
+                    <div class="detail-icon">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+
+                    <div>
+                        <span>
+                            Preferred Time
+                        </span>
+
+                        <strong>
+                            {{ booking.preferred_time|time:"g:i A" }}
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <!-- DURATION -->
+
+                <div class="confirmation-detail">
+
+                    <div class="detail-icon">
+                        <i class="fa-solid fa-hourglass-half"></i>
+                    </div>
+
+                    <div>
+                        <span>
+                            Duration
+                        </span>
+
+                        <strong>
+                            {{ booking.duration_minutes }} minutes
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- NOTES -->
+
+            {% if booking.notes %}
+
+                <div class="confirmation-notes">
+
+                    <span>
+                        Additional Notes
+                    </span>
+
+                    <p>
+                        {{ booking.notes }}
+                    </p>
+
+                </div>
+
+            {% endif %}
+
+        </div>
+
+
+        <!-- =========================================
+             WHAT HAPPENS NEXT
+        ========================================== -->
+
+        <div class="next-steps">
+
+            <div class="next-steps-header">
+
+                <div class="next-steps-icon">
+                    <i class="fa-solid fa-circle-info"></i>
+                </div>
+
+                <div>
+                    <h2>
+                        What Happens Next?
+                    </h2>
+
+                    <p>
+                        Here's what you can expect after submitting
+                        your booking request.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="steps-list">
+
+
+                <div class="next-step">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <div>
+                        <h3>
+                            Your Request Is Reviewed
+                        </h3>
+
+                        <p>
+                            Our team or your selected counsellor will
+                            review your preferred date and time.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="next-step">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <div>
+                        <h3>
+                            You'll Receive Confirmation
+                        </h3>
+
+                        <p>
+                            Once your booking is approved, your session
+                            will be confirmed.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="next-step">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <div>
+                        <h3>
+                            Attend Your Session
+                        </h3>
+
+                        <p>
+                            You'll receive the information you need
+                            to attend your counselling session.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================================
+             ACTIONS
+        ========================================== -->
+
+        <div class="confirmation-actions">
+
+            <a
+                href="{% url 'client_dashboard' %}"
+                class="confirmation-primary-btn"
+            >
+                <span>
+                    Go to My Dashboard
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+
+            <a
+                href="/"
+                class="confirmation-secondary-btn"
+            >
+                Return Home
+            </a>
+
+        </div>
+
+
+        <!-- =========================================
+             PRIVACY MESSAGE
+        ========================================== -->
+
+        <div class="confirmation-security">
+
+            <i class="fa-solid fa-shield-heart"></i>
+
+            <p>
+                Your privacy matters to us. Your information is
+                handled securely and confidentially.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

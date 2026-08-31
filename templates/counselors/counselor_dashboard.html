@@ -19,6 +19,128 @@
         </p>
 
     </div>
+    {% if pending_bookings %}
+
+            <div class="booking-requests">
+
+                <h2>Booking Requests</h2>
+
+                {% for booking in pending_bookings %}
+
+                    <div class="booking-card">
+
+                        <div class="booking-header">
+
+                            <div>
+                                <span>Booking Request</span>
+
+                                <h3>
+                                    {{ booking.client.get_full_name }}
+                                </h3>
+                            </div>
+
+                            <span class="status pending">
+                                Pending Approval
+                            </span>
+
+                        </div>
+
+
+                        <div class="booking-details">
+
+                            <p>
+                                <strong>Session:</strong>
+                                {{ booking.get_session_type_display }}
+                            </p>
+
+                            <p>
+                                <strong>Mode:</strong>
+                                {{ booking.get_session_mode_display }}
+                            </p>
+
+                            <p>
+                                <strong>Date:</strong>
+                                {{ booking.preferred_date|date:"F d, Y" }}
+                            </p>
+
+                            <p>
+                                <strong>Time:</strong>
+                                {{ booking.preferred_time|time:"g:i A" }}
+                            </p>
+
+                            <p>
+                                <strong>Duration:</strong>
+                                {{ booking.duration_minutes }} minutes
+                            </p>
+
+                            {% if booking.notes %}
+                                <p>
+                                    <strong>Notes:</strong>
+                                    {{ booking.notes }}
+                                </p>
+                            {% endif %}
+
+                        </div>
+
+
+                        <div class="booking-actions">
+
+                            <form
+                                method="POST"
+                                action="{% url 'approve_booking_by_counselor' booking.id %}"
+                            >
+
+                                {% csrf_token %}
+
+                                <button
+                                    type="submit"
+                                    class="btn-primary"
+                                >
+                                    <i class="fa-solid fa-check"></i>
+                                    Approve Booking
+                                </button>
+
+                            </form>
+
+
+                            <form
+                                method="POST"
+                                action="{% url 'decline_booking_by_counselor' booking.id %}"
+                            >
+
+                                {% csrf_token %}
+
+                                <button
+                                    type="submit"
+                                    class="btn-danger"
+                                >
+                                    <i class="fa-solid fa-xmark"></i>
+                                    Decline
+                                </button>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+        {% else %}
+
+            <div class="empty-state">
+
+                <h3>No pending booking requests</h3>
+
+                <p>
+                    New client booking requests will appear here.
+                </p>
+
+            </div>
+
+        {% endif %}
 
     <div class="stats-grid">
 
@@ -46,7 +168,7 @@
 
         <div class="dashboard-card">
 
-            <h3>Upcoming Appointments</h3>
+            <h3>Upcoming Sessions</h3>
 
             <table>
 
@@ -63,17 +185,27 @@
 
                 <tbody>
 
-                {% for appointment in appointments %}
+                {% for session in upcoming_sessions %}
 
                     <tr>
 
-                        <td>{{ appointment.client }}</td>
+                        <td>
+                            {{ session.client.get_full_name }}
+                        </td>
 
-                        <td>{{ appointment.appointment_date }}</td>
+                        <td>
+                            {{ session.appointment_date|date:"M d, Y" }}
+                        </td>
 
-                        <td>{{ appointment.appointment_time }}</td>
+                        <td>
+                            {{ session.appointment_time|time:"g:i A" }}
+                        </td>
 
-                        <td>{{ appointment.status }}</td>
+                        <td>
+                            <span class="appointment-status">
+                                {{ session.get_status_display }}
+                            </span>
+                        </td>
 
                     </tr>
 
@@ -81,7 +213,7 @@
 
                     <tr>
                         <td colspan="4">
-                            No appointments available.
+                            No upcoming sessions available.
                         </td>
                     </tr>
 

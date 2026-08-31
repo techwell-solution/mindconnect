@@ -7,23 +7,133 @@ from django.utils import timezone
 from django.contrib import messages
 from .models import SessionNote, CounsellorProfile
 from .forms import SessionNoteForm
+from appointments.models import Booking
 
 # Create your views here.
+
 @login_required
-def counsellor_dashboard(request):
+def counselor_dashboard(request):
 
-    counsellor = request.user
+    today = timezone.localdate()
 
-    sessions = Session.objects.filter(counselor=counsellor)
+    # =====================================================
+    # PENDING BOOKING REQUESTS
+    # =====================================================
+
+    pending_bookings = (
+        Booking.objects
+        .filter(
+            counselor=request.user,
+            status="pending"
+        )
+        .select_related("client")
+        .order_by("-created_at")
+    )
+
+    # =====================================================
+    # APPROVED BOOKINGS
+    # =====================================================
+
+    approved_bookings = (
+        Booking.objects
+        .filter(
+            counselor=request.user,
+            status="approved"
+        )
+        .select_related(
+            "client",
+            "session"
+        )
+        .order_by(
+            "preferred_date",
+            "preferred_time"
+        )
+    )
+
+    # =====================================================
+    # ALL SESSIONS
+    # =====================================================
+
+    sessions = (
+        Session.objects
+        .filter(
+            counselor=request.user
+        )
+        .select_related("client")
+        .order_by(
+            "appointment_date",
+            "appointment_time"
+        )
+    )
+
+    # =====================================================
+    # UPCOMING SESSIONS
+    # =====================================================
+
+    upcoming_sessions = sessions.filter(
+        appointment_date__gte=today,
+        status__in=[
+            "awaiting_payment",
+            "confirmed",
+        ]
+    )
+
+    # =====================================================
+    # COMPLETED SESSIONS
+    # =====================================================
+
+    completed_sessions = sessions.filter(
+        status="completed"
+    )
+
+    # =====================================================
+    # TOTAL UNIQUE CLIENTS
+    # Same logic as client_list
+    # =====================================================
+
+    total_clients = (
+        sessions
+        .values("client")
+        .distinct()
+        .count()
+    )
+
+    # =====================================================
+    # TODAY'S CONFIRMED SESSIONS
+    # =====================================================
+
+    today_sessions = sessions.filter(
+        appointment_date=today,
+        status="confirmed"
+    ).count()
+
+    # =====================================================
+    # PENDING BOOKING REQUESTS COUNT
+    # =====================================================
+
+    pending_sessions = pending_bookings.count()
+
+    # =====================================================
+    # CONTEXT
+    # =====================================================
 
     context = {
-        "total_clients": sessions.values("client").distinct().count(),
-        "today_sessions": sessions.filter(status="confirmed").count(),
-        "pending_sessions": sessions.filter(status="pending").count(),
-        "appointments": sessions.order_by("appointment_date")[:5],
+        "pending_bookings": pending_bookings,
+        "approved_bookings": approved_bookings,
+
+        "sessions": sessions,
+        "upcoming_sessions": upcoming_sessions,
+        "completed_sessions": completed_sessions,
+
+        "total_clients": total_clients,
+        "today_sessions": today_sessions,
+        "pending_sessions": pending_sessions,
+
+        # Your template uses "appointments"
+        "appointments": upcoming_sessions,
     }
 
-    return render(request, "counselors/counselor_dashboard.html", context)
+    return render( request, "counselors/counselor_dashboard.html",  context)
 
 @login_required
 def client_list(request):
@@ -211,3 +321,71 @@ def counsellor_profile(request):
             "counsellor": counsellor,
         }
     )
+@login_required
+def approve_booking_by_counselor(request, booking_id):
+
+    if request.method != "POST":
+        return redirect("counselor_dashboard")
+
+    booking = get_object_or_404(
+        Booking,
+        id=booking_id,
+        counselor=request.user,
+        status="pending"
+    )
+
+    # Create the session
+    session = Session.objects.create(
+        client=booking.client,
+        counselor=request.user,
+        session_type=booking.session_type,
+        session_mode=booking.session_mode,
+        appointment_date=booking.preferred_date,
+        appointment_time=booking.preferred_time,
+        duration_minutes=booking.duration_minutes,
+        notes=booking.notes,
+        status="awaiting_payment",
+    )
+
+    # Approve booking
+    booking.status = "approved"
+    booking.session = session
+    booking.save(
+        update_fields=[
+            "status",
+            "session",
+        ]
+    )
+
+    messages.success(
+        request,
+        "Booking approved successfully. The client can now make payment."
+    )
+
+    return redirect("counselor_dashboard")
+
+@login_required
+def decline_booking_by_counselor(request, booking_id):
+
+    if request.method != "POST":
+        return redirect("counselor_dashboard")
+
+    booking = get_object_or_404(
+        Booking,
+        id=booking_id,
+        counselor=request.user,
+        status="pending"
+    )
+
+    booking.status = "declined"
+
+    booking.save(
+        update_fields=["status"]
+    )
+
+    messages.success(
+        request,
+        "Booking declined successfully."
+    )
+
+    return redirect("counselor_dashboard")

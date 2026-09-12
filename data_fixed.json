@@ -1,0 +1,3996 @@
+[
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "core",
+      "model": "casestudy"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "core",
+      "model": "processstep"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "core",
+      "model": "services"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "events",
+      "model": "event"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "contacts",
+      "model": "contact"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "accounts",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "accounts",
+      "model": "clientprofile"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "accounts",
+      "model": "counsellorprofile"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "appointments",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "appointments",
+      "model": "payment"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "assessments",
+      "model": "phq9assessment"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "assessments",
+      "model": "gad7assessment"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "assessments",
+      "model": "stressassessment"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "appointments",
+      "model": "journalentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "appointments",
+      "model": "progressgoal"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "counselors",
+      "model": "sessionnote"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "counselors",
+      "model": "counsellorprofile"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "appointments",
+      "model": "booking"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "testimonials",
+      "model": "testimonial"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "core",
+      "model": "faq"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "app_label": "payments",
+      "model": "payment"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "1jkv3vza7ik5kffjzgx7bcqq1m7sn21y",
+    "fields": {
+      "session_data": ".eJxVjMsKwjAQAP9lzxLy3m2P3v2GkMdiqpJA057Ef5dCD3qdGeYNIe5bDfvgNSwFZiC4_LIU85PbIcojtnsXubdtXZI4EnHaIW698Ot6tn-DGkeFGaxPaJXP2hZnnGJbErIqEkkpIzOTpkTkSVLGSaGbGI22zhkpmaPR8PkCtzE2Xg:1wzruz:zGOIAO5MQQo4YIt1UI9ie2fO4tzoLwF_-KgmrzixJLA",
+      "expire_date": "2026-09-11T08:26:33.893Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "2ikhshx9ks67zlej7y98to03fll8xmwy",
+    "fields": {
+      "session_data": ".eJxVjDEOwjAMAP-SGUUkTlzCyN43VLbj0AJKpaadEH9HlTrAene6txloW8dha7oMUzZX48zplzHJU-su8oPqfbYy13WZ2O6JPWyz_Zz1dTvav8FIbdy3EBQVXCY4Y_BFBIgdJwoei4OL8yIaEWKkUjpyiF3CJJyYxUdF8_kC3z43-A:1wkiTp:4-UuaDNAEiZez_68bpEfGLYE5vESOpayyXrkfQmwTrI",
+      "expire_date": "2026-07-31T13:19:53.239Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "2kmuckassxh8tpikuronegwk7yze23j6",
+    "fields": {
+      "session_data": "e30:1wkjiL:vr3b2stUU9LxOb3BqWB3efZ0K6TIiOcponTWekqek4E",
+      "expire_date": "2026-07-31T14:38:57.783Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "3428lcgqc49qfw1c9cnb7175pv7elsq9",
+    "fields": {
+      "session_data": ".eJxVjMsKwjAQAP9lzxLy3m2P3v2GkMdiqpJA057Ef5dCD3qdGeYNIe5bDfvgNSwFZiC4_LIU85PbIcojtnsXubdtXZI4EnHaIW698Ot6tn-DGkeFGaxPaJXP2hZnnGJbErIqEkkpIzOTpkTkSVLGSaGbGI22zhkpmaPR8PkCtzE2Xg:1wkjsR:hBPPWoahSYcURe8oSRO0ytPm1gTapSTPusQJDQIIrSE",
+      "expire_date": "2026-07-31T14:49:23.087Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "a2v7iiuitlesq8u10ajj3la5q4o4r16f",
+    "fields": {
+      "session_data": "e30:1wkjTY:jnKlDmLMOsdJ06dMA5j2BwovtoIAWg8I7iwatzfG1wg",
+      "expire_date": "2026-07-31T14:23:40.148Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "akrpp24prih431pi33xzp03op7v3or80",
+    "fields": {
+      "session_data": ".eJxVjMsKwjAQAP9lzxLy3m2P3v2GkMdiqpJA057Ef5dCD3qdGeYNIe5bDfvgNSwFZiC4_LIU85PbIcojtnsXubdtXZI4EnHaIW698Ot6tn-DGkeFGaxPaJXP2hZnnGJbErIqEkkpIzOTpkTkSVLGSaGbGI22zhkpmaPR8PkCtzE2Xg:1wlW88:twP-vXtdmxVw4e3FiVyQ5LMorQxNRmObgtnXIw6Wi4k",
+      "expire_date": "2026-08-02T18:20:48.160Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "ekcgsnmbrdxb0eilkzoxwttc7f1sw2ls",
+    "fields": {
+      "session_data": ".eJxVjMsKwjAQAP9lzxLy3m2P3v2GkMdiqpJA057Ef5dCD3qdGeYNIe5bDfvgNSwFZiC4_LIU85PbIcojtnsXubdtXZI4EnHaIW698Ot6tn-DGkeFGaxPaJXP2hZnnGJbErIqEkkpIzOTpkTkSVLGSaGbGI22zhkpmaPR8PkCtzE2Xg:1wkknl:QaiOZGO-3iGWU2LKhihAc3boV7yOky6omwrIL8YEBKc",
+      "expire_date": "2026-07-31T15:48:37.886Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "fe0gh341mjr0x52hzj2rsjyx8gul9obn",
+    "fields": {
+      "session_data": "e30:1wkjk9:FjuuqZnCCgOTwbm91TfrNiulQbaWZBOOD5pkiN9a0So",
+      "expire_date": "2026-07-31T14:40:49.875Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "l67ubwg2ctz6doi28k71ckha24k0m67z",
+    "fields": {
+      "session_data": "e30:1wkjlb:6m0x5AMTrUYJ59uXIZQ6Lil_bToBemU6vPtYQo_ZtPE",
+      "expire_date": "2026-07-31T14:42:19.669Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "lshcttwsljjnlk5te1v0q5yrefh80xw8",
+    "fields": {
+      "session_data": "e30:1wkjWq:IxOF_1ESI--CXZRiufQJIfXjWKMLUaimG6huSlGRAZ8",
+      "expire_date": "2026-07-31T14:27:04.565Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "m541bz8kivl13y3ua30jt1nzh89vqjcx",
+    "fields": {
+      "session_data": ".eJxVjMsKwjAQAP9lzxLy3m2P3v2GkMdiqpJA057Ef5dCD3qdGeYNIe5bDfvgNSwFZiC4_LIU85PbIcojtnsXubdtXZI4EnHaIW698Ot6tn-DGkeFGaxPaJXP2hZnnGJbErIqEkkpIzOTpkTkSVLGSaGbGI22zhkpmaPR8PkCtzE2Xg:1woJ4s:l1UxkesqSeTshpQCgYYuW_MBOVJdHRwnlDPH4rT4lAU",
+      "expire_date": "2026-08-10T11:00:58.435Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "ofdvjx1dlalpiigpxhcg1y54ypl5i0hk",
+    "fields": {
+      "session_data": ".eJxVjMsKwjAQAP9lzxLy3m2P3v2GkMdiqpJA057Ef5dCD3qdGeYNIe5bDfvgNSwFZiC4_LIU85PbIcojtnsXubdtXZI4EnHaIW698Ot6tn-DGkeFGaxPaJXP2hZnnGJbErIqEkkpIzOTpkTkSVLGSaGbGI22zhkpmaPR8PkCtzE2Xg:1wmrOE:X26ZMrg7_noPrrWv8enJbux5p8P7QMZfpF4XVi0woJU",
+      "expire_date": "2026-08-06T11:14:58.457Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "r4lseucvbjx11lgtn57hf0roiolqfazr",
+    "fields": {
+      "session_data": ".eJxVjMsKwjAQAP9lzxLy3m2P3v2GkMdiqpJA057Ef5dCD3qdGeYNIe5bDfvgNSwFZiC4_LIU85PbIcojtnsXubdtXZI4EnHaIW698Ot6tn-DGkeFGaxPaJXP2hZnnGJbErIqEkkpIzOTpkTkSVLGSaGbGI22zhkpmaPR8PkCtzE2Xg:1wkjnC:59YihoG8Z-qvBTdbVMBYlSKlni68aXpOFHN-QH5vJdI",
+      "expire_date": "2026-07-31T14:43:58.156Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "s8jpxtor6y973ufhzmiap9hms3akjd3l",
+    "fields": {
+      "session_data": ".eJxVjMsKwjAQAP9lzxLy3m2P3v2GkMdiqpJA057Ef5dCD3qdGeYNIe5bDfvgNSwFZiC4_LIU85PbIcojtnsXubdtXZI4EnHaIW698Ot6tn-DGkeFGaxPaJXP2hZnnGJbErIqEkkpIzOTpkTkSVLGSaGbGI22zhkpmaPR8PkCtzE2Xg:1wkiag:Wj8je1Dmdlg2b4hPK72PD2FapzSndxXpIAzJJ_q15jU",
+      "expire_date": "2026-07-31T13:26:58.414Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "ucmuhncvor8z6x8eqv5qozzacyh7isco",
+    "fields": {
+      "session_data": ".eJxVjDEOwjAMAP-SGUUkTlzCyN43VLbj0AJKpaadEH9HlTrAene6txloW8dha7oMUzZX48zplzHJU-su8oPqfbYy13WZ2O6JPWyz_Zz1dTvav8FIbdy3EBQVXCY4Y_BFBIgdJwoei4OL8yIaEWKkUjpyiF3CJJyYxUdF8_kC3z43-A:1wz6uI:SUmmI2A708LR0khEs-UR6TWAVQjgUoXy7XdS2RFX3uw",
+      "expire_date": "2026-09-09T06:14:42.604Z"
+    }
+  },
+  {
+    "model": "core.services",
+    "pk": 1,
+    "fields": {
+      "title": "Individual Therapy",
+      "slug": "individual-therapy",
+      "short_description": "Individual Therapy provides one-on-one, confidential counselling to help individuals overcome personal challenges, improve emotional well-being, build resilience, and achieve lasting personal growth.",
+      "description": "Individual Therapy offers a safe, confidential, and supportive environment where you can openly discuss your thoughts, feelings, and life experiences with a qualified counsellor. Whether you are facing emotional difficulties, navigating major life changes, or seeking personal growth, we are here to help you every step of the way.\r\n\r\nOur counselling sessions are tailored to your unique needs and goals. Using evidence-based therapeutic approaches, we work collaboratively with you to identify challenges, develop healthy coping strategies, improve emotional regulation, and build the confidence needed to make positive life changes.\r\n\r\nIndividual Therapy can help with:\r\n\r\n• Anxiety and excessive worry\r\n• Depression and low mood\r\n• Stress and burnout\r\n• Grief and loss\r\n• Trauma and emotional healing\r\n• Relationship and family challenges\r\n• Self-esteem and confidence\r\n• Anger management\r\n• Life transitions and personal growth\r\n• Emotional resilience and well-being\r\n\r\nOur goal is to empower you with the skills, insight, and support needed to overcome life's challenges, improve your mental health, and lead a more balanced, confident, and fulfilling life.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxOlvfKn9McTDk4hav4IOSt073sD7DR6lAfT7zrxG3PQ&s=10",
+      "icon": "fa-solid fa-user",
+      "is_featured": true,
+      "is_active": true,
+      "created_at": "2026-07-16T11:12:18.195Z"
+    }
+  },
+  {
+    "model": "core.services",
+    "pk": 2,
+    "fields": {
+      "title": "Couples Therapy",
+      "slug": "couples-therapy",
+      "short_description": "Couples Therapy provides a safe, supportive, and confidential environment where partners can strengthen communication, resolve conflicts, rebuild trust, and develop healthier, more fulfilling relation",
+      "description": "Every relationship experiences challenges, but with the right support, couples can learn to navigate difficulties and grow stronger together. Our Couples Therapy service offers a confidential and non-judgmental space where partners can openly discuss concerns, improve communication, and work toward shared goals.\r\n\r\nOur experienced counsellors help couples identify patterns that may be affecting their relationship and develop practical strategies to strengthen emotional connection, rebuild trust, and resolve conflicts in healthy, constructive ways. Whether you are dating, engaged, married, or in a long-term partnership, therapy can provide valuable tools for creating a stronger and more satisfying relationship.\r\n\r\nThis service can help with:\r\n\r\n• Communication difficulties\r\n• Frequent conflicts and disagreements\r\n• Trust and relationship rebuilding\r\n• Emotional disconnection\r\n• Premarital counselling\r\n• Parenting and family-related challenges\r\n• Financial and lifestyle conflicts\r\n• Managing life transitions together\r\n• Strengthening intimacy and emotional connection\r\n• Improving problem-solving as a couple\r\n\r\nOur goal is to help couples build healthier relationships founded on trust, mutual respect, understanding, and effective communication, enabling them to face life's challenges together with confidence and resilience.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR83-DJiICoV681VvVCgP1Gh-tp4Ha0FqpcoFNdy1i_pg&s=10",
+      "icon": "fa-solid fa-heart",
+      "is_featured": true,
+      "is_active": true,
+      "created_at": "2026-07-16T11:12:18.257Z"
+    }
+  },
+  {
+    "model": "core.services",
+    "pk": 3,
+    "fields": {
+      "title": "Corporate Therapy",
+      "slug": "corporate-therapy",
+      "short_description": "Corporate Therapy supports organizations by promoting employee mental well-being, reducing workplace stress, improving productivity, and fostering a healthy, resilient, and positive work environment.",
+      "description": "A healthy workforce is the foundation of a successful organization. Our Corporate Therapy service is designed to help businesses create a supportive workplace culture where employees can thrive both personally and professionally.\r\n\r\nWe partner with organizations to provide confidential counselling, stress management, and mental wellness programs that address the emotional and psychological challenges employees may face. By supporting employee well-being, organizations can improve morale, strengthen teamwork, reduce burnout, and enhance overall productivity.\r\n\r\nOur experienced counsellors work with individuals, teams, and management to develop practical strategies for maintaining a healthy work environment and promoting resilience in the workplace.\r\n\r\nThis service can help with:\r\n\r\n• Workplace stress and burnout\r\n• Employee Assistance Program (EAP) support\r\n• Work-life balance challenges\r\n• Conflict resolution and communication\r\n• Leadership and management support\r\n• Team-building and resilience\r\n• Critical incident and trauma support\r\n• Change management and organizational transitions\r\n• Mental health awareness training\r\n• Employee wellness workshops\r\n\r\nOur goal is to help organizations build a positive workplace culture where employees feel supported, motivated, and equipped to perform at their best while maintaining good mental health and emotional well-being.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZSwYg7j9QUNVxawuNxr219bfoSv0rpp_Z2KeUuvr5Wg&s=10",
+      "icon": "fa-solid fa-building-user",
+      "is_featured": false,
+      "is_active": true,
+      "created_at": "2026-07-16T11:12:18.295Z"
+    }
+  },
+  {
+    "model": "core.services",
+    "pk": 4,
+    "fields": {
+      "title": "Stress Therapy",
+      "slug": "stress-therapy",
+      "short_description": "Stress Therapy provides practical, compassionate support to help individuals manage stress, restore emotional balance, build resilience, and improve overall mental and physical well-being.",
+      "description": "Stress is a natural part of life, but when it becomes overwhelming or persistent, it can affect your mental health, physical well-being, relationships, and daily performance. Our Stress Therapy service offers a safe, confidential space where you can explore the sources of your stress and develop healthy ways to cope.\r\n\r\nOur experienced counsellors work collaboratively with you to identify stress triggers, understand your emotional responses, and create personalized strategies to manage pressure more effectively. Using evidence-based therapeutic approaches, we help you strengthen resilience, improve emotional regulation, and develop healthier habits for long-term well-being.\r\n\r\nThis service can help with:\r\n\r\n• Work-related stress and burnout\r\n• Academic stress and exam pressure\r\n• Family and relationship challenges\r\n• Financial and life-transition stress\r\n• Caregiver stress\r\n• Time management difficulties\r\n• Emotional exhaustion\r\n• Difficulty balancing work and personal life\r\n\r\nOur goal is to help you regain a sense of calm, improve your ability to cope with life's challenges, and build lasting skills that promote emotional wellness, confidence, and a healthier, more balanced lifestyle.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2HKht_foa3GWTb2xljTC-mV_7ge3e5bvi22nNRJzkpg&s=10",
+      "icon": "fa-solid fa-spa",
+      "is_featured": true,
+      "is_active": true,
+      "created_at": "2026-07-16T11:12:18.324Z"
+    }
+  },
+  {
+    "model": "core.services",
+    "pk": 5,
+    "fields": {
+      "title": "Depression Therapy",
+      "slug": "depression-therapy",
+      "short_description": "Depression Therapy offers compassionate, confidential support to help individuals overcome feelings of sadness, hopelessness, low motivation, and emotional distress while building resilience and impro",
+      "description": "Depression can make everyday life feel overwhelming, affecting your emotions, relationships, work, studies, and overall quality of life. You do not have to face these challenges alone.\r\n\r\nOur Depression Therapy service provides a safe, supportive, and confidential environment where you can openly discuss your thoughts and feelings without fear of judgment. Our experienced counsellors work with you to understand the underlying causes of your depression and develop practical strategies to promote healing and recovery.\r\n\r\nUsing evidence-based therapeutic approaches, we help you identify negative thought patterns, strengthen healthy coping skills, rebuild self-confidence, and create realistic goals for long-term emotional well-being.\r\n\r\nThis service can help with:\r\n\r\n• Persistent sadness or low mood\r\n• Loss of interest in activities once enjoyed\r\n• Feelings of hopelessness or worthlessness\r\n• Low self-esteem and lack of motivation\r\n• Emotional exhaustion\r\n• Difficulty concentrating\r\n• Grief and life transitions\r\n• Stress-related depression\r\n\r\nOur goal is to help you rediscover hope, improve your emotional health, strengthen resilience, and support you in living a healthier, more fulfilling life—one step at a time.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjGgpGyZPMwqUm99VDlRJIImsBjjknaqlyzCmM_473dQ&s=10",
+      "icon": "fa-solid fa-heart-circle-plus",
+      "is_featured": false,
+      "is_active": true,
+      "created_at": "2026-07-16T11:12:18.344Z"
+    }
+  },
+  {
+    "model": "core.services",
+    "pk": 6,
+    "fields": {
+      "title": "Anxiety Therapy",
+      "slug": "anxiety-therapy",
+      "short_description": "Anxiety Therapy provides a safe, confidential space to help individuals manage anxiety, panic attacks, excessive worry, stress, and related emotional challenges using evidence-based counselling approa",
+      "description": "Anxiety can affect every aspect of life, from work and school to relationships and physical well-being. Our Anxiety Therapy service provides compassionate, confidential support to help you understand the root causes of your anxiety and develop practical strategies to manage it.\r\n\r\nOur qualified counsellors use evidence-based therapeutic approaches tailored to your individual needs. Together, we will identify triggers, challenge unhelpful thought patterns, build healthy coping skills, and improve emotional resilience.\r\n\r\nThis service can help with:\r\n\r\n• Generalized anxiety\r\n• Panic attacks\r\n• Social anxiety\r\n• Health anxiety\r\n• Excessive worry and overthinking\r\n• Stress management\r\n• Fear and phobias\r\n• Anxiety related to work, school, or relationships\r\n\r\nOur goal is to empower you with the confidence and tools needed to regain control, improve your emotional well-being, and enjoy a more balanced and fulfilling life.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBLDf1qrO831iINQDD7I8RMqmZ7VZg9cTS_KcqG5nOLA&s=10",
+      "icon": "fa-solid fa-brain",
+      "is_featured": false,
+      "is_active": true,
+      "created_at": "2026-07-16T11:12:18.364Z"
+    }
+  },
+  {
+    "model": "core.casestudy",
+    "pk": 1,
+    "fields": {
+      "title": "Managing Anxiety in Young Adults",
+      "slug": "managing-anxiety-in-young-adults",
+      "short_description": "Helping a young professional overcome anxiety through Cognitive Behavioral Therapy (CBT), mindfulness, and personalized coping strategies.",
+      "description": "This case study highlights how structured counselling helped a young adult manage anxiety that was affecting both personal and professional life. Through evidence-based Cognitive Behavioral Therapy (CBT), mindfulness practices, and practical coping techniques, the client developed healthier thought patterns, reduced anxiety symptoms, and regained confidence in social and workplace environments.",
+      "image": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80",
+      "client_profile": "Age: 24, experiencing work and social anxiety, struggling with constant worry, overthinking, and fear of judgment in everyday interactions.”",
+      "challenge": "The client experienced panic attacks during presentations and avoided social gatherings, leading to isolation.",
+      "approach": "Weekly CBT sessions\r\nMindfulness and breathing techniques\r\nPersonalized anxiety-management plan",
+      "outcome": "After 10 weeks, the client reported fewer panic attacks, improved confidence at work, and renewed social life.",
+      "icon": "fas fa-brain",
+      "status": "published",
+      "is_featured": true,
+      "is_active": true,
+      "created_at": "2026-07-16T11:12:18.448Z"
+    }
+  },
+  {
+    "model": "core.casestudy",
+    "pk": 2,
+    "fields": {
+      "title": "Supporting Couples in Conflict",
+      "slug": "supporting-couples-in-conflict",
+      "short_description": "Helping couples rebuild trust, improve communication, and strengthen their relationship through professional couples counselling.",
+      "description": "This case study demonstrates how structured couples counselling helped a married couple overcome recurring conflict, rebuild trust, and develop healthier communication patterns. Through evidence-based therapeutic techniques and guided exercises, they learned practical ways to resolve disagreements respectfully and reconnect emotionally.",
+      "image": "https://plus.unsplash.com/premium_photo-1664478125455-704732b82837?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "client_profile": "Couple, Restoring Balance for a Couple Married for 7 Years Facing Conflict",
+      "challenge": "The couple experienced recurring arguments, unresolved misunderstandings, and trust issues that created emotional distance. Poor communication patterns made it difficult to resolve disagreements, leaving both partners feeling unheard and disconnected.",
+      "approach": "Structured couples therapy sessions\r\nActive listening exercises\r\nConflict-resolution and problem-solving techniques\r\nGuided communication exercises\r\nRelationship goal-setting\r\nHomework activities to practice healthy communication between sessions\r\nTrust-building strategies",
+      "outcome": "After completing the counselling program, the couple reported improved communication, greater understanding of each other's perspectives, and healthier ways of resolving conflict. Trust gradually strengthened, emotional intimacy increased, and they felt more confident working together to navigate future challenges.",
+      "icon": "fas fa-heart",
+      "status": "published",
+      "is_featured": true,
+      "is_active": true,
+      "created_at": "2026-07-16T11:12:18.494Z"
+    }
+  },
+  {
+    "model": "core.casestudy",
+    "pk": 3,
+    "fields": {
+      "title": "Work-Life Balance for Professionals",
+      "slug": "work-life-balance-for-professionals",
+      "short_description": "Helping professionals overcome burnout, reduce stress, and achieve a healthier balance between work and personal life.",
+      "description": "This case study showcases how personalized counselling helped a working professional manage chronic stress and burnout caused by a demanding career. Through practical stress-management strategies, relaxation techniques, and healthier lifestyle habits, the client improved their overall well-being, productivity, and work-life balance.",
+      "image": "https://plus.unsplash.com/premium_photo-1661380248194-41ddde1eb91c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "client_profile": "Age: 35, Burnout and stress from demanding job",
+      "challenge": "The client struggled with overwhelming responsibilities, persistent stress, insomnia, mental fatigue, and low energy. These challenges affected productivity, relationships, and overall quality of life.",
+      "approach": "Stress-management techniques, including time-blocking and prioritization\r\nRelaxation exercises\r\nGuided meditation sessions\r\nDevelopment of healthy sleep hygiene habits\r\nNutrition and healthy eating guidance\r\nEncouragement of regular physical exercise\r\nWork-life boundary-setting strategies\r\nWeekly progress reviews and goal adjustments",
+      "outcome": "After eight weeks of counselling, the client reported better sleep quality, increased focus, reduced stress levels, and renewed energy. They successfully established healthier work-life boundaries, improved daily routines, and felt more in control of both their professional and personal responsibilities.",
+      "icon": "fas fa-briefcase",
+      "status": "published",
+      "is_featured": true,
+      "is_active": true,
+      "created_at": "2026-07-16T11:12:18.512Z"
+    }
+  },
+  {
+    "model": "core.casestudy",
+    "pk": 4,
+    "fields": {
+      "title": "Building Self-Esteem in Adolescents",
+      "slug": "building-self-esteem-in-adolescents",
+      "short_description": "Supporting adolescents in developing self-confidence, resilience, and a positive self-image through professional counselling.",
+      "description": "This case study highlights how counselling helped an adolescent build healthier self-esteem, challenge negative thought patterns, and develop greater confidence in academic and social settings. Through a supportive and strengths-based approach, the client learned practical skills to improve self-worth, communication, and emotional resilience.",
+      "image": "https://plus.unsplash.com/premium_photo-1683121344795-00207fa6480b?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "client_profile": "Age: 15, BLow self-confidence, negative self-talk, reluctance to participate in class",
+      "challenge": "The client struggled with feelings of inadequacy, fear of making mistakes, and difficulty recognizing personal strengths. These challenges affected classroom participation, peer relationships, and overall emotional well-being.",
+      "approach": "Weekly individual counselling sessions\r\nStrength-based counselling techniques\r\nCognitive Behavioral Therapy (CBT) exercises to challenge negative self-talk\r\nConfidence-building activities and goal setting\r\nCommunication and social skills development\r\nJournaling and self-reflection exercises\r\nPositive affirmation and self-compassion practices\r\nParental guidance to reinforce progress at home",
+      "outcome": "After 12 weeks of counselling, the client demonstrated increased self-confidence, participated more actively in class, developed healthier thinking patterns, and built stronger relationships with peers. They reported greater self-acceptance and felt more comfortable expressing themselves in both academic and social environments.",
+      "icon": "fas fa-seedling",
+      "status": "published",
+      "is_featured": true,
+      "is_active": true,
+      "created_at": "2026-07-16T11:12:18.528Z"
+    }
+  },
+  {
+    "model": "core.casestudy",
+    "pk": 5,
+    "fields": {
+      "title": "Finding Healing Through Grief and Loss Support",
+      "slug": "finding-healing-through-grief-and-loss-support",
+      "short_description": "Providing compassionate support to help individuals navigate grief, process loss, and gradually rebuild hope for the future.",
+      "description": "This case study demonstrates how compassionate grief counselling supported an individual following the sudden loss of a loved one. Through a safe and supportive therapeutic environment, the client learned healthy ways to process emotions, develop coping strategies, and gradually adjust to life while honoring their loss.",
+      "image": "https://plus.unsplash.com/premium_photo-1681884243436-2136c89135dc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "client_profile": "Age: 45, Coping with the sudden loss of a loved one",
+      "challenge": "The client struggled with overwhelming sadness, difficulty concentrating, disrupted sleep, and feelings of loneliness. Everyday responsibilities became challenging, and they found it difficult to process their emotions while adapting to significant life changes.",
+      "approach": "Compassionate one-on-one grief counselling sessions\r\nA safe space to express emotions without judgment\r\nPsychoeducation about the grieving process\r\nMindfulness and grounding techniques for emotional regulation\r\nHealthy coping strategies for managing difficult emotions\r\nMemory and legacy activities to honor the loved one\r\nSelf-care planning and rebuilding daily routines\r\nGradual goal-setting to regain confidence and purpose",
+      "outcome": "After several weeks of counselling, the client reported feeling better equipped to cope with grief and navigate daily life. While continuing to honor the memory of their loved one, they experienced improved emotional resilience, healthier coping strategies, better sleep, and renewed hope for the future.",
+      "icon": "fas fa-dove",
+      "status": "published",
+      "is_featured": true,
+      "is_active": true,
+      "created_at": "2026-07-16T11:12:18.545Z"
+    }
+  },
+  {
+    "model": "core.casestudy",
+    "pk": 6,
+    "fields": {
+      "title": "Overcoming Teenage Depression: Building Hope and Emotional Resilience",
+      "slug": "overcoming-teenage-depression-building-hope-and-em",
+      "short_description": "Helping adolescents overcome depression by fostering hope, emotional resilience, and healthy coping strategies through professional counselling.",
+      "description": "This case study highlights how compassionate, evidence-based counselling supported a teenager experiencing symptoms of depression. Through individual therapy, family involvement, and practical coping techniques, the client gradually regained confidence, improved emotional well-being, and re-engaged with school, friendships, and daily life.",
+      "image": "https://plus.unsplash.com/premium_photo-1723604421326-bff3a6cdd353?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "client_profile": "Age: 16, Feelings of worthlessness, withdrawal from school and friends",
+      "challenge": "The client had become increasingly isolated, lost interest in activities they previously enjoyed, and struggled with low self-esteem, poor concentration, and declining academic performance. These difficulties affected relationships with family and peers and reduced their confidence in everyday life.",
+      "approach": "Weekly individual counselling sessions\r\nCognitive Behavioral Therapy (CBT) techniques\r\nEmotional awareness and healthy expression exercises\r\nGoal-setting to rebuild confidence and motivation\r\nMindfulness and stress-management practices\r\nDevelopment of healthy coping strategies\r\nFamily sessions to strengthen support at home\r\nEncouragement of positive routines, hobbies, and social engagement",
+      "outcome": "After 12 weeks of counselling, the client reported improved mood, increased confidence, and healthier coping strategies for managing difficult emotions. They gradually re-engaged with school activities, strengthened relationships with family and friends, and developed greater emotional resilience and hope for the future.",
+      "icon": "fas fa-sun",
+      "status": "published",
+      "is_featured": true,
+      "is_active": true,
+      "created_at": "2026-07-16T11:12:18.563Z"
+    }
+  },
+  {
+    "model": "core.processstep",
+    "pk": 1,
+    "fields": {
+      "title": "Choose a Service",
+      "description": "Select the type of therapy or counselling that suits your needs.",
+      "order": 1,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.processstep",
+    "pk": 2,
+    "fields": {
+      "title": "Book a Session",
+      "description": "Pick a convenient time through our easy online booking system.",
+      "order": 2,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.processstep",
+    "pk": 3,
+    "fields": {
+      "title": "Confirm & Prepare",
+      "description": "Receive confirmation and session details via email or SMS.",
+      "order": 3,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.processstep",
+    "pk": 4,
+    "fields": {
+      "title": "Meet Your Therapist",
+      "description": "Connect in person or virtually in a safe, confidential space.",
+      "order": 4,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.processstep",
+    "pk": 5,
+    "fields": {
+      "title": "Begin Your Journey",
+      "description": "Start working toward healing, growth, and lasting wellness.",
+      "order": 5,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.faq",
+    "pk": 1,
+    "fields": {
+      "question": "What is counselling?",
+      "answer": "Counselling is a confidential, supportive process where a trained therapist helps you explore you thoughts, feelings, and behaviors to better understand yourself and work through challenges.",
+      "order": 0,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.faq",
+    "pk": 2,
+    "fields": {
+      "question": "Who is counselling for?",
+      "answer": "Counselling is for anyone seeking support — whether you’re facing stress, anxiety, relationship issues, trauma, or simply want personal growth and clarity.",
+      "order": 1,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.faq",
+    "pk": 3,
+    "fields": {
+      "question": "How do I know if I need counselling?",
+      "answer": "If you’re feeling overwhelmed, stuck, or emotionally drained — or just want a safe space to talk — counselling can help. It’s okay to seek support even if you’re unsure what’s “wrong.”",
+      "order": 2,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.faq",
+    "pk": 4,
+    "fields": {
+      "question": "What issues can you help with?",
+      "answer": "We support clients dealing with anxiety, depression, self-esteem issues,  trauma, grief, relationship and family problems, life transitions, and  more.",
+      "order": 3,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.faq",
+    "pk": 5,
+    "fields": {
+      "question": "Is counselling confidential?",
+      "answer": "Yes. Everything you share is kept confidential unless there’s a risk of harm to you or others.",
+      "order": 4,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.faq",
+    "pk": 6,
+    "fields": {
+      "question": "Do you offer online sessions?",
+      "answer": "Yes, we offer both in-person and secure online counselling sessions for  your convenience.",
+      "order": 5,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.faq",
+    "pk": 7,
+    "fields": {
+      "question": "How do I book a session?",
+      "answer": "You can book via our website, phone, or contact form. We'll guide you through the next steps.",
+      "order": 6,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.faq",
+    "pk": 8,
+    "fields": {
+      "question": "What are your fees and payment options?",
+      "answer": "Session fees and payment options vary. We accept M-Pesa, PayPal, and bank  transfer. Sliding scale fees available on request.",
+      "order": 7,
+      "is_active": true
+    }
+  },
+  {
+    "model": "counselors.counsellorprofile",
+    "pk": 1,
+    "fields": {
+      "name": "Erastus Ivelia",
+      "title": "Professional Counsellor & Mental Wellness Practitioner",
+      "photo": "counsellors/ERAS_0IaB28d.jpg",
+      "short_bio": "Erastus Ivelia is a compassionate counselling professional dedicated to helping individuals, couples, and families navigate life's challenges and achieve greater emotional well-being. He provides a safe, confidential, and supportive environment where clients can feel heard, understood, and empowered to grow.",
+      "bio": "Erastus Ivelia is a dedicated counselling professional committed to helping individuals, couples, families, and organizations achieve emotional well-being and personal growth. Through a compassionate and client-centered approach, he provides guidance, support, and practical strategies for navigating life's challenges.\r\n\r\nWith over 5 years of counselling experience, Erastus has worked with diverse individuals and groups, helping them develop healthier coping strategies, strengthen relationships, manage emotional challenges, and improve their overall mental wellness.\r\n\r\nHe believes that every client is unique and deserves to be treated with dignity, empathy, and respect. His approach focuses on creating a safe and confidential environment where clients can openly explore their concerns and work toward meaningful and lasting change.",
+      "specializations": "Individual Counselling\r\nCouples & Relationship Counselling\r\nFamily Therapy\r\nStress & Anxiety Management\r\nGrief & Loss Support\r\nCorporate Wellness Programmes",
+      "experience": "With over 5 years of counselling experience, Erastus has supported diverse individuals, couples, families, and groups in developing healthier coping strategies, strengthening relationships, managing stress and emotional challenges, and improving overall mental wellness.",
+      "qualifications": "Bachelor's Degree in Counselling Psychology\r\nProfessional Counselling Certification\r\nContinuous Professional Development Training\r\nMental Health & Wellness Practitioner",
+      "approach": "Every client is unique. Erastus believes in creating a safe, confidential, and supportive environment where clients can openly explore their concerns without judgment. His counselling approach is compassionate, client-centered, practical, and focused on empowering individuals to develop healthy coping strategies and work toward meaningful, lasting change.",
+      "years_experience": 5,
+      "online_support": true,
+      "in_person_support": true,
+      "is_active": true,
+      "created_at": "2026-08-25T15:12:26.969Z",
+      "updated_at": "2026-08-25T15:12:26.969Z"
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 1,
+    "fields": {
+      "title": "Managing Anxiety in Everyday Life",
+      "slug": "managing-anxiety-in-everyday-life",
+      "short_description": "Join our practical workshop to learn healthy strategies for managing anxiety, reducing stress, and supporting your emotional and mental well-being.",
+      "description": "This interactive workshop is designed to help participants understand anxiety, identify common triggers, and develop practical coping strategies for everyday life. Through guided discussions, relaxation techniques, and evidence-based approaches, attendees will gain valuable tools to improve their mental well-being and build resilience.\r\n\r\nWhether you're experiencing anxiety yourself or supporting someone who is, this session provides a safe and welcoming environment to learn, ask questions, and connect with others.",
+      "image": "https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f",
+      "event_date": "2026-09-23",
+      "start_time": "10:00:00",
+      "end_time": "12:30:00",
+      "venue": "Redeemed Christian Church of God, Nairobi",
+      "registration_link": "",
+      "button_text": "Coming Soon",
+      "is_active": true,
+      "created_at": "2026-07-16T11:12:18.851Z"
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 2,
+    "fields": {
+      "title": "Parenting with Confidence Seminar",
+      "slug": "parenting-with-confidence-seminar",
+      "short_description": "Gain practical parenting strategies to strengthen communication, build healthy relationships, and support your child's emotional and mental well-being.",
+      "description": "Join us for an engaging seminar designed to equip parents and caregivers with practical tools for raising confident, resilient, and emotionally healthy children. Led by experienced counselors, this session explores positive parenting techniques, effective communication, discipline with empathy, and strategies for nurturing children's emotional growth in today's changing world. Whether you are a new parent or have teenagers, this seminar offers valuable insights to help you navigate the parenting journey with confidence.",
+      "image": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
+      "event_date": "2027-02-17",
+      "start_time": "09:00:00",
+      "end_time": "18:00:00",
+      "venue": "Techwell Solution Grounds, Nairobi",
+      "registration_link": "",
+      "button_text": "Coming Soon",
+      "is_active": true,
+      "created_at": "2026-07-16T11:12:18.873Z"
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 3,
+    "fields": {
+      "title": "Depression Recovery Talk",
+      "slug": "Depression-Recovery-Talk",
+      "short_description": "Learn to recognize the signs of depression, explore effective coping strategies, and discover pathways to healing and recovery in a supportive environment.",
+      "description": "Depression affects people of all ages and backgrounds, but with the right support, recovery is possible. This educational talk is designed to increase awareness of depression, reduce stigma, and encourage early intervention. Experienced mental health professionals will discuss common symptoms, risk factors, healthy coping strategies, treatment options, and ways to support yourself or someone experiencing depression. Participants will also have an opportunity to ask questions in a safe and confidential setting.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuCDFG67izaWs-sTvWjApeyBqu36EwYOiLVxqKYDH_PA&s",
+      "event_date": "2027-04-30",
+      "start_time": "10:00:00",
+      "end_time": "18:00:00",
+      "venue": "Techwell Solution Grounds, Nairobi",
+      "registration_link": "",
+      "button_text": "Coming Soon",
+      "is_active": true,
+      "created_at": "2026-07-16T11:12:18.888Z"
+    }
+  },
+  {
+    "model": "testimonials.testimonial",
+    "pk": 1,
+    "fields": {
+      "name": "Jane M.",
+      "position": "Individual Therapy",
+      "message": "MindConnect has been a safe space for me. My sessions with Erastus have helped me manage anxiety and rebuild my confidence",
+      "photo": "",
+      "rating": 5,
+      "is_featured": true,
+      "is_active": true,
+      "order": 0,
+      "created_at": "2026-08-26T08:09:01.916Z",
+      "updated_at": "2026-08-26T08:23:52.856Z"
+    }
+  },
+  {
+    "model": "testimonials.testimonial",
+    "pk": 2,
+    "fields": {
+      "name": "Sarah T.",
+      "position": "Couple's Therapy",
+      "message": "I appreciate the therapist’s ability to combine compassion with practical strategies. Their approach fosters real progress and long-term personal growth.",
+      "photo": "",
+      "rating": 5,
+      "is_featured": true,
+      "is_active": true,
+      "order": 1,
+      "created_at": "2026-08-26T08:11:28.600Z",
+      "updated_at": "2026-08-26T08:24:01.840Z"
+    }
+  },
+  {
+    "model": "testimonials.testimonial",
+    "pk": 3,
+    "fields": {
+      "name": "Alex K.",
+      "position": "Individual Therapy",
+      "message": "Sessions are conducted with professionalism and care, creating a space where clients feel heard and respected. The guidance offered is both constructive and empowering.",
+      "photo": "",
+      "rating": 5,
+      "is_featured": true,
+      "is_active": true,
+      "order": 2,
+      "created_at": "2026-08-26T08:12:11.814Z",
+      "updated_at": "2026-08-26T08:24:11.686Z"
+    }
+  },
+  {
+    "model": "testimonials.testimonial",
+    "pk": 4,
+    "fields": {
+      "name": "Brian L.",
+      "position": "Individual Therapy",
+      "message": "The therapist demonstrates expertise and empathy in every session. Their support has a meaningful impact on personal well-being and resilience.",
+      "photo": "",
+      "rating": 5,
+      "is_featured": true,
+      "is_active": true,
+      "order": 3,
+      "created_at": "2026-08-26T08:13:19.468Z",
+      "updated_at": "2026-08-26T08:24:25.633Z"
+    }
+  },
+  {
+    "model": "testimonials.testimonial",
+    "pk": 5,
+    "fields": {
+      "name": "Johnathan P",
+      "position": "Stress Therapy",
+      "message": "The therapist provides a supportive and professional environment that makes it easy to open up. Each session is focused, insightful, and tailored to individual needs.",
+      "photo": "",
+      "rating": 5,
+      "is_featured": true,
+      "is_active": true,
+      "order": 4,
+      "created_at": "2026-08-26T08:13:51.154Z",
+      "updated_at": "2026-08-26T08:24:36.492Z"
+    }
+  },
+  {
+    "model": "contacts.contact",
+    "pk": 1,
+    "fields": {
+      "full_name": "Catherine Mung'ohe",
+      "email": "catelilungo@gmail.com",
+      "phone": "0792501015",
+      "subject": "fefedf",
+      "message": "dvsfggthdfg",
+      "status": "new",
+      "created_at": "2026-07-16T11:12:19.097Z",
+      "updated_at": "2026-07-16T11:12:19.097Z"
+    }
+  },
+  {
+    "model": "contacts.contact",
+    "pk": 2,
+    "fields": {
+      "full_name": "Catherine Mung'ohe",
+      "email": "catelilungo@gmail.com",
+      "phone": "0792501015",
+      "subject": "efewfew",
+      "message": "ferwferwgferwfewf",
+      "status": "new",
+      "created_at": "2026-07-16T11:12:19.161Z",
+      "updated_at": "2026-07-16T11:12:19.161Z"
+    }
+  },
+  {
+    "model": "contacts.contact",
+    "pk": 3,
+    "fields": {
+      "full_name": "Catherine Mung'ohe",
+      "email": "catelilungo@gmail.com",
+      "phone": "0792501015",
+      "subject": "dwdwsdw",
+      "message": "gtehyrhtrht",
+      "status": "new",
+      "created_at": "2026-07-16T11:12:19.179Z",
+      "updated_at": "2026-07-16T11:12:19.179Z"
+    }
+  },
+  {
+    "model": "contacts.contact",
+    "pk": 4,
+    "fields": {
+      "full_name": "Catherine Mung'ohe",
+      "email": "catelilungo@gmail.com",
+      "phone": "0792501015",
+      "subject": "dvsbfvd",
+      "message": "fvfnhngbfrg",
+      "status": "new",
+      "created_at": "2026-07-16T11:12:19.194Z",
+      "updated_at": "2026-07-16T11:12:19.194Z"
+    }
+  },
+  {
+    "model": "contacts.contact",
+    "pk": 5,
+    "fields": {
+      "full_name": "Catherine Mung'ohe",
+      "email": "catelilungo@gmail.com",
+      "phone": "0792501015",
+      "subject": "cffewfewf",
+      "message": "fregergerg",
+      "status": "new",
+      "created_at": "2026-07-16T11:12:19.212Z",
+      "updated_at": "2026-07-16T11:12:19.212Z"
+    }
+  },
+  {
+    "model": "contacts.contact",
+    "pk": 6,
+    "fields": {
+      "full_name": "Catherine Mung'ohe",
+      "email": "catelilungo@gmail.com",
+      "phone": "0792501015",
+      "subject": "rhththtg",
+      "message": "thtrhhnr",
+      "status": "new",
+      "created_at": "2026-07-16T11:12:19.232Z",
+      "updated_at": "2026-07-16T11:12:19.232Z"
+    }
+  },
+  {
+    "model": "contacts.contact",
+    "pk": 7,
+    "fields": {
+      "full_name": "Catherine Mung'ohe",
+      "email": "catelilungo@gmail.com",
+      "phone": "0792501015",
+      "subject": "wegerwrwf",
+      "message": "ef4wrgregr",
+      "status": "new",
+      "created_at": "2026-07-16T11:12:19.247Z",
+      "updated_at": "2026-07-16T11:12:19.248Z"
+    }
+  },
+  {
+    "model": "contacts.contact",
+    "pk": 8,
+    "fields": {
+      "full_name": "Catherine Mung'ohe",
+      "email": "catelilungo@gmail.com",
+      "phone": "0792501015",
+      "subject": "xdvf",
+      "message": "defgrefgdf",
+      "status": "new",
+      "created_at": "2026-07-16T11:12:19.267Z",
+      "updated_at": "2026-07-16T11:12:19.267Z"
+    }
+  },
+  {
+    "model": "contacts.contact",
+    "pk": 9,
+    "fields": {
+      "full_name": "Catherine Mung'ohe",
+      "email": "catelilungo@gmail.com",
+      "phone": "0792501015",
+      "subject": "yuhetye5",
+      "message": "egfrwgrwg",
+      "status": "new",
+      "created_at": "2026-07-16T11:12:19.292Z",
+      "updated_at": "2026-07-16T11:12:19.292Z"
+    }
+  },
+  {
+    "model": "contacts.contact",
+    "pk": 10,
+    "fields": {
+      "full_name": "Catherine Mung'ohe",
+      "email": "catelilungo@gmail.com",
+      "phone": "0792501015",
+      "subject": "wfqwd",
+      "message": "qsefewwfqedwqdwdwdwd",
+      "status": "new",
+      "created_at": "2026-07-16T11:12:19.314Z",
+      "updated_at": "2026-07-16T11:12:19.314Z"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": [
+        "admin",
+        "logentry"
+      ],
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": [
+        "admin",
+        "logentry"
+      ],
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": [
+        "admin",
+        "logentry"
+      ],
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": [
+        "admin",
+        "logentry"
+      ],
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add permission",
+      "content_type": [
+        "auth",
+        "permission"
+      ],
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change permission",
+      "content_type": [
+        "auth",
+        "permission"
+      ],
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": [
+        "auth",
+        "permission"
+      ],
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view permission",
+      "content_type": [
+        "auth",
+        "permission"
+      ],
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add group",
+      "content_type": [
+        "auth",
+        "group"
+      ],
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change group",
+      "content_type": [
+        "auth",
+        "group"
+      ],
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete group",
+      "content_type": [
+        "auth",
+        "group"
+      ],
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view group",
+      "content_type": [
+        "auth",
+        "group"
+      ],
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add content type",
+      "content_type": [
+        "contenttypes",
+        "contenttype"
+      ],
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change content type",
+      "content_type": [
+        "contenttypes",
+        "contenttype"
+      ],
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": [
+        "contenttypes",
+        "contenttype"
+      ],
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view content type",
+      "content_type": [
+        "contenttypes",
+        "contenttype"
+      ],
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add session",
+      "content_type": [
+        "sessions",
+        "session"
+      ],
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change session",
+      "content_type": [
+        "sessions",
+        "session"
+      ],
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete session",
+      "content_type": [
+        "sessions",
+        "session"
+      ],
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view session",
+      "content_type": [
+        "sessions",
+        "session"
+      ],
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add Case Study",
+      "content_type": [
+        "core",
+        "casestudy"
+      ],
+      "codename": "add_casestudy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change Case Study",
+      "content_type": [
+        "core",
+        "casestudy"
+      ],
+      "codename": "change_casestudy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete Case Study",
+      "content_type": [
+        "core",
+        "casestudy"
+      ],
+      "codename": "delete_casestudy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view Case Study",
+      "content_type": [
+        "core",
+        "casestudy"
+      ],
+      "codename": "view_casestudy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add process step",
+      "content_type": [
+        "core",
+        "processstep"
+      ],
+      "codename": "add_processstep"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change process step",
+      "content_type": [
+        "core",
+        "processstep"
+      ],
+      "codename": "change_processstep"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete process step",
+      "content_type": [
+        "core",
+        "processstep"
+      ],
+      "codename": "delete_processstep"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view process step",
+      "content_type": [
+        "core",
+        "processstep"
+      ],
+      "codename": "view_processstep"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add services",
+      "content_type": [
+        "core",
+        "services"
+      ],
+      "codename": "add_services"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change services",
+      "content_type": [
+        "core",
+        "services"
+      ],
+      "codename": "change_services"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete services",
+      "content_type": [
+        "core",
+        "services"
+      ],
+      "codename": "delete_services"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view services",
+      "content_type": [
+        "core",
+        "services"
+      ],
+      "codename": "view_services"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add event",
+      "content_type": [
+        "events",
+        "event"
+      ],
+      "codename": "add_event"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change event",
+      "content_type": [
+        "events",
+        "event"
+      ],
+      "codename": "change_event"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete event",
+      "content_type": [
+        "events",
+        "event"
+      ],
+      "codename": "delete_event"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view event",
+      "content_type": [
+        "events",
+        "event"
+      ],
+      "codename": "view_event"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add contact",
+      "content_type": [
+        "contacts",
+        "contact"
+      ],
+      "codename": "add_contact"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change contact",
+      "content_type": [
+        "contacts",
+        "contact"
+      ],
+      "codename": "change_contact"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete contact",
+      "content_type": [
+        "contacts",
+        "contact"
+      ],
+      "codename": "delete_contact"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view contact",
+      "content_type": [
+        "contacts",
+        "contact"
+      ],
+      "codename": "view_contact"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add user",
+      "content_type": [
+        "accounts",
+        "user"
+      ],
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change user",
+      "content_type": [
+        "accounts",
+        "user"
+      ],
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete user",
+      "content_type": [
+        "accounts",
+        "user"
+      ],
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view user",
+      "content_type": [
+        "accounts",
+        "user"
+      ],
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add client profile",
+      "content_type": [
+        "accounts",
+        "clientprofile"
+      ],
+      "codename": "add_clientprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change client profile",
+      "content_type": [
+        "accounts",
+        "clientprofile"
+      ],
+      "codename": "change_clientprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete client profile",
+      "content_type": [
+        "accounts",
+        "clientprofile"
+      ],
+      "codename": "delete_clientprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view client profile",
+      "content_type": [
+        "accounts",
+        "clientprofile"
+      ],
+      "codename": "view_clientprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add counsellor profile",
+      "content_type": [
+        "accounts",
+        "counsellorprofile"
+      ],
+      "codename": "add_counsellorprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change counsellor profile",
+      "content_type": [
+        "accounts",
+        "counsellorprofile"
+      ],
+      "codename": "change_counsellorprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete counsellor profile",
+      "content_type": [
+        "accounts",
+        "counsellorprofile"
+      ],
+      "codename": "delete_counsellorprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view counsellor profile",
+      "content_type": [
+        "accounts",
+        "counsellorprofile"
+      ],
+      "codename": "view_counsellorprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add session",
+      "content_type": [
+        "appointments",
+        "session"
+      ],
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change session",
+      "content_type": [
+        "appointments",
+        "session"
+      ],
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete session",
+      "content_type": [
+        "appointments",
+        "session"
+      ],
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view session",
+      "content_type": [
+        "appointments",
+        "session"
+      ],
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add payment",
+      "content_type": [
+        "appointments",
+        "payment"
+      ],
+      "codename": "add_payment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change payment",
+      "content_type": [
+        "appointments",
+        "payment"
+      ],
+      "codename": "change_payment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete payment",
+      "content_type": [
+        "appointments",
+        "payment"
+      ],
+      "codename": "delete_payment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view payment",
+      "content_type": [
+        "appointments",
+        "payment"
+      ],
+      "codename": "view_payment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add ph q9 assessment",
+      "content_type": [
+        "assessments",
+        "phq9assessment"
+      ],
+      "codename": "add_phq9assessment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change ph q9 assessment",
+      "content_type": [
+        "assessments",
+        "phq9assessment"
+      ],
+      "codename": "change_phq9assessment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete ph q9 assessment",
+      "content_type": [
+        "assessments",
+        "phq9assessment"
+      ],
+      "codename": "delete_phq9assessment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view ph q9 assessment",
+      "content_type": [
+        "assessments",
+        "phq9assessment"
+      ],
+      "codename": "view_phq9assessment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add GAD-7 Assessment",
+      "content_type": [
+        "assessments",
+        "gad7assessment"
+      ],
+      "codename": "add_gad7assessment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change GAD-7 Assessment",
+      "content_type": [
+        "assessments",
+        "gad7assessment"
+      ],
+      "codename": "change_gad7assessment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete GAD-7 Assessment",
+      "content_type": [
+        "assessments",
+        "gad7assessment"
+      ],
+      "codename": "delete_gad7assessment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view GAD-7 Assessment",
+      "content_type": [
+        "assessments",
+        "gad7assessment"
+      ],
+      "codename": "view_gad7assessment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add Stress Assessment",
+      "content_type": [
+        "assessments",
+        "stressassessment"
+      ],
+      "codename": "add_stressassessment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change Stress Assessment",
+      "content_type": [
+        "assessments",
+        "stressassessment"
+      ],
+      "codename": "change_stressassessment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete Stress Assessment",
+      "content_type": [
+        "assessments",
+        "stressassessment"
+      ],
+      "codename": "delete_stressassessment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view Stress Assessment",
+      "content_type": [
+        "assessments",
+        "stressassessment"
+      ],
+      "codename": "view_stressassessment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add journal entry",
+      "content_type": [
+        "appointments",
+        "journalentry"
+      ],
+      "codename": "add_journalentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change journal entry",
+      "content_type": [
+        "appointments",
+        "journalentry"
+      ],
+      "codename": "change_journalentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete journal entry",
+      "content_type": [
+        "appointments",
+        "journalentry"
+      ],
+      "codename": "delete_journalentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view journal entry",
+      "content_type": [
+        "appointments",
+        "journalentry"
+      ],
+      "codename": "view_journalentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add progress goal",
+      "content_type": [
+        "appointments",
+        "progressgoal"
+      ],
+      "codename": "add_progressgoal"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change progress goal",
+      "content_type": [
+        "appointments",
+        "progressgoal"
+      ],
+      "codename": "change_progressgoal"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete progress goal",
+      "content_type": [
+        "appointments",
+        "progressgoal"
+      ],
+      "codename": "delete_progressgoal"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view progress goal",
+      "content_type": [
+        "appointments",
+        "progressgoal"
+      ],
+      "codename": "view_progressgoal"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add session note",
+      "content_type": [
+        "counselors",
+        "sessionnote"
+      ],
+      "codename": "add_sessionnote"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change session note",
+      "content_type": [
+        "counselors",
+        "sessionnote"
+      ],
+      "codename": "change_sessionnote"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete session note",
+      "content_type": [
+        "counselors",
+        "sessionnote"
+      ],
+      "codename": "delete_sessionnote"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view session note",
+      "content_type": [
+        "counselors",
+        "sessionnote"
+      ],
+      "codename": "view_sessionnote"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add Counsellor Profile",
+      "content_type": [
+        "counselors",
+        "counsellorprofile"
+      ],
+      "codename": "add_counsellorprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change Counsellor Profile",
+      "content_type": [
+        "counselors",
+        "counsellorprofile"
+      ],
+      "codename": "change_counsellorprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete Counsellor Profile",
+      "content_type": [
+        "counselors",
+        "counsellorprofile"
+      ],
+      "codename": "delete_counsellorprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view Counsellor Profile",
+      "content_type": [
+        "counselors",
+        "counsellorprofile"
+      ],
+      "codename": "view_counsellorprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add booking",
+      "content_type": [
+        "appointments",
+        "booking"
+      ],
+      "codename": "add_booking"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change booking",
+      "content_type": [
+        "appointments",
+        "booking"
+      ],
+      "codename": "change_booking"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete booking",
+      "content_type": [
+        "appointments",
+        "booking"
+      ],
+      "codename": "delete_booking"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view booking",
+      "content_type": [
+        "appointments",
+        "booking"
+      ],
+      "codename": "view_booking"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add Testimonial",
+      "content_type": [
+        "testimonials",
+        "testimonial"
+      ],
+      "codename": "add_testimonial"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change Testimonial",
+      "content_type": [
+        "testimonials",
+        "testimonial"
+      ],
+      "codename": "change_testimonial"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete Testimonial",
+      "content_type": [
+        "testimonials",
+        "testimonial"
+      ],
+      "codename": "delete_testimonial"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view Testimonial",
+      "content_type": [
+        "testimonials",
+        "testimonial"
+      ],
+      "codename": "view_testimonial"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add FAQ",
+      "content_type": [
+        "core",
+        "faq"
+      ],
+      "codename": "add_faq"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change FAQ",
+      "content_type": [
+        "core",
+        "faq"
+      ],
+      "codename": "change_faq"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete FAQ",
+      "content_type": [
+        "core",
+        "faq"
+      ],
+      "codename": "delete_faq"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view FAQ",
+      "content_type": [
+        "core",
+        "faq"
+      ],
+      "codename": "view_faq"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add payment",
+      "content_type": [
+        "payments",
+        "payment"
+      ],
+      "codename": "add_payment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change payment",
+      "content_type": [
+        "payments",
+        "payment"
+      ],
+      "codename": "change_payment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete payment",
+      "content_type": [
+        "payments",
+        "payment"
+      ],
+      "codename": "delete_payment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view payment",
+      "content_type": [
+        "payments",
+        "payment"
+      ],
+      "codename": "view_payment"
+    }
+  },
+  {
+    "model": "accounts.user",
+    "fields": {
+      "password": "pbkdf2_sha256$1200000$VBLPh0zoE9MMN0Zq3OMUlC$3gHyw+Ub51dTCGh9obcsDwbfOYxXsyHEXttbVsggcOM=",
+      "last_login": "2026-08-27T19:19:31.021Z",
+      "is_superuser": true,
+      "username": "cate",
+      "first_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2026-07-16T10:44:08.448Z",
+      "role": "client",
+      "email": "catelilungo@gmail.com",
+      "phone_number": null,
+      "is_verified": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "fields": {
+      "password": "pbkdf2_sha256$1200000$huF1yBetq44hZHcbyiz9Z9$2gVoHxGTDuWRWLwZPHO251bILPByEueUKLrksx/7Y50=",
+      "last_login": "2026-08-28T08:26:33.875Z",
+      "is_superuser": false,
+      "username": "Amani@gmail.com",
+      "first_name": "Gabriel",
+      "last_name": "Amani",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-07-17T13:18:54.537Z",
+      "role": "client",
+      "email": "Amani@gmail.com",
+      "phone_number": "0792501015",
+      "is_verified": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "fields": {
+      "password": "pbkdf2_sha256$1200000$P2UrzFaSks2Su8bVuBeGzg$GTYYcu88m9x3GQGsMsQJIuKpdXJuvRoiComTZUxXQN4=",
+      "last_login": "2026-08-28T08:26:00.848Z",
+      "is_superuser": false,
+      "username": "erastusivelia@gmail.com",
+      "first_name": "Erastus Ivelia",
+      "last_name": "Matekwa",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-07-28T08:42:33.959Z",
+      "role": "counsellor",
+      "email": "erastusivelia@gmail.com",
+      "phone_number": "0711897242",
+      "is_verified": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.clientprofile",
+    "pk": 7,
+    "fields": {
+      "user": [
+        "Amani@gmail.com"
+      ],
+      "profile_photo": "profile_photos/GABRIEL.jpg",
+      "date_of_birth": null,
+      "gender": "",
+      "emergency_contact": "",
+      "emergency_phone": ""
+    }
+  },
+  {
+    "model": "accounts.clientprofile",
+    "pk": 8,
+    "fields": {
+      "user": [
+        "erastusivelia@gmail.com"
+      ],
+      "profile_photo": "profile_photos/ERAS.jpg",
+      "date_of_birth": null,
+      "gender": "",
+      "emergency_contact": "",
+      "emergency_phone": ""
+    }
+  },
+  {
+    "model": "accounts.counsellorprofile",
+    "pk": 2,
+    "fields": {
+      "user": [
+        "erastusivelia@gmail.com"
+      ],
+      "professional_title": "Counsellor",
+      "specialization": "Family Therapy",
+      "years_of_experience": 5,
+      "license_number": "25780533466",
+      "qualifications": "Bachelor's Degree",
+      "bio": "Erastus Ivelia is a dedicated counselling professional committed to helping  individuals, couples, families, and organizations achieve emotional well-being  and personal growth. Through a compassionate and client-centered approach,  he provides guidance, support, and practical strategies for navigating life's challenges.",
+      "profile_photo": "counsellors/ERAS.jpg",
+      "license_document": "licenses/pdf.pdf",
+      "approved": false
+    }
+  },
+  {
+    "model": "assessments.phq9assessment",
+    "pk": 1,
+    "fields": {
+      "user": [
+        "Amani@gmail.com"
+      ],
+      "q1": 1,
+      "q2": 3,
+      "q3": 0,
+      "q4": 0,
+      "q5": 2,
+      "q6": 1,
+      "q7": 3,
+      "q8": 3,
+      "q9": 3,
+      "total_score": 16,
+      "created_at": "2026-07-23T11:08:52.086Z"
+    }
+  },
+  {
+    "model": "assessments.phq9assessment",
+    "pk": 2,
+    "fields": {
+      "user": [
+        "Amani@gmail.com"
+      ],
+      "q1": 0,
+      "q2": 2,
+      "q3": 3,
+      "q4": 1,
+      "q5": 2,
+      "q6": 3,
+      "q7": 1,
+      "q8": 1,
+      "q9": 1,
+      "total_score": 14,
+      "created_at": "2026-07-27T13:30:11.179Z"
+    }
+  },
+  {
+    "model": "assessments.gad7assessment",
+    "pk": 1,
+    "fields": {
+      "user": [
+        "Amani@gmail.com"
+      ],
+      "q1": 2,
+      "q2": 0,
+      "q3": 1,
+      "q4": 1,
+      "q5": 3,
+      "q6": 0,
+      "q7": 0,
+      "difficulty": "not",
+      "total_score": 7,
+      "interpretation": "Mild Anxiety",
+      "created_at": "2026-07-27T12:41:33.293Z"
+    }
+  },
+  {
+    "model": "assessments.gad7assessment",
+    "pk": 2,
+    "fields": {
+      "user": [
+        "Amani@gmail.com"
+      ],
+      "q1": 2,
+      "q2": 0,
+      "q3": 1,
+      "q4": 1,
+      "q5": 3,
+      "q6": 0,
+      "q7": 0,
+      "difficulty": "not",
+      "total_score": 7,
+      "interpretation": "Mild Anxiety",
+      "created_at": "2026-07-27T12:46:56.157Z"
+    }
+  },
+  {
+    "model": "assessments.gad7assessment",
+    "pk": 3,
+    "fields": {
+      "user": [
+        "Amani@gmail.com"
+      ],
+      "q1": 2,
+      "q2": 0,
+      "q3": 1,
+      "q4": 1,
+      "q5": 3,
+      "q6": 0,
+      "q7": 0,
+      "difficulty": "not",
+      "total_score": 7,
+      "interpretation": "Mild Anxiety",
+      "created_at": "2026-07-27T12:48:21.884Z"
+    }
+  },
+  {
+    "model": "assessments.gad7assessment",
+    "pk": 4,
+    "fields": {
+      "user": [
+        "Amani@gmail.com"
+      ],
+      "q1": 1,
+      "q2": 2,
+      "q3": 1,
+      "q4": 3,
+      "q5": 3,
+      "q6": 1,
+      "q7": 2,
+      "difficulty": "very",
+      "total_score": 13,
+      "interpretation": "Moderate Anxiety",
+      "created_at": "2026-07-27T12:51:34.870Z"
+    }
+  },
+  {
+    "model": "assessments.gad7assessment",
+    "pk": 5,
+    "fields": {
+      "user": [
+        "Amani@gmail.com"
+      ],
+      "q1": 0,
+      "q2": 3,
+      "q3": 3,
+      "q4": 1,
+      "q5": 2,
+      "q6": 2,
+      "q7": 0,
+      "difficulty": "somewhat",
+      "total_score": 11,
+      "interpretation": "Moderate Anxiety",
+      "created_at": "2026-07-27T13:30:47.730Z"
+    }
+  },
+  {
+    "model": "assessments.stressassessment",
+    "pk": 1,
+    "fields": {
+      "user": [
+        "Amani@gmail.com"
+      ],
+      "q1": 1,
+      "q2": 0,
+      "q3": 0,
+      "q4": 0,
+      "q5": 0,
+      "q6": 0,
+      "q7": 0,
+      "q8": 0,
+      "q9": 0,
+      "q10": 0,
+      "total_score": 1,
+      "interpretation": "Minimal Stress",
+      "created_at": "2026-07-27T13:11:49.328Z"
+    }
+  },
+  {
+    "model": "assessments.stressassessment",
+    "pk": 2,
+    "fields": {
+      "user": [
+        "Amani@gmail.com"
+      ],
+      "q1": 1,
+      "q2": 0,
+      "q3": 0,
+      "q4": 0,
+      "q5": 0,
+      "q6": 0,
+      "q7": 0,
+      "q8": 0,
+      "q9": 0,
+      "q10": 0,
+      "total_score": 1,
+      "interpretation": "Minimal Stress",
+      "created_at": "2026-07-27T13:12:37.756Z"
+    }
+  },
+  {
+    "model": "assessments.stressassessment",
+    "pk": 3,
+    "fields": {
+      "user": [
+        "Amani@gmail.com"
+      ],
+      "q1": 1,
+      "q2": 2,
+      "q3": 2,
+      "q4": 3,
+      "q5": 1,
+      "q6": 1,
+      "q7": 1,
+      "q8": 3,
+      "q9": 1,
+      "q10": 0,
+      "total_score": 15,
+      "interpretation": "Moderate Stress",
+      "created_at": "2026-07-27T13:33:02.300Z"
+    }
+  },
+  {
+    "model": "payments.payment",
+    "pk": 1,
+    "fields": {
+      "session": 1,
+      "client": [
+        "Amani@gmail.com"
+      ],
+      "amount": "34.00",
+      "currency": "KES",
+      "gateway": "paystack",
+      "status": "failed",
+      "reference": "MC-DFD9C86DBC95",
+      "transaction_id": "6498441158",
+      "gateway_response": {
+        "error": "Reverse for 'client_appointments' not found. 'client_appointments' is not a valid view function or pattern name."
+      },
+      "paid_at": "2026-08-27T14:17:18.796Z",
+      "created_at": "2026-08-27T13:11:03.238Z",
+      "updated_at": "2026-08-27T14:17:18.938Z"
+    }
+  },
+  {
+    "model": "payments.payment",
+    "pk": 2,
+    "fields": {
+      "session": 2,
+      "client": [
+        "Amani@gmail.com"
+      ],
+      "amount": "599.99",
+      "currency": "KES",
+      "gateway": "paystack",
+      "status": "failed",
+      "reference": "MC-FC4B19B521F3",
+      "transaction_id": "6499240675",
+      "gateway_response": {
+        "error": "Reverse for 'client_appointments' not found. 'client_appointments' is not a valid view function or pattern name."
+      },
+      "paid_at": "2026-08-27T18:47:18.584Z",
+      "created_at": "2026-08-27T18:46:51.023Z",
+      "updated_at": "2026-08-27T18:47:18.628Z"
+    }
+  },
+  {
+    "model": "payments.payment",
+    "pk": 3,
+    "fields": {
+      "session": 3,
+      "client": [
+        "Amani@gmail.com"
+      ],
+      "amount": "478.00",
+      "currency": "KES",
+      "gateway": "paystack",
+      "status": "failed",
+      "reference": "MC-92C53809D6F0",
+      "transaction_id": "6499424533",
+      "gateway_response": {
+        "error": "Reverse for 'client_appointments' not found. 'client_appointments' is not a valid view function or pattern name."
+      },
+      "paid_at": "2026-08-27T19:53:53.998Z",
+      "created_at": "2026-08-27T19:53:16.309Z",
+      "updated_at": "2026-08-27T19:53:54.031Z"
+    }
+  },
+  {
+    "model": "payments.payment",
+    "pk": 4,
+    "fields": {
+      "session": 5,
+      "client": [
+        "Amani@gmail.com"
+      ],
+      "amount": "70.00",
+      "currency": "KES",
+      "gateway": "paystack",
+      "status": "failed",
+      "reference": "MC-DA99BDA1DACE",
+      "transaction_id": null,
+      "gateway_response": {
+        "error": "HTTPSConnectionPool(host='api.paystack.co', port=443): Read timed out. (read timeout=30)"
+      },
+      "paid_at": null,
+      "created_at": "2026-08-28T08:37:01.326Z",
+      "updated_at": "2026-08-28T08:37:35.956Z"
+    }
+  },
+  {
+    "model": "payments.payment",
+    "pk": 5,
+    "fields": {
+      "session": 4,
+      "client": [
+        "Amani@gmail.com"
+      ],
+      "amount": "300.00",
+      "currency": "KES",
+      "gateway": "paystack",
+      "status": "failed",
+      "reference": "MC-F14A12564819",
+      "transaction_id": "6500759547",
+      "gateway_response": {
+        "error": "Reverse for 'client_appointments' not found. 'client_appointments' is not a valid view function or pattern name."
+      },
+      "paid_at": "2026-08-28T08:40:15.896Z",
+      "created_at": "2026-08-28T08:39:45.555Z",
+      "updated_at": "2026-08-28T08:40:15.943Z"
+    }
+  },
+  {
+    "model": "appointments.booking",
+    "pk": 4,
+    "fields": {
+      "client": [
+        "Amani@gmail.com"
+      ],
+      "counselor": [
+        "erastusivelia@gmail.com"
+      ],
+      "session": 1,
+      "session_type": "individual",
+      "session_mode": "online",
+      "preferred_date": "2026-09-03",
+      "preferred_time": "04:12:00",
+      "duration_minutes": 90,
+      "notes": "I need a session. Thank you.",
+      "status": "approved",
+      "created_at": "2026-08-27T13:06:38.671Z"
+    }
+  },
+  {
+    "model": "appointments.booking",
+    "pk": 6,
+    "fields": {
+      "client": [
+        "Amani@gmail.com"
+      ],
+      "counselor": [
+        "erastusivelia@gmail.com"
+      ],
+      "session": 2,
+      "session_type": "corporate",
+      "session_mode": "physical",
+      "preferred_date": "2026-09-05",
+      "preferred_time": "09:50:00",
+      "duration_minutes": 60,
+      "notes": "qerykl o86rtt r899pjl",
+      "status": "approved",
+      "created_at": "2026-08-27T18:44:43.577Z"
+    }
+  },
+  {
+    "model": "appointments.booking",
+    "pk": 7,
+    "fields": {
+      "client": [
+        "Amani@gmail.com"
+      ],
+      "counselor": [
+        "erastusivelia@gmail.com"
+      ],
+      "session": 3,
+      "session_type": "couples",
+      "session_mode": "online",
+      "preferred_date": "2026-08-27",
+      "preferred_time": "23:58:00",
+      "duration_minutes": 120,
+      "notes": "trutrgfgfhgh",
+      "status": "approved",
+      "created_at": "2026-08-27T19:35:05.355Z"
+    }
+  },
+  {
+    "model": "appointments.booking",
+    "pk": 8,
+    "fields": {
+      "client": [
+        "Amani@gmail.com"
+      ],
+      "counselor": [
+        "erastusivelia@gmail.com"
+      ],
+      "session": 4,
+      "session_type": "individual",
+      "session_mode": "physical",
+      "preferred_date": "2026-08-29",
+      "preferred_time": "09:04:00",
+      "duration_minutes": 60,
+      "notes": "wreseraw",
+      "status": "approved",
+      "created_at": "2026-08-28T06:02:18.798Z"
+    }
+  },
+  {
+    "model": "appointments.booking",
+    "pk": 9,
+    "fields": {
+      "client": [
+        "Amani@gmail.com"
+      ],
+      "counselor": [
+        "erastusivelia@gmail.com"
+      ],
+      "session": 5,
+      "session_type": "individual",
+      "session_mode": "physical",
+      "preferred_date": "2026-08-28",
+      "preferred_time": "17:42:00",
+      "duration_minutes": 60,
+      "notes": "SADFGYTJRYTRGFDC",
+      "status": "approved",
+      "created_at": "2026-08-28T08:25:23.172Z"
+    }
+  },
+  {
+    "model": "appointments.session",
+    "pk": 1,
+    "fields": {
+      "client": [
+        "Amani@gmail.com"
+      ],
+      "counselor": [
+        "erastusivelia@gmail.com"
+      ],
+      "session_type": "individual",
+      "session_mode": "online",
+      "appointment_date": "2026-09-03",
+      "appointment_time": "04:12:00",
+      "duration_minutes": 90,
+      "notes": "I need a session. Thank you.",
+      "meeting_link": "",
+      "status": "confirmed",
+      "created_at": "2026-08-27T13:10:11.950Z"
+    }
+  },
+  {
+    "model": "appointments.session",
+    "pk": 2,
+    "fields": {
+      "client": [
+        "Amani@gmail.com"
+      ],
+      "counselor": [
+        "erastusivelia@gmail.com"
+      ],
+      "session_type": "corporate",
+      "session_mode": "physical",
+      "appointment_date": "2026-09-05",
+      "appointment_time": "09:50:00",
+      "duration_minutes": 60,
+      "notes": "qerykl o86rtt r899pjl",
+      "meeting_link": "",
+      "status": "completed",
+      "created_at": "2026-08-27T18:45:39.704Z"
+    }
+  },
+  {
+    "model": "appointments.session",
+    "pk": 3,
+    "fields": {
+      "client": [
+        "Amani@gmail.com"
+      ],
+      "counselor": [
+        "erastusivelia@gmail.com"
+      ],
+      "session_type": "couples",
+      "session_mode": "online",
+      "appointment_date": "2026-08-27",
+      "appointment_time": "23:58:00",
+      "duration_minutes": 120,
+      "notes": "trutrgfgfhgh",
+      "meeting_link": "",
+      "status": "confirmed",
+      "created_at": "2026-08-27T19:36:07.607Z"
+    }
+  },
+  {
+    "model": "appointments.session",
+    "pk": 4,
+    "fields": {
+      "client": [
+        "Amani@gmail.com"
+      ],
+      "counselor": [
+        "erastusivelia@gmail.com"
+      ],
+      "session_type": "individual",
+      "session_mode": "physical",
+      "appointment_date": "2026-08-29",
+      "appointment_time": "09:04:00",
+      "duration_minutes": 60,
+      "notes": "wreseraw",
+      "meeting_link": "",
+      "status": "confirmed",
+      "created_at": "2026-08-28T06:02:56.179Z"
+    }
+  },
+  {
+    "model": "appointments.session",
+    "pk": 5,
+    "fields": {
+      "client": [
+        "Amani@gmail.com"
+      ],
+      "counselor": [
+        "erastusivelia@gmail.com"
+      ],
+      "session_type": "individual",
+      "session_mode": "physical",
+      "appointment_date": "2026-08-28",
+      "appointment_time": "17:42:00",
+      "duration_minutes": 60,
+      "notes": "SADFGYTJRYTRGFDC",
+      "meeting_link": "",
+      "status": "awaiting_payment",
+      "created_at": "2026-08-28T08:26:06.682Z"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2026-07-17T08:21:09.420Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "services"
+      ],
+      "object_id": "6",
+      "object_repr": "Anxiety Therapy",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Slug\", \"Short description\", \"Image\", \"Icon\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2026-07-17T08:22:09.227Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "services"
+      ],
+      "object_id": "5",
+      "object_repr": "Depression Therapy",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Slug\", \"Short description\", \"Image\", \"Icon\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2026-07-17T08:23:20.439Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "services"
+      ],
+      "object_id": "4",
+      "object_repr": "Stress Therapy",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Slug\", \"Short description\", \"Image\", \"Icon\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2026-07-17T08:25:03.674Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "services"
+      ],
+      "object_id": "6",
+      "object_repr": "Anxiety Therapy",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Short description\", \"Description\", \"Icon\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2026-07-17T08:25:17.182Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "services"
+      ],
+      "object_id": "6",
+      "object_repr": "Anxiety Therapy",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2026-07-17T08:26:17.293Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "services"
+      ],
+      "object_id": "5",
+      "object_repr": "Depression Therapy",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Short description\", \"Description\", \"Icon\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2026-07-17T08:27:09.282Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "services"
+      ],
+      "object_id": "4",
+      "object_repr": "Stress Therapy",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Short description\", \"Description\", \"Icon\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2026-07-17T08:28:58.131Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "services"
+      ],
+      "object_id": "3",
+      "object_repr": "Corporate Therapy",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Slug\", \"Description\", \"Image\", \"Icon\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2026-07-17T08:30:33.245Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "services"
+      ],
+      "object_id": "2",
+      "object_repr": "Couples Therapy",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Slug\", \"Short description\", \"Description\", \"Image\", \"Icon\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2026-07-17T08:32:19.720Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "services"
+      ],
+      "object_id": "1",
+      "object_repr": "Individual Therapy",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Slug\", \"Short description\", \"Description\", \"Image\", \"Icon\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2026-07-17T08:33:51.601Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "services"
+      ],
+      "object_id": "3",
+      "object_repr": "Corporate Therapy",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Short description\", \"Icon\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2026-07-17T10:45:49.638Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "accounts",
+        "clientprofile"
+      ],
+      "object_id": "4",
+      "object_repr": "Catherine Mung'ohe - Client",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2026-07-17T10:45:49.638Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "accounts",
+        "clientprofile"
+      ],
+      "object_id": "3",
+      "object_repr": "Catherine Mung'ohe - Client",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2026-07-17T10:45:49.638Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "accounts",
+        "clientprofile"
+      ],
+      "object_id": "2",
+      "object_repr": "Catherine Mung'ohe - Client",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2026-07-17T10:45:49.638Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "accounts",
+        "clientprofile"
+      ],
+      "object_id": "1",
+      "object_repr": "Catherine Mung'ohe - Client",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2026-07-17T10:53:16.765Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "accounts",
+        "clientprofile"
+      ],
+      "object_id": "5",
+      "object_repr": "Catherine Mung'ohe - Client",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2026-07-28T08:34:27.616Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "accounts",
+        "counsellorprofile"
+      ],
+      "object_id": "1",
+      "object_repr": "Erastus Ivelia Matekwa - Counsellor",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2026-07-28T08:39:58.597Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "accounts",
+        "user"
+      ],
+      "object_id": "9",
+      "object_repr": "Erastus Ivelia Matekwa",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2026-07-28T08:40:23.300Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "accounts",
+        "user"
+      ],
+      "object_id": "3",
+      "object_repr": "Catherine Mung'ohe",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2026-07-28T08:40:23.301Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "accounts",
+        "user"
+      ],
+      "object_id": "4",
+      "object_repr": "Catherine Mung'ohe",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2026-07-28T08:40:23.301Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "accounts",
+        "user"
+      ],
+      "object_id": "6",
+      "object_repr": "Catherine Mung'ohe",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2026-07-28T08:40:23.301Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "accounts",
+        "user"
+      ],
+      "object_id": "5",
+      "object_repr": "Catherine Mung'ohe",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2026-07-28T08:40:23.301Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "accounts",
+        "user"
+      ],
+      "object_id": "7",
+      "object_repr": "Mercy Joy",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2026-07-28T08:40:23.301Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "accounts",
+        "user"
+      ],
+      "object_id": "2",
+      "object_repr": "Catherine Mung'ohe",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2026-08-25T15:12:26.981Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "counselors",
+        "counsellorprofile"
+      ],
+      "object_id": "1",
+      "object_repr": "Erastus Ivelia",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2026-08-26T06:19:33.231Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "services"
+      ],
+      "object_id": "5",
+      "object_repr": "Depression Therapy",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Is featured\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2026-08-26T06:19:45.221Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "services"
+      ],
+      "object_id": "6",
+      "object_repr": "Anxiety Therapy",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Is featured\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2026-08-26T06:19:56.810Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "services"
+      ],
+      "object_id": "3",
+      "object_repr": "Corporate Therapy",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Is featured\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2026-08-26T08:09:01.983Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "testimonials",
+        "testimonial"
+      ],
+      "object_id": "1",
+      "object_repr": "Jane M.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+      "action_time": "2026-08-26T08:11:28.606Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "testimonials",
+        "testimonial"
+      ],
+      "object_id": "2",
+      "object_repr": "Sarah T.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+      "action_time": "2026-08-26T08:12:11.819Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "testimonials",
+        "testimonial"
+      ],
+      "object_id": "3",
+      "object_repr": "Alex K.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+      "action_time": "2026-08-26T08:13:19.590Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "testimonials",
+        "testimonial"
+      ],
+      "object_id": "4",
+      "object_repr": "Brian L.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+      "action_time": "2026-08-26T08:13:51.174Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "testimonials",
+        "testimonial"
+      ],
+      "object_id": "5",
+      "object_repr": "Johnathan P",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+      "action_time": "2026-08-26T08:15:36.829Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "testimonials",
+        "testimonial"
+      ],
+      "object_id": "6",
+      "object_repr": "Alex K.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+      "action_time": "2026-08-26T08:15:58.882Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "testimonials",
+        "testimonial"
+      ],
+      "object_id": "6",
+      "object_repr": "Alex K.",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+      "action_time": "2026-08-26T08:23:06.131Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "testimonials",
+        "testimonial"
+      ],
+      "object_id": "3",
+      "object_repr": "Alex K.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Is featured\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+      "action_time": "2026-08-26T08:23:06.142Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "testimonials",
+        "testimonial"
+      ],
+      "object_id": "4",
+      "object_repr": "Brian L.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Is featured\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+      "action_time": "2026-08-26T08:23:06.145Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "testimonials",
+        "testimonial"
+      ],
+      "object_id": "5",
+      "object_repr": "Johnathan P",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Is featured\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+      "action_time": "2026-08-26T08:23:52.862Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "testimonials",
+        "testimonial"
+      ],
+      "object_id": "1",
+      "object_repr": "Jane M.",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+      "action_time": "2026-08-26T08:24:01.854Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "testimonials",
+        "testimonial"
+      ],
+      "object_id": "2",
+      "object_repr": "Sarah T.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Message\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+      "action_time": "2026-08-26T08:24:11.694Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "testimonials",
+        "testimonial"
+      ],
+      "object_id": "3",
+      "object_repr": "Alex K.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Message\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+      "action_time": "2026-08-26T08:24:25.643Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "testimonials",
+        "testimonial"
+      ],
+      "object_id": "4",
+      "object_repr": "Brian L.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Message\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+      "action_time": "2026-08-26T08:24:36.498Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "testimonials",
+        "testimonial"
+      ],
+      "object_id": "5",
+      "object_repr": "Johnathan P",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Message\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+      "action_time": "2026-08-26T08:40:26.147Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "faq"
+      ],
+      "object_id": "1",
+      "object_repr": "What is counselling?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+      "action_time": "2026-08-26T08:41:12.642Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "faq"
+      ],
+      "object_id": "2",
+      "object_repr": "Who is counselling for?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+      "action_time": "2026-08-26T08:42:12.078Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "faq"
+      ],
+      "object_id": "3",
+      "object_repr": "How do I know if I need counselling?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+      "action_time": "2026-08-26T08:42:47.657Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "faq"
+      ],
+      "object_id": "4",
+      "object_repr": "What issues can you help with?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+      "action_time": "2026-08-26T08:43:25.273Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "faq"
+      ],
+      "object_id": "5",
+      "object_repr": "Is counselling confidential?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+      "action_time": "2026-08-26T08:43:58.287Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "faq"
+      ],
+      "object_id": "6",
+      "object_repr": "Do you offer online sessions?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+      "action_time": "2026-08-26T08:44:33.695Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "faq"
+      ],
+      "object_id": "7",
+      "object_repr": "How do I book a session?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+      "action_time": "2026-08-26T08:45:09.768Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "faq"
+      ],
+      "object_id": "8",
+      "object_repr": "What are your fees and payment options?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+      "action_time": "2026-08-26T08:45:24.536Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "faq"
+      ],
+      "object_id": "6",
+      "object_repr": "Do you offer online sessions?",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+      "action_time": "2026-08-26T08:45:24.540Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "faq"
+      ],
+      "object_id": "7",
+      "object_repr": "How do I book a session?",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+      "action_time": "2026-08-26T08:45:24.552Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "faq"
+      ],
+      "object_id": "8",
+      "object_repr": "What are your fees and payment options?",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Order\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+      "action_time": "2026-08-26T09:34:49.979Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "casestudy"
+      ],
+      "object_id": "6",
+      "object_repr": "Overcoming Teenage Depression: Building Hope and Emotional Resilience",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+      "action_time": "2026-08-26T09:34:59.442Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "casestudy"
+      ],
+      "object_id": "5",
+      "object_repr": "Finding Healing Through Grief and Loss Support",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+      "action_time": "2026-08-26T09:35:07.862Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "casestudy"
+      ],
+      "object_id": "4",
+      "object_repr": "Building Self-Esteem in Adolescents",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+      "action_time": "2026-08-26T09:35:18.704Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "casestudy"
+      ],
+      "object_id": "3",
+      "object_repr": "Work-Life Balance for Professionals",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+      "action_time": "2026-08-26T09:35:26.504Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "casestudy"
+      ],
+      "object_id": "1",
+      "object_repr": "Managing Anxiety in Young Adults",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+      "action_time": "2026-08-26T09:35:35.865Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "casestudy"
+      ],
+      "object_id": "2",
+      "object_repr": "Supporting Couples in Conflict",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+      "action_time": "2026-08-26T09:35:46.139Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "core",
+        "casestudy"
+      ],
+      "object_id": "3",
+      "object_repr": "Work-Life Balance for Professionals",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+      "action_time": "2026-08-27T08:30:32.072Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "appointments",
+        "booking"
+      ],
+      "object_id": "2",
+      "object_repr": "Gabriel Amani → Erastus Ivelia Matekwa",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+      "action_time": "2026-08-27T08:51:26.434Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "appointments",
+        "booking"
+      ],
+      "object_id": "2",
+      "object_repr": "Gabriel Amani → Erastus Ivelia Matekwa",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+      "action_time": "2026-08-27T08:53:33.393Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "appointments",
+        "booking"
+      ],
+      "object_id": "3",
+      "object_repr": "Gabriel Amani → Erastus Ivelia Matekwa",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+      "action_time": "2026-08-27T09:11:31.054Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "appointments",
+        "booking"
+      ],
+      "object_id": "2",
+      "object_repr": "Gabriel Amani → Erastus Ivelia Matekwa",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+      "action_time": "2026-08-27T13:04:36.673Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "appointments",
+        "booking"
+      ],
+      "object_id": "3",
+      "object_repr": "Gabriel Amani → Erastus Ivelia Matekwa",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+      "action_time": "2026-08-27T13:04:36.673Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "appointments",
+        "booking"
+      ],
+      "object_id": "2",
+      "object_repr": "Gabriel Amani → Erastus Ivelia Matekwa",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+      "action_time": "2026-08-27T13:04:36.673Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "appointments",
+        "booking"
+      ],
+      "object_id": "1",
+      "object_repr": "Gabriel Amani → Erastus Ivelia Matekwa",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+      "action_time": "2026-08-27T18:49:17.853Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "appointments",
+        "session"
+      ],
+      "object_id": "2",
+      "object_repr": "Gabriel Amani - 2026-09-05",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+      "action_time": "2026-08-27T18:50:29.326Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "appointments",
+        "booking"
+      ],
+      "object_id": "5",
+      "object_repr": "Erastus Ivelia Matekwa → Erastus Ivelia Matekwa",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+      "action_time": "2026-08-27T18:51:12.232Z",
+      "user": [
+        "cate"
+      ],
+      "content_type": [
+        "appointments",
+        "session"
+      ],
+      "object_id": "2",
+      "object_repr": "Gabriel Amani - 2026-09-05",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  }
+]

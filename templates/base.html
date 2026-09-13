@@ -135,7 +135,7 @@
 
             </div>
 
-            <button class="menu-toggle" type="button">
+            <button class="menu-toggle" type="button" id="menu-toggle">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -143,9 +143,9 @@
 
 
 <!-- Mobile Menu -->
-            <div class="mobile-menu">
+            <div class="mobile-menu" >
 
-                <ul nav-links>
+                <ul class="nav-links">
                     <li><a href="/">Home</a></li>
                     <li><a href="{% url 'about' %}">About</a></li>
                     <li><a href="{% url 'services' %}">Services</a></li>
@@ -186,9 +186,9 @@
                     <h3 class="footer-heading">Links</h3>
                     <ul class="footer-links">
                         <li><a href="/">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'events' %}">Events</a></li>
+                        <li><a href="{% url 'case_study' %}">Case Studies</a></li>
                 </div>
                 
                 <!-- Third Section: Resources -->
@@ -229,24 +229,13 @@
                 <p>&copy; 2025  <b>Techwell Therapy</b>. Healing Minds, Empowering Futures. | All rights reserved.</p>
             </div>
         </footer>
-
-        <script src="{% static 'js/main.js' %}"></script>
-
-        {% block scripts %}
+        {% block extra_js %}
         {% endblock %}
+        <script src="{% static 'js/main.js' %}"></script>
+        <script src="{% static 'js/base.js' %}"></script>
 
-  <script>
-    function toggleDropdown(event) {
-        event.stopPropagation();
-        document.getElementById("profileMenu").classList.toggle("show");
-    }
+        
 
-    document.addEventListener("click", function () {
-        const menu = document.getElementById("profileMenu");
-        if (menu) {
-            menu.classList.remove("show");
-        }
-    });
-</script>          
+    
 </body>
 </html>

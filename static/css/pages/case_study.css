@@ -369,3 +369,282 @@
     background: var(--primary-color);
     color: var(--white);
 }
+/* =====================================================
+   CASE STUDIES RESPONSIVE DESIGN
+   ===================================================== */
+
+
+/* =========================
+   992px and below
+   ========================= */
+@media (max-width: 992px) {
+
+    /* Case Studies */
+    .studies-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .service-card {
+        width: 100%;
+    }
+
+    .card-image {
+        min-height: 220px;
+    }
+
+    /* Challenge vs Solution */
+    .case-card {
+        width: 100%;
+    }
+
+    .case-content {
+        gap: 20px;
+    }
+
+    .challenge,
+    .solution {
+        width: 100%;
+    }
+
+    /* Impact */
+    .impact-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+}
+
+
+/* =========================
+   768px and below
+   ========================= */
+@media (max-width: 768px) {
+
+    /* Case Studies */
+    .studies-section .content-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .studies-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .service-card {
+        width: 100%;
+    }
+
+    .card-image {
+        min-height: 240px;
+    }
+
+    .card-content {
+        width: 100%;
+    }
+
+    /* Pagination */
+    .pagination {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .pagination-btn {
+        padding: 10px 18px;
+    }
+
+    /* Challenge vs Solution */
+    .case-studies {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .case-card {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .case-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .challenge,
+    .solution {
+        width: 100%;
+    }
+
+    /* Impact */
+    .impact-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .impact-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .stat-card {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================
+   480px and below
+   ========================= */
+@media (max-width: 480px) {
+
+    /* Case Studies */
+    .studies-section .content-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .studies-section .content-section h2 {
+        font-size: 26px;
+    }
+
+    .studies-section .content-section p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .studies-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .service-card {
+        width: 100%;
+    }
+
+    .card-image {
+        min-height: 200px;
+    }
+
+    .card-content {
+        padding: 18px;
+    }
+
+    .card-content h3 {
+        font-size: 21px;
+    }
+
+    .card-content p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .more-content h4 {
+        font-size: 18px;
+    }
+
+    .more-content li {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .card-link {
+        font-size: 15px;
+    }
+
+
+    /* Pagination */
+    .pagination {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 15px;
+    }
+
+    .pagination-btn {
+        width: 100%;
+    }
+
+    .page-info {
+        order: -1;
+    }
+
+
+    /* Challenge vs Solution */
+    .case-studies {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .case-studies .content-section h2 {
+        font-size: 26px;
+    }
+
+    .case-card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .case-card h3 {
+        font-size: 21px;
+    }
+
+    .case-content {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .challenge,
+    .solution {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .challenge h4,
+    .solution h4 {
+        font-size: 18px;
+    }
+
+    .challenge p,
+    .solution p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+
+    /* Impact */
+    .impact-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .impact-section h2 {
+        font-size: 26px;
+    }
+
+    .impact-stats {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .stat-card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .stat-card h3 {
+        font-size: 30px;
+    }
+
+    .stat-card p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+}

@@ -486,3 +486,276 @@
         text-align: center;
     }
 }
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+/* =========================
+   TABLETS & SMALL LAPTOPS
+   992px and below
+   ========================= */
+@media (max-width: 992px) {
+
+    /* Mission, Vision & Values */
+    .values-container {
+        gap: 20px;
+    }
+
+    .values-card {
+        width: 100%;
+    }
+
+    /* Our Story */
+    .stories-section .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .stories-section .col-4,
+    .stories-section .col-8 {
+        width: 100%;
+    }
+
+    .stories-section .col-4 {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .stories-section .col-4 img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Counsellor */
+    .counsellor-home-wrapper {
+        gap: 30px;
+    }
+
+    .counsellor-home-image,
+    .counsellor-home-content {
+        width: 100%;
+    }
+
+    /* Why Book */
+    .why-section {
+        gap: 20px;
+    }
+
+}
+
+
+/* =========================
+   TABLETS
+   768px and below
+   ========================= */
+@media (max-width: 768px) {
+
+    /* General Content */
+    .content-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Mission, Vision & Values */
+    .values-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .values-card {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    /* Our Story */
+    .stories-section .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .stories-section .col-4,
+    .stories-section .col-8 {
+        width: 100%;
+    }
+
+    .stories-section .col-4 {
+        text-align: center;
+    }
+
+    .stories-section .col-4 img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    /* Counsellor */
+    .counsellor-home-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .counsellor-home-image,
+    .counsellor-home-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .counsellor-highlights {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .counsellor-actions {
+        justify-content: center;
+    }
+
+    /* Why Book */
+    .why-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .why-card {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+   480px and below
+   ========================= */
+@media (max-width: 480px) {
+
+    /* General Content */
+    .content-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .content-section h2 {
+        font-size: 26px;
+    }
+
+    .content-section p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    /* Mission, Vision & Values */
+    .values-container {
+        padding: 0 15px;
+    }
+
+    .values-card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .values-card h4 {
+        font-size: 20px;
+    }
+
+    .values-card p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .book-btn {
+        display: inline-block;
+        max-width: 100%;
+    }
+
+    /* Our Story */
+    .stories-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .stories-section .col-4 img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .stories-section .col-8 p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    /* Counsellor */
+    .counsellor-home {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .section-heading p {
+        font-size: 15px;
+    }
+
+    .counsellor-home-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .counsellor-home-content h3 {
+        font-size: 25px;
+    }
+
+    .counsellor-home-content h4 {
+        font-size: 18px;
+    }
+
+    .counsellor-home-content p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .counsellor-highlights {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .counsellor-actions {
+        width: 100%;
+    }
+
+    .counsellor-actions .btn {
+        width: 100%;
+        display: block;
+    }
+
+    /* Why Book */
+    .why-section {
+        padding: 0 15px;
+    }
+
+    .why-card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .why-card h4 {
+        font-size: 20px;
+    }
+
+    .why-card li {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 8px;
+    }
+
+    /* Final Consultation Section */
+    .content-section .book-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+}
